@@ -54,6 +54,10 @@ div.contents {
   padding: 0;
 }
 
+p.text {
+  line-height: 2;
+}
+
 div.logo {
   text-align: center;
 }

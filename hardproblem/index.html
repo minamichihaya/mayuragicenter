@@ -9,7 +9,7 @@
     <div class="subpage" v-repeat="subpage : subpages" id="{{subpage.id}}">
       <div v-component="hpot_header" v-with="subpage"></div>
       <div class="contents">
-        <div class="text" v-html="subpage.text | lfToBr"></div>
+        <p class="text" v-html="subpage.text | lfToBr"></p>
       </div>
     </div>
 
