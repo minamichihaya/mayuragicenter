@@ -1,10 +1,14 @@
 Vue.component('header', {
   template: util.load('../components/header.html')
-})
+});
 
 Vue.component('hpot_header', {
   template: util.load('../components/hpot_header.html')
-})
+});
+
+Vue.component('hpot_footer', {
+  template: util.load('../components/hpot_footer.html')
+});
 
 function mkSections(sections, id) {
   var sections = sections.map(function (x) { return _.extend({}, x) });
@@ -40,6 +44,26 @@ var sections1 = [
                   {
                     title: "5",
                     id: "1-05",
+                  },
+                  {
+                    title: "§2",
+                    id: "2-01",
+                  },
+                  {
+                    title: "§3",
+                    id: "2-01",
+                  },
+                  {
+                    title: "§4",
+                    id: "2-01",
+                  },
+                  {
+                    title: "§5",
+                    id: "2-01",
+                  },
+                  {
+                    title: "§6",
+                    id: "2-01",
                   },
                 ];
 

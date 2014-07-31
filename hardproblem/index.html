@@ -10,7 +10,8 @@
       <div v-component="hpot_header" v-with="subpage"></div>
       <div class="contents">
         <p class="text" v-html="subpage.text | lfToBr"></p>
-      </div>
+        <div v-component="hpot_footer" v-with="subpage">
+      </div></div>
     </div>
 
     <div class="mainpage">
