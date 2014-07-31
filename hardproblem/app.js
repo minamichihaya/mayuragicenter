@@ -171,6 +171,8 @@ var pages = new Vue({
       var dom = document.getElementById(subpage.id).querySelector("p");
       var xhr = new XMLHttpRequest();
 
+      dom.innerHTML = "";
+
       xhr.onreadystatechange = function() {
         console.log(subpage.url);
         if (xhr.readyState == 4 && xhr.status >= 200 && xhr.status < 300) {
