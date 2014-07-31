@@ -1,9 +1,9 @@
 Vue.component('header', {
-  template: util.load('/components/header.html')
+  template: util.load('../components/header.html')
 })
 
 Vue.component('hpot_header', {
-  template: util.load('/components/hpot_header.html')
+  template: util.load('../components/hpot_header.html')
 })
 
 function mkSections(sections, id) {
@@ -52,7 +52,7 @@ var pages = new Vue({
   data: {
     mainpage: {
       title: "ふたりのハードプロブレム",
-      logo: util.load("/components/hpot_logo.html"),
+      logo: util.load("../components/hpot_logo.html"),
       chapters: [
         {
           title: "§1",
