@@ -1,0 +1,37 @@
+html.ios div.pages,
+html.android div.pages {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html.ios div.subpage,
+html.android div.subpage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+html.ios div.subpage:target,
+html.android div.subpage:target {
+  display: block;
+}
+
+html.ios div.mainpage,
+html.android div.mainpage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+html.ios div.subpage:target ~ div.mainpage,
+html.android div.subpage:target ~ div.mainpage {
+  display: none;
+}

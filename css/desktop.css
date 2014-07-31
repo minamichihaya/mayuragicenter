@@ -1,27 +1,27 @@
-body {
+html.desktop body {
   margin: 0;
   padding: 0;
 }
 
-div.header {
+html.desktop div.header {
   margin: 0;
   padding: 0;
 }
 
-div.header .hr {
+html.desktop div.header .hr {
   background-color: #ccc;
   width: 100%;
   height: 0.2em;
 }
 
-div.header ol.nav {
+html.desktop div.header ol.nav {
   list-style: none;
   float: right;
   margin: 2em;
   padding: 0;
 }
 
-div.header ol.nav li {
+html.desktop div.header ol.nav li {
   color: #ccc;
   min-width: 2em;
   margin: 0 0.125em;
@@ -30,42 +30,42 @@ div.header ol.nav li {
   text-align: center;
 }
 
-div.header ol.nav li a {
+html.desktop div.header ol.nav li a {
   color: #ccc;
   text-decoration: none;
 }
 
-div.header ol.nav li {
+html.desktop div.header ol.nav li {
   border-bottom: solid 3px #fff;
 }
 
-div.header ol.nav li[now="true"] {
+html.desktop div.header ol.nav li[now="true"] {
   border-bottom: solid 3px #88f;
 }
 
-div.header ol.nav li:hover:not(.nohover) {
+html.desktop div.header ol.nav li:hover:not(.nohover) {
   border-bottom: solid 3px #88f;
 }
 
-div.footer {
+html.desktop div.footer {
   margin: 5em 0 0;
   padding: 0;
 }
 
-div.footer .hr {
+html.desktop div.footer .hr {
   background-color: #ccc;
   width: 100%;
   height: 0.2em;
 }
 
-div.footer ol.nav {
+html.desktop div.footer ol.nav {
   list-style: none;
   width: 37em;
   margin: 0;
   padding: 0;
 }
 
-div.footer ol.nav li {
+html.desktop div.footer ol.nav li {
   color: #ccc;
   min-width: 2em;
   margin: 0 0.125em;
@@ -74,52 +74,52 @@ div.footer ol.nav li {
   text-align: center;
 }
 
-div.footer ol.nav li a {
+html.desktop div.footer ol.nav li a {
   color: #ccc;
   text-decoration: none;
 }
 
-div.footer ol.nav li {
+html.desktop div.footer ol.nav li {
   border-bottom: solid 3px #fff;
 }
 
-div.footer ol.nav li[now="true"] {
+html.desktop div.footer ol.nav li[now="true"] {
   border-bottom: solid 3px #88f;
 }
 
-div.footer ol.nav li:hover:not(.nohover) {
+html.desktop div.footer ol.nav li:hover:not(.nohover) {
   border-bottom: solid 3px #88f;
 }
 
-div.contents {
+html.desktop div.contents {
   color: #555;
   width: 37em;
   margin: 5em auto 5em;
   padding: 0;
 }
 
-p.text {
+html.desktop p.text {
   line-height: 2;
 }
 
-div.logo {
+html.desktop div.logo {
   text-align: center;
 }
 
-div.logo .word {
+html.desktop div.logo .word {
   color: #888;
   font-size: 0.75em;
   text-align: center;
 }
 
-ol.chapters {
+html.desktop ol.chapters {
   list-style: none;
   width: 18em;
   margin: 2em auto 2em;
   padding: 0;
 }
 
-ol.chapters li {
+html.desktop ol.chapters li {
   width: 2em;
   margin: 0 0.5em;
   padding: 0;
@@ -127,27 +127,27 @@ ol.chapters li {
   text-align: center;
 }
 
-ol.chapters li a {
+html.desktop ol.chapters li a {
   color: #ccc;
   text-decoration: none;
 }
 
-ol.chapters li {
+html.desktop ol.chapters li {
   border-bottom: solid 3px #fff;
 }
 
-ol.chapters li:hover {
+html.desktop ol.chapters li:hover {
   border-bottom: solid 3px #88f;
 }
 
-div.pages {
+html.desktop div.pages {
   position: relative;
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-div.subpage {
+html.desktop div.subpage {
   position: absolute;
   top: 0;
   left: 0;
@@ -156,11 +156,11 @@ div.subpage {
   height: auto;
 }
 
-div.subpage:target {
+html.desktop div.subpage:target {
   display: block;
 }
 
-div.mainpage {
+html.desktop div.mainpage {
   position: absolute;
   top: 0;
   left: 0;
@@ -169,6 +169,6 @@ div.mainpage {
   height: auto;
 }
 
-div.subpage:target ~ div.mainpage {
+html.desktop div.subpage:target ~ div.mainpage {
   display: none;
 }
