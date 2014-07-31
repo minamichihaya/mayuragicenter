@@ -1,3 +1,62 @@
+
+html.ios div.contents,
+html.android div.contents, {
+  color: #555;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html.ios div.contents p.text,
+html.android div.contents p.text {
+}
+
+html.ios div.contents img,
+html.android div.contents img {
+  width: 100%;
+  height: auto;
+}
+
+html.ios div.logo,
+html.android div.logo {
+  text-align: center;
+}
+
+html.ios div.logo .word,
+html.android div.logo .word {
+  color: #888;
+  text-align: center;
+}
+
+html.ios ol.chapters,
+html.android ol.chapters {
+  list-style: none;
+  width: 100%;
+  margin: 0.5em auto 0.5em;
+  padding: 0;
+}
+
+html.ios ol.chapters li,
+html.android ol.chapters li {
+  width: 30%;
+  margin: 0 0;
+  padding: 0;
+  display: inline-block;
+  text-align: center;
+}
+
+html.ios ol.chapters li a,
+html.android ol.chapters li a {
+  color: #88f;
+  font-size: 2em;
+}
+
+html.ios div.logo img,
+html.android div.logo img {
+  width: 100%;
+  height: auto;
+}
+
 html.ios div.pages,
 html.android div.pages {
   position: relative;

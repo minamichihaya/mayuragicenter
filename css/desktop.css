@@ -98,7 +98,7 @@ html.desktop div.contents {
   padding: 0;
 }
 
-html.desktop p.text {
+html.desktop div.contents p.text {
   line-height: 2;
 }
 
