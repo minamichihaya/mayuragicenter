@@ -1,13 +1,43 @@
-Vue.component('header', {
-  template: util.load('../components/header.html')
-});
+Vue.component('hpot_logo', {
+  template: '<div class="logo hpot-logo">'
+          + '  <a href="#"><img src="../img/hpot_logo.jpg" /></a>'
+          + '  <p class="word delay1">'
+          + '    機械になりたい、って思った。'
+          + '  </p>'
+          + '  <p class="word delay2">'
+          + '    いまでもそう思ってる。'
+          + '  </p>'
+          + '</div>'
+})
 
 Vue.component('hpot_header', {
-  template: util.load('../components/hpot_header.html')
+  template: '<div class="header hpot-header">'
+          + '  <a href="#"><img src="../img/hpot_logo.jpg" /></a>'
+          + '  <ol class="nav">'
+          + '    <li class="nohover">'
+          + '      {{title}}'
+          + '    </li>'
+          + '    <li v-repeat="section : sections()" now="{{section.now}}">'
+          + '      <a href="#{{section.id}}">{{section.title}}</a>'
+          + '    </li>'
+          + '  </ol>'
+
+          + '  <div class="hr"></div>'
+          + '</div>'
 });
 
 Vue.component('hpot_footer', {
-  template: util.load('../components/hpot_footer.html')
+  template: '<div class="footer hpot-footer">'
+          + '  <div class="hr"></div>'
+          + '  <ol class="nav">'
+          + '    <li class="nohover">'
+          + '      {{title}}'
+          + '    </li>'
+          + '    <li v-repeat="section : sections()" now="{{section.now}}">'
+          + '      <a href="#{{section.id}}">{{section.title}}</a>'
+          + '    </li>'
+          + '  </ol>'
+          + '</div>'
 });
 
 function mkSections(sections, id) {
@@ -76,7 +106,6 @@ var pages = new Vue({
   data: {
     mainpage: {
       title: "ふたりのハードプロブレム",
-      logo: util.load("../components/hpot_logo.html"),
       chapters: [
         {
           title: "§1",
