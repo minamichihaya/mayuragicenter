@@ -174,7 +174,6 @@ var pages = new Vue({
       dom.innerHTML = "";
 
       xhr.onreadystatechange = function() {
-        console.log(subpage.url);
         if (xhr.readyState == 4 && xhr.status >= 200 && xhr.status < 300) {
           dom.innerHTML = xhr.responseText;
         } else {
