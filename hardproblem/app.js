@@ -132,33 +132,60 @@ var pages = new Vue({
       {
         id: "1-01",
         title: "§1 虹を閉じ込めた瞳",
-        text: util.load("1-01.html"),
+        url: "1-01.html",
         sections: mkSections(sections1, "1-01"),
       },
       {
         id: "1-02",
         title: "§1 虹を閉じ込めた瞳",
-        text: util.load("1-02.html"),
+        url: "1-02.html",
         sections: mkSections(sections1, "1-02"),
       },
       {
         id: "1-03",
         title: "§1 虹を閉じ込めた瞳",
-        text: util.load("1-03.html"),
+        url: "1-03.html",
         sections: mkSections(sections1, "1-03"),
       },
       {
         id: "1-04",
         title: "§1 虹を閉じ込めた瞳",
-        text: util.load("1-04.html"),
+        url: "1-04.html",
         sections: mkSections(sections1, "1-04"),
       },
       {
         id: "1-05",
         title: "§1 虹を閉じ込めた瞳",
-        text: util.load("1-05.html"),
+        url: "1-05.html",
         sections: mkSections(sections1, "1-05"),
       },
     ],
   }
 });
+
+(function () {
+
+  for (var i = 0; i < pages.subpages.length; i++) {
+    (function () {
+      var subpage = pages.subpages[i];
+      var dom = document.getElementById(subpage.id).querySelector("p");
+      var xhr = new XMLHttpRequest();
+
+      xhr.onreadystatechange = function() {
+        console.log(subpage.url);
+        if (xhr.readyState == 4 && xhr.status >= 200 && xhr.status < 300) {
+          dom.innerHTML = xhr.responseText;
+        } else {
+          dom.innerHTML = util.catURL(window.location.protocol + "//" + window.location.host + window.location.pathname, subpage.url) + ": " + xhr.statusText;
+        }
+      }
+      xhr.open("GET", subpage.url, true);
+      try {
+        xhr.send();
+      } catch (e) {
+        dom.innerHTML = util.catURL(window.location.protocol + "//" + window.location.host + window.location.pathname, subpage.url) + ": " + e.message;
+        return;
+      }
+    })();
+  };
+})();
