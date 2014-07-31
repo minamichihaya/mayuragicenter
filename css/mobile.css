@@ -1,48 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+}
 
-html.ios div.contents,
-html.android div.contents, {
+div.header {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+div.header img {
+  width: 50%;
+}
+
+div.header .hr {
+  background-color: #ccc;
+  width: 100%;
+  height: 0.2em;
+}
+
+div.header ol.nav {
+  list-style: none;
+  margin: 1em 0;
+  padding: 0;
+}
+
+div.header ol.nav li {
+  color: #ccc;
+  min-width: 1.5em;
+  margin: 0.25em 0.125em;
+  padding: 0;
+  display: inline-block;
+  text-align: center;
+  font-size: 0.75em;
+}
+
+div.header ol.nav li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.75em;
+}
+
+div.header ol.nav li {
+  border-bottom: solid 3px #fff;
+}
+
+div.header ol.nav li[now="true"] {
+  border-bottom: solid 3px #88f;
+}
+
+div.footer {
+  margin: 1em 0 0;
+  padding: 0;
+}
+
+div.footer .hr {
+  background-color: #ccc;
+  width: 100%;
+  height: 0.2em;
+}
+
+div.footer ol.nav {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+div.footer ol.nav li {
+  color: #ccc;
+  min-width: 1.5em;
+  margin: 0.25em 0.125em;
+  padding: 0;
+  display: inline-block;
+  text-align: center;
+  font-size: 0.75em;
+}
+
+div.footer ol.nav li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.75em;
+}
+
+div.footer ol.nav li {
+  border-bottom: solid 3px #fff;
+}
+
+div.footer ol.nav li[now="true"] {
+  border-bottom: solid 3px #88f;
+}
+
+div.contents {
   color: #555;
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-html.ios div.contents p.text,
-html.android div.contents p.text {
+div.contents p.text {
 }
 
-html.ios div.contents img,
-html.android div.contents img {
+div.contents img {
   width: 100%;
   height: auto;
 }
 
-html.ios div.logo,
-html.android div.logo {
+div.logo {
   text-align: center;
 }
 
-html.ios div.logo .word,
-html.android div.logo .word {
+div.logo .word {
   color: #888;
   text-align: center;
 }
 
-html.ios ol.chapters,
-html.android ol.chapters {
+ol.chapters {
   display: none;
 }
 
-html.ios ol.mobile-chapters,
-html.android ol.mobile-chapters {
+ol.mobile-chapters {
   list-style: none;
   width: 100%;
   margin: 0.5em auto 0.5em;
   padding: 0;
 }
 
-html.ios ol.mobile-chapters li,
-html.android ol.mobile-chapters li {
+ol.mobile-chapters li {
   width: 30%;
   margin: 0 0;
   padding: 0;
@@ -50,28 +134,24 @@ html.android ol.mobile-chapters li {
   text-align: center;
 }
 
-html.ios ol.mobile-chapters li a,
-html.android ol.mobile-chapters li a {
+ol.mobile-chapters li a {
   color: #88f;
   font-size: 2em;
 }
 
-html.ios div.logo img,
-html.android div.logo img {
+div.logo img {
   width: 100%;
   height: auto;
 }
 
-html.ios div.pages,
-html.android div.pages {
+div.pages {
   position: relative;
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-html.ios div.subpage,
-html.android div.subpage {
+div.subpage {
   position: absolute;
   top: 0;
   left: 0;
@@ -80,13 +160,11 @@ html.android div.subpage {
   height: auto;
 }
 
-html.ios div.subpage:target,
-html.android div.subpage:target {
+div.subpage:target {
   display: block;
 }
 
-html.ios div.mainpage,
-html.android div.mainpage {
+div.mainpage {
   position: absolute;
   top: 0;
   left: 0;
@@ -95,7 +173,6 @@ html.android div.mainpage {
   height: auto;
 }
 
-html.ios div.subpage:target ~ div.mainpage,
-html.android div.subpage:target ~ div.mainpage {
+div.subpage:target ~ div.mainpage {
   display: none;
 }

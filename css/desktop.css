@@ -1,27 +1,27 @@
-html.desktop body {
+body {
   margin: 0;
   padding: 0;
 }
 
-html.desktop div.header {
+div.header {
   margin: 0;
   padding: 0;
 }
 
-html.desktop div.header .hr {
+div.header .hr {
   background-color: #ccc;
   width: 100%;
   height: 0.2em;
 }
 
-html.desktop div.header ol.nav {
+div.header ol.nav {
   list-style: none;
   float: right;
   margin: 2em;
   padding: 0;
 }
 
-html.desktop div.header ol.nav li {
+div.header ol.nav li {
   color: #ccc;
   min-width: 2em;
   margin: 0 0.125em;
@@ -30,42 +30,42 @@ html.desktop div.header ol.nav li {
   text-align: center;
 }
 
-html.desktop div.header ol.nav li a {
+div.header ol.nav li a {
   color: #ccc;
   text-decoration: none;
 }
 
-html.desktop div.header ol.nav li {
+div.header ol.nav li {
   border-bottom: solid 3px #fff;
 }
 
-html.desktop div.header ol.nav li[now="true"] {
+div.header ol.nav li[now="true"] {
   border-bottom: solid 3px #88f;
 }
 
-html.desktop div.header ol.nav li:hover:not(.nohover) {
+div.header ol.nav li:hover:not(.nohover) {
   border-bottom: solid 3px #88f;
 }
 
-html.desktop div.footer {
+div.footer {
   margin: 5em 0 0;
   padding: 0;
 }
 
-html.desktop div.footer .hr {
+div.footer .hr {
   background-color: #ccc;
   width: 100%;
   height: 0.2em;
 }
 
-html.desktop div.footer ol.nav {
+div.footer ol.nav {
   list-style: none;
   width: 37em;
   margin: 0;
   padding: 0;
 }
 
-html.desktop div.footer ol.nav li {
+div.footer ol.nav li {
   color: #ccc;
   min-width: 2em;
   margin: 0 0.125em;
@@ -74,52 +74,52 @@ html.desktop div.footer ol.nav li {
   text-align: center;
 }
 
-html.desktop div.footer ol.nav li a {
+div.footer ol.nav li a {
   color: #ccc;
   text-decoration: none;
 }
 
-html.desktop div.footer ol.nav li {
+div.footer ol.nav li {
   border-bottom: solid 3px #fff;
 }
 
-html.desktop div.footer ol.nav li[now="true"] {
+div.footer ol.nav li[now="true"] {
   border-bottom: solid 3px #88f;
 }
 
-html.desktop div.footer ol.nav li:hover:not(.nohover) {
+div.footer ol.nav li:hover:not(.nohover) {
   border-bottom: solid 3px #88f;
 }
 
-html.desktop div.contents {
+div.contents {
   color: #555;
   width: 37em;
   margin: 5em auto 5em;
   padding: 0;
 }
 
-html.desktop div.contents p.text {
+div.contents p.text {
   line-height: 2;
 }
 
-html.desktop div.logo {
+div.logo {
   text-align: center;
 }
 
-html.desktop div.logo .word {
+div.logo .word {
   color: #888;
   font-size: 0.75em;
   text-align: center;
 }
 
-html.desktop ol.chapters {
+ol.chapters {
   list-style: none;
   width: 18em;
   margin: 2em auto 2em;
   padding: 0;
 }
 
-html.desktop ol.chapters li {
+ol.chapters li {
   width: 2em;
   margin: 0 0.5em;
   padding: 0;
@@ -127,31 +127,31 @@ html.desktop ol.chapters li {
   text-align: center;
 }
 
-html.desktop ol.chapters li a {
+ol.chapters li a {
   color: #ccc;
   text-decoration: none;
 }
 
-html.desktop ol.chapters li {
+ol.chapters li {
   border-bottom: solid 3px #fff;
 }
 
-html.desktop ol.chapters li:hover {
+ol.chapters li:hover {
   border-bottom: solid 3px #88f;
 }
 
-html.desktop ol.mobile-chapters {
+ol.mobile-chapters {
   display: none;
 }
 
-html.desktop div.pages {
+div.pages {
   position: relative;
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-html.desktop div.subpage {
+div.subpage {
   position: absolute;
   top: 0;
   left: 0;
@@ -160,11 +160,11 @@ html.desktop div.subpage {
   height: auto;
 }
 
-html.desktop div.subpage:target {
+div.subpage:target {
   display: block;
 }
 
-html.desktop div.mainpage {
+div.mainpage {
   position: absolute;
   top: 0;
   left: 0;
@@ -173,6 +173,6 @@ html.desktop div.mainpage {
   height: auto;
 }
 
-html.desktop div.subpage:target ~ div.mainpage {
+div.subpage:target ~ div.mainpage {
   display: none;
 }
