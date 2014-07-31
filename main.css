@@ -88,11 +88,19 @@ div.logo .word {
 div.logo .delay1 {
   opacity: 1;
   animation: delay1 1.5s ease-in-out 0s 1 normal;
+  -moz-animation: delay1 1.5s ease-in-out 0s 1 normal;
+  -webkit-animation: delay1 1.5s ease-in-out 0s 1 normal;
+  -o-animation: delay1 1.5s ease-in-out 0s 1 normal;
+  -ms-animation: delay1 1.5s ease-in-out 0s 1 normal;
 }
 
 div.logo .delay2 {
   opacity: 1;
   animation: delay2 3s ease-out 0s 1 normal;
+  -moz-animation: delay2 3s ease-out 0s 1 normal;
+  -webkit-animation: delay2 3s ease-out 0s 1 normal;
+  -o-animation: delay2 3s ease-out 0s 1 normal;
+  -ms-animation: delay2 3s ease-out 0s 1 normal;
 }
 
 ol.chapters {
