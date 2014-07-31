@@ -30,14 +30,19 @@ html.android div.logo .word {
 
 html.ios ol.chapters,
 html.android ol.chapters {
+  display: none;
+}
+
+html.ios ol.mobile-chapters,
+html.android ol.mobile-chapters {
   list-style: none;
   width: 100%;
   margin: 0.5em auto 0.5em;
   padding: 0;
 }
 
-html.ios ol.chapters li,
-html.android ol.chapters li {
+html.ios ol.mobile-chapters li,
+html.android ol.mobile-chapters li {
   width: 30%;
   margin: 0 0;
   padding: 0;
@@ -45,8 +50,8 @@ html.android ol.chapters li {
   text-align: center;
 }
 
-html.ios ol.chapters li a,
-html.android ol.chapters li a {
+html.ios ol.mobile-chapters li a,
+html.android ol.mobile-chapters li a {
   color: #88f;
   font-size: 2em;
 }

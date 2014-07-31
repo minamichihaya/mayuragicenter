@@ -140,6 +140,10 @@ html.desktop ol.chapters li:hover {
   border-bottom: solid 3px #88f;
 }
 
+html.desktop ol.mobile-chapters {
+  display: none;
+}
+
 html.desktop div.pages {
   position: relative;
   width: 100%;

@@ -31,6 +31,18 @@
         </ol>
 
         <div v-component="hpot_logo"></div>
+
+
+        <ol class="mobile-chapters">
+          <li v-repeat="chapter : mainpage.chapters">
+            <a href="#{{chapter.id}}">{{chapter.title}}</a>
+            <ol class="sections">
+              <li v-repeat="section : chapter.sections">
+                <a href="#{{section.id}}">{{section.title}}</a>
+              </li>
+            </ol>
+          </li>
+        </ol>
       </div>
     </div>
   </div>
