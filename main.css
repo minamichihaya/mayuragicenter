@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+div.header {
+  margin: 0 0 5em;
+  padding: 0;
+}
+
+div.header .hr {
+  background-color: #ccc;
+  width: 100%;
+  height: 0.2em;
+}
+
+div.header ol.nav {
+  list-style: none;
+  float: right;
+  margin: 2em;
+  padding: 0;
+}
+
+div.header ol.nav li {
+  color: #ccc;
+  min-width: 2em;
+  margin: 0 0.5em;
+  padding: 0;
+  display: inline-block;
+  text-align: center;
+}
+
+div.header ol.nav li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+div.header ol.nav li {
+  border-bottom: solid 3px #fff;
+}
+
+div.header ol.nav li[now="true"] {
+  border-bottom: solid 3px #88f;
+}
+
+div.header ol.nav li:hover:not(.nohover) {
+  border-bottom: solid 3px #88f;
+}
+
+div.contents {
+  color: #555;
+  width: 37em;
+  margin: 0 auto 0;
+  padding: 0;
+}
+
+div.logo {
+  text-align: center;
+}
+
+div.logo .word {
+  color: #888;
+  font-size: 0.75em;
+  text-align: center;
+}
+
+@keyframes delay1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes delay2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+div.logo .delay1 {
+  opacity: 1;
+  animation: delay1 1.5s ease-in-out 0s 1 normal;
+}
+
+div.logo .delay2 {
+  opacity: 1;
+  animation: delay2 3s ease-out 0s 1 normal;
+}
+
+ol.chapters {
+  list-style: none;
+  width: 18em;
+  margin: 2em auto 2em;
+  padding: 0;
+}
+
+ol.chapters li {
+  width: 2em;
+  margin: 0 0.5em;
+  padding: 0;
+  display: inline-block;
+  text-align: center;
+}
+
+ol.chapters li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+ol.chapters li {
+  border-bottom: solid 3px #fff;
+}
+
+ol.chapters li:hover {
+  border-bottom: solid 3px #88f;
+}
+
+div.pages {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+div.subpage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+div.subpage:target {
+  display: block;
+}
+
+div.mainpage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+div.subpage:target ~ div.mainpage {
+  display: none;
+}

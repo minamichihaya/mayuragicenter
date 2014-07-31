@@ -1,0 +1,41 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="/main.css" />
+  <title>真摇中心</title>
+</head>
+<body>
+  <div id="pages" class="pages">
+    <div class="subpage" v-repeat="subpage : subpages" id="{{subpage.id}}">
+      <div v-component="hpot_header" v-with="subpage"></div>
+      <div class="contents">
+        <div class="text" v-html="subpage.text | lfToBr"></div>
+      </div>
+    </div>
+
+    <div class="mainpage">
+      <div class="contents">
+
+        <ol class="chapters">
+          <li v-repeat="chapter : mainpage.chapters">
+            <a href="#{{chapter.id}}">{{chapter.title}}</a>
+            <ol class="sections">
+              <li v-repeat="section : chapter.sections">
+                <a href="#{{section.id}}">{{section.title}}</a>
+              </li>
+            </ol>
+          </li>
+        </ol>
+
+        <div v-html="mainpage.logo" v-if="mainpage.logo"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<script src="/vender/jquery-2.1.1.min.js"></script>
+<script src="/vender/underscore-min.js"></script>
+<script src="/vender/vue.min.js"></script>
+<script src="/lib/util.js"></script>
+<script src="app.js"></script>
