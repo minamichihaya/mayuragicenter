@@ -117,28 +117,50 @@ div.logo .word {
   text-align: center;
 }
 
+
 ol.chapters {
-  display: none;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-ol.mobile-chapters {
-  list-style: none;
+ol.chapters li {
   width: 100%;
   margin: 0.5em auto 0.5em;
   padding: 0;
 }
 
-ol.mobile-chapters li {
-  width: 30%;
-  margin: 0 0;
+ol.chapters li p {
+  color: #555;
+  font-weight: bold;
+}
+
+ol.chapters li ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ol.chapters li ol li {
+  width: 1.5em;
+  margin: 0 0.25em;
   padding: 0;
   display: inline-block;
   text-align: center;
 }
 
-ol.mobile-chapters li a {
-  color: #88f;
-  font-size: 2em;
+ol.chapters li ol li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+ol.chapters li ol li {
+  border-bottom: solid 3px #fff;
+}
+
+ol.chapters li ol li:hover {
+  border-bottom: solid 3px #88f;
 }
 
 div.logo img {
