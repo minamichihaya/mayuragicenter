@@ -204,11 +204,11 @@ var pages = new Vue({
       [].concat.apply([], chapters.map(function (chapter) {
         return (chapter.sections || []).map(function (section) {
             return {
-              id: section.id,
-              title: chapter.title,
+              id: section.id || "",
+              title: chapter.title || "",
               url: section.id + ".html",
-              sections: chapter.sections,
-              chapters: chapters,
+              sections: chapter.sections || [],
+              chapters: chapters || [],
             }
           })})),
   }
