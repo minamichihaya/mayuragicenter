@@ -12,7 +12,7 @@ Vue.component('hpot_header_of_main', {
 });
 
 Vue.component('hpot_header', {
-  template: '<div class="header hpot-header">'
+  template: '<div class="header hpot-header hpot-header-of-sub">'
           + '  <a href="#"><img src="../img/hpot_logo.jpg" /></a>'
           + '  <ol class="nav">'
           + '    <li class="nohover">'
@@ -23,6 +23,12 @@ Vue.component('hpot_header', {
           + '    </li>'
           + '  </ol>'
           + '  <div class="hr"></div>'
+          + '  <p class="word">'
+          + '    機械になりたい、って思った。'
+          + '  </p>'
+          + '  <p class="word">'
+          + '    いまでもそう思ってる。'
+          + '  </p>'
           + '</div>'
 });
 
@@ -220,7 +226,7 @@ var pages = new Vue({
   for (var i = 0; i < pages.subpages.length; i++) {
     (function () {
       var subpage = pages.subpages[i];
-      var dom = document.getElementById(subpage.id).querySelector("p");
+      var dom = document.getElementById(subpage.id).querySelector("p.text");
       var xhr = new XMLHttpRequest();
 
       dom.innerHTML = "";

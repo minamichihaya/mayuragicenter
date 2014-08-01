@@ -14,6 +14,17 @@ div.hpot-header-of-main p.word {
   display: inline-block;
 }
 
+div.hpot-header-of-sub div.hr + p.word {
+  margin-left: 2em;
+}
+
+div.hpot-header-of-sub p.word {
+  color: #888;
+  font-size: 0.75em;
+  margin: 0;
+  display: inline-block;
+}
+
 div.header {
   margin: 0;
   padding: 0;

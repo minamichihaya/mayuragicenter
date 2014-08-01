@@ -9,8 +9,22 @@ div.header {
   text-align: center;
 }
 
-div.header img {
+div.hpot-header-of-main img {
+  width: 100%;
+  height: auto;
+}
+
+div.hpot-header-of-main p.word {
+  color: #888;
+  text-align: center;
+}
+
+div.hpot-header-of-sub img {
   width: 50%;
+}
+
+div.hpot-header-of-sub p.word {
+  display: none;
 }
 
 div.header .hr {
@@ -107,21 +121,6 @@ div.contents img {
   width: 100%;
   height: auto;
 }
-
-div.hpot-header-of-main {
-  text-align: center;
-}
-
-div.hpot-header-of-main img {
-  width: 100%;
-  height: auto;
-}
-
-div.hpot-header-of-main p.word {
-  color: #888;
-  text-align: center;
-}
-
 
 ol.chapters {
   list-style: none;
