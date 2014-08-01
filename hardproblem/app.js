@@ -205,7 +205,7 @@ var pages = new Vue({
         return (chapter.sections || []).map(function (section) {
             return {
               id: section.id || "",
-              title: chapter.title || "",
+              title: (chapter.sectPrefix || "") + (chapter.title || ""),
               url: section.id + ".html",
               sections: chapter.sections || [],
               chapters: chapters || [],
