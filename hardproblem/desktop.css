@@ -153,6 +153,17 @@ div.contents div.text {
 }
 
 /**************************************\
+ * Contents
+\**************************************/
+div.contents div.logo {
+  border: solid 1px #555;
+}
+
+div.contents div.logo img {
+  width: 100%;
+}
+
+/**************************************\
  * Index of Main page
 \**************************************/
 #main-hpot-index > ol {
