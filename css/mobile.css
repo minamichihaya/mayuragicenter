@@ -93,8 +93,7 @@ div.footer ol.nav li[now="true"] {
 
 div.contents {
   color: #555;
-  width: 100%;
-  margin: 0;
+  margin: 0.75em;
   padding: 0;
 }
 
