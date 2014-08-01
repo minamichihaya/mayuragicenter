@@ -97,6 +97,8 @@ var sections1 = [
                   },
                 ];
 
+function lfToBr (s) { return s ? s.split("\n").join("<br />") : s; }
+
 var pages = new Vue({
   el: '#pages',
   filters: {
@@ -174,8 +176,8 @@ var pages = new Vue({
       dom.innerHTML = "";
 
       xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4 && xhr.status >= 200 && xhr.status < 300) {
-          dom.innerHTML = xhr.responseText;
+        if (xhr.readyState == 4 && (xhr.status >= 200 && xhr.status < 300)) {
+          dom.innerHTML = lfToBr(xhr.responseText);
         } else {
           dom.innerHTML = util.catURL(window.location.protocol + "//" + window.location.host + window.location.pathname, subpage.url) + ": " + xhr.statusText;
         }
