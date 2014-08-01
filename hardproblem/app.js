@@ -17,7 +17,7 @@ Vue.component('hpot_header', {
           + '    <li class="nohover">'
           + '      {{title}}'
           + '    </li>'
-          + '    <li v-repeat="section : sections" now="{{section.now}}">'
+          + '    <li v-repeat="section : sections" now="{{id === section.id}}">'
           + '      <a href="#{{section.id}}">{{section.title}}</a>'
           + '    </li>'
           + '  </ol>'
@@ -33,69 +33,62 @@ Vue.component('hpot_footer', {
           + '    <li class="nohover">'
           + '      {{title}}'
           + '    </li>'
-          + '    <li v-repeat="section : sections" now="{{section.now}}">'
+          + '    <li v-repeat="section : sections" now="{{id === section.id}}">'
           + '      <a href="#{{section.id}}">{{section.title}}</a>'
           + '    </li>'
           + '  </ol>'
           + '</div>'
 });
 
-function mkSections(sections, id) {
-  var sections = sections.map(function (x) { return _.extend({}, x) });
-  for (var i = sections.length - 1; i >= 0; i--) {
-    if (sections[i].id === id) {
-      sections[i].now = true;
-    } else {
-      sections[i].now = false;
-    }
-  }
-  return sections;
-}
-
-var sections1 = [
-                  {
-                    title: "1",
-                    id: "1-01",
-                  },
-                  {
-                    title: "2",
-                    id: "1-02",
-                  },
-                  {
-                    title: "3",
-                    id: "1-03",
-                  },
-                  {
-                    title: "4",
-                    id: "1-04",
-                  },
-                  {
-                    title: "5",
-                    id: "1-05",
-                  },
-                  {
-                    title: "§2",
-                    id: "2-01",
-                  },
-                  {
-                    title: "§3",
-                    id: "2-01",
-                  },
-                  {
-                    title: "§4",
-                    id: "2-01",
-                  },
-                  {
-                    title: "§5",
-                    id: "2-01",
-                  },
-                  {
-                    title: "§6",
-                    id: "2-01",
-                  },
-                ];
-
 function lfToBr (s) { return s ? s.split("\n").join("<br />") : s; }
+
+var chapters = [
+                {
+                  sectPrefix: "§1",
+                  title: "虹を閉じ込めた瞳",
+                  id: "1-01",
+                  sections:
+                    [
+                      {
+                        title: "1",
+                        id: "1-01",
+                      },
+                      {
+                        title: "2",
+                        id: "1-02",
+                      },
+                      {
+                        title: "3",
+                        id: "1-03",
+                      },
+                      {
+                        title: "4",
+                        id: "1-04",
+                      },
+                      {
+                        title: "5",
+                        id: "1-05",
+                      },
+                    ],
+                },
+                {
+                  sectPrefix: "§2",
+                },
+                {
+                  sectPrefix: "§3",
+                },
+                {
+                  sectPrefix: "§4",
+                },
+                {
+                  sectPrefix: "§5",
+                },
+                {
+                  sectPrefix: "§6",
+                },
+              ];
+
+var sections1 = chapters.filter(function (chapter) { return chapter.id === "1-01"; })[0].sections;
 
 var pages = new Vue({
   el: '#pages',
@@ -106,58 +99,42 @@ var pages = new Vue({
   data: {
     mainpage: {
       title: "ふたりのハードプロブレム",
-      chapters: [
-        {
-          title: "§1",
-          id: "1-01",
-        },
-        {
-          title: "§2",
-        },
-        {
-          title: "§3",
-        },
-        {
-          title: "§4",
-        },
-        {
-          title: "§5",
-        },
-        {
-          title: "§6",
-        },
-      ],
+      chapters: chapters,
     },
     subpages: [
       {
         id: "1-01",
         title: "§1 虹を閉じ込めた瞳",
         url: "1-01.html",
-        sections: mkSections(sections1, "1-01"),
+        sections: sections1,
+        chapters: chapters,
       },
       {
         id: "1-02",
         title: "§1 虹を閉じ込めた瞳",
         url: "1-02.html",
-        sections: mkSections(sections1, "1-02"),
+        sections: sections1,
+        chapters: chapters,
       },
       {
         id: "1-03",
         title: "§1 虹を閉じ込めた瞳",
         url: "1-03.html",
-        sections: mkSections(sections1, "1-03"),
+        sections: sections1,
+        chapters: chapters,
       },
       {
         id: "1-04",
         title: "§1 虹を閉じ込めた瞳",
         url: "1-04.html",
-        sections: mkSections(sections1, "1-04"),
+        sections: sections1,
+        chapters: chapters,
       },
       {
         id: "1-05",
         title: "§1 虹を閉じ込めた瞳",
         url: "1-05.html",
-        sections: mkSections(sections1, "1-05"),
+        sections: sections1,
       },
     ],
   }
