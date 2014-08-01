@@ -89,6 +89,11 @@ div.footer ol.nav li {
   border-bottom: solid 3px #fff;
 }
 
+
+div.footer ol.nav li:not(.nohover) {
+  text-align: center;
+}
+
 div.footer ol.nav li.nohover {
   width: 16em;
 }
