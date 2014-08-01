@@ -2,4 +2,4 @@
 
 ## Authors
 
-* [pasberth](https://twitter.com/pasberth) <pasberth@gmail.com>
+* [pasberth](https://twitter.com/pasberth)
