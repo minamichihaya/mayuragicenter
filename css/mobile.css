@@ -32,13 +32,11 @@ div.header ol.nav li {
   padding: 0;
   display: inline-block;
   text-align: center;
-  font-size: 0.75em;
 }
 
 div.header ol.nav li a {
   color: #ccc;
   text-decoration: none;
-  font-size: 0.75em;
 }
 
 div.header ol.nav li {
@@ -60,6 +58,13 @@ div.footer .hr {
   height: 0.2em;
 }
 
+div.footer ol.nav1 {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 div.footer ol.nav {
   list-style: none;
   width: 100%;
@@ -74,13 +79,11 @@ div.footer ol.nav li {
   padding: 0;
   display: inline-block;
   text-align: center;
-  font-size: 0.75em;
 }
 
 div.footer ol.nav li a {
   color: #ccc;
   text-decoration: none;
-  font-size: 0.75em;
 }
 
 div.footer ol.nav li {
