@@ -1,3 +1,16 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" type="text/css" media="screen and (min-width: 24em)" href="desktop.css" />
+  <link rel="stylesheet" type="text/css" media="not screen and (min-width: 24em)" href="mobile.css" />
+  <title>真摇中心</title>
+</head>
+<body id="page">
+  <div v-component="hpot-page-header"></div>
+
+  <div class="contents">
+<pre>
 <div class="logo hpot-sec1-logo">
   <img src="../img/hpot1.jpg" />
 </div>
@@ -27,3 +40,14 @@
 （もう1年も経つのか……）
 　目を閉じ、ゆっくりと呼吸を整える。
 　希海が大学に行かなくなったのは、ちょうど去年の今頃だった。
+</pre>
+
+    <div id="footer" v-component="hpot-page-footer"></div>
+  </div>
+</body>
+</html>
+
+<script src="config.js"></script>
+<script src="../vendor/vue.min.js"></script>
+<script src="components.js"></script>
+<script src="page.js"></script>
