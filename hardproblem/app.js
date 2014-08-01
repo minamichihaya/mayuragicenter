@@ -189,8 +189,6 @@ var chapters = [
                 },
               ];
 
-var sections1 = chapters.filter(function (chapter) { return chapter.id === "1-01"; })[0].sections;
-
 var pages = new Vue({
   el: '#pages',
   filters: {
@@ -202,42 +200,17 @@ var pages = new Vue({
       title: "ふたりのハードプロブレム",
       chapters: chapters,
     },
-    subpages: [
-      {
-        id: "1-01",
-        title: "§1 虹を閉じ込めた瞳",
-        url: "1-01.html",
-        sections: sections1,
-        chapters: chapters,
-      },
-      {
-        id: "1-02",
-        title: "§1 虹を閉じ込めた瞳",
-        url: "1-02.html",
-        sections: sections1,
-        chapters: chapters,
-      },
-      {
-        id: "1-03",
-        title: "§1 虹を閉じ込めた瞳",
-        url: "1-03.html",
-        sections: sections1,
-        chapters: chapters,
-      },
-      {
-        id: "1-04",
-        title: "§1 虹を閉じ込めた瞳",
-        url: "1-04.html",
-        sections: sections1,
-        chapters: chapters,
-      },
-      {
-        id: "1-05",
-        title: "§1 虹を閉じ込めた瞳",
-        url: "1-05.html",
-        sections: sections1,
-      },
-    ],
+    subpages:
+      [].concat.apply([], chapters.map(function (chapter) {
+        return (chapter.sections || []).map(function (section) {
+            return {
+              id: section.id,
+              title: chapter.title,
+              url: section.id + ".html",
+              sections: chapter.sections,
+              chapters: chapters,
+            }
+          })})),
   }
 });
 
