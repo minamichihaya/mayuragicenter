@@ -1,14 +1,15 @@
-Vue.component('hpot_logo', {
-  template: '<div class="logo hpot-logo">'
+Vue.component('hpot_header_of_main', {
+  template: '<div class="header hpot-header-of-main">'
           + '  <a href="#"><img src="../img/hpot_logo.jpg" /></a>'
-          + '  <p class="word delay1">'
+          + '  <div class="hr"></div>'
+          + '  <p class="word">'
           + '    機械になりたい、って思った。'
           + '  </p>'
-          + '  <p class="word delay2">'
+          + '  <p class="word">'
           + '    いまでもそう思ってる。'
           + '  </p>'
           + '</div>'
-})
+});
 
 Vue.component('hpot_header', {
   template: '<div class="header hpot-header">'

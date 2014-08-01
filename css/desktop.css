@@ -3,6 +3,17 @@ body {
   padding: 0;
 }
 
+div.hpot-header-of-main div.hr + p.word {
+  margin-left: 2em;
+}
+
+div.hpot-header-of-main p.word {
+  color: #888;
+  font-size: 0.75em;
+  margin: 0;
+  display: inline-block;
+}
+
 div.header {
   margin: 0;
   padding: 0;
@@ -118,12 +129,6 @@ div.contents p.text {
 }
 
 div.logo {
-  text-align: center;
-}
-
-div.logo .word {
-  color: #888;
-  font-size: 0.75em;
   text-align: center;
 }
 

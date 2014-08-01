@@ -108,11 +108,16 @@ div.contents img {
   height: auto;
 }
 
-div.logo {
+div.hpot-header-of-main {
   text-align: center;
 }
 
-div.logo .word {
+div.hpot-header-of-main img {
+  width: 100%;
+  height: auto;
+}
+
+div.hpot-header-of-main p.word {
   color: #888;
   text-align: center;
 }
@@ -161,11 +166,6 @@ ol.chapters li ol li {
 
 ol.chapters li ol li:hover {
   border-bottom: solid 3px #88f;
-}
-
-div.logo img {
-  width: 100%;
-  height: auto;
 }
 
 div.pages {
