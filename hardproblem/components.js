@@ -15,12 +15,6 @@ Vue.component('hpot-page-header', {
   template: '<a href="index.html"><img src="../img/hpot_logo.jpg" /></a>'
           + '<div v-component="hpot-section-index"></div>'
           + '<div class="hr"></div>'
-          + '<p class="word">'
-          + '  機械になりたい、って思った。'
-          + '</p>'
-          + '<p class="word">'
-          + '  いまでもそう思ってる。'
-          + '</p>'
 });
 
 Vue.component('hpot-page-footer', {
