@@ -1,3 +1,16 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" type="text/css" media="screen and (min-width: 24em)" href="desktop.css" />
+  <link rel="stylesheet" type="text/css" media="not screen and (min-width: 24em)" href="mobile.css" />
+  <title>真摇中心</title>
+</head>
+<body id="page">
+  <div v-component="hpot-page-header"></div>
+
+  <div class="contents">
+<div class="text">
 　結局、希海が買い物に出掛けたのは夕方の4時を過ぎてからだった。スーパーの開店時刻までにはまだしばらく時間があるからと、溜まっていた洗濯物を片付けたところまでは良かった。だがその後、小休止とばかりにパソコンの前に座ってしまったのが運の尽きである。
 　一度インターネットを始めてしまえば、そこから離れるのはなかなかに難しい。当初の目的だったブログや掲示板のチェックを終えても、どこかに何か面白いものがあるはず、と惰性でリンクを渡り歩き気付けば数時間が消し飛んでしまっていた。
 （まあ、こうして買い物はできたわけだし……）
@@ -62,3 +75,14 @@
 　見慣れた街の夕暮れが普段よりもずっと広い視野角を持って希海の網膜に投影される。オレンジから紺色に変わるグラデーションの空。夕日に照らされ濃い陰影を刻む綿雲。視界の隅では電柱と戸建住宅がそびえ立ち、何本もの電力線と通信ケーブルがまるで蔓草のようにそれらの間を横切っていた。
 （何年ぶりかな……。こうして地面に寝っ転がるの）
 　眼前に広がる空は人工物に切り取られてなお、驚くほどに大きかった。
+</div>
+
+    <div id="footer" v-component="hpot-page-footer"></div>
+  </div>
+</body>
+</html>
+
+<script src="config.js"></script>
+<script src="../vendor/vue.min.js"></script>
+<script src="components.js"></script>
+<script src="page.js"></script>

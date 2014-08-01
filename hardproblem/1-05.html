@@ -1,3 +1,16 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" type="text/css" media="screen and (min-width: 24em)" href="desktop.css" />
+  <link rel="stylesheet" type="text/css" media="not screen and (min-width: 24em)" href="mobile.css" />
+  <title>真摇中心</title>
+</head>
+<body id="page">
+  <div v-component="hpot-page-header"></div>
+
+  <div class="contents">
+<div class="text">
 　人気のない静まり返った喫煙所。六畳ほどの広さのその部屋の中央には、見るも恐ろしいほどに汚れた大型の灰皿が置かれている。頭上では蛍光灯の白い光が、タールで黄ばんだ天井を照らし上げていた。
 （……もうこんな時間か）
 　希海はスボンのポケットから取り出した百円ライターでタバコに火を点ける。目を泳がせると時計の文字盤が見えた。壁に掛かった安物のアナログ式時計。その針は、あと少しで深夜0時に差し掛かろうかというところだった。
@@ -115,3 +128,14 @@
 　昼食を抜いて事業所内を端から端まで探し、まさか思って位置情報を検索してみて今度は我が目を疑った。ハルカの位置情報デバイスが動作しているのだ。モニタ上のカーソルが指し示す住所は<ruby>真浜<rp>(</rp><rt>まはま</rt><rp>)</rp></ruby>区<ruby>真揺<rp>(</rp><rt>まゆらぎ</rt><rp>)</rp></ruby>洞<ruby>始新台<rp>(</rp><rt>ししんだい</rt><rp>)</rp></ruby>1丁目。事業所から直線距離にして約5kmほど離れた場所である。
 　東は情報端末を片手に大慌てで車を出した。停止したFIANCの自発的再起動。聞いたことがないわけではなかったが、東とて数本の論文に引用されているのを見たことがある程度で、今の今まですっかり頭から抜けていた。実際に自分が出くわさなければ二度と思い出すこともなかっただろう。それくらい例外的な現象だ。
 　東がGPSの位置情報を頼りにたどり着いたのは3階建てのボロアパートだった。端末が指し示すハルカの場所は建物の一番東の部屋。下から順にチャイムを鳴らしていくと、1階は無人、2階には40代の中年男性、3階には内気なくせに負けん気だけは人一倍強そうな女子大生が住んでいて、ここから先の話は希海もよく知るところである。
+</div>
+
+    <div id="footer" v-component="hpot-page-footer"></div>
+  </div>
+</body>
+</html>
+
+<script src="config.js"></script>
+<script src="../vendor/vue.min.js"></script>
+<script src="components.js"></script>
+<script src="page.js"></script>

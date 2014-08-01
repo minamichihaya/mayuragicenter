@@ -1,3 +1,16 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" type="text/css" media="screen and (min-width: 24em)" href="desktop.css" />
+  <link rel="stylesheet" type="text/css" media="not screen and (min-width: 24em)" href="mobile.css" />
+  <title>真摇中心</title>
+</head>
+<body id="page">
+  <div v-component="hpot-page-header"></div>
+
+  <div class="contents">
+<div class="text">
 　13回。
 　女の子が希海の上から離れるまでに言った『すいません』の数である。
 「本当にすいません、私、何だかぼんやりしちゃっていて……」
@@ -43,3 +56,14 @@
 　姿勢が崩れた。
 　両手を振り回してバランスを取ろうにも、右の腕は背後から掴まれたままである。左手でがむしゃらに宙を引っ掻き、両足の筋肉を硬直させて必死に踏ん張ると、重心の変位は次第に収まっていく。
 　今度は転ばずにすみそうだった。
+</div>
+
+    <div id="footer" v-component="hpot-page-footer"></div>
+  </div>
+</body>
+</html>
+
+<script src="config.js"></script>
+<script src="../vendor/vue.min.js"></script>
+<script src="components.js"></script>
+<script src="page.js"></script>

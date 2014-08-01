@@ -144,11 +144,11 @@ div.contents {
   padding: 0;
 }
 
-div.contents p.text {
+div.contents div.text {
   line-height: 2;
 }
 
-div.contents pre {
+div.contents div.text {
   white-space: pre-wrap;
 }
 
