@@ -136,6 +136,7 @@ div.contents {
 }
 
 div.contents p.text {
+  white-space: pre-wrap;
 }
 
 div.contents img {
