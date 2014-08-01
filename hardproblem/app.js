@@ -17,7 +17,7 @@ Vue.component('hpot_header', {
           + '    <li class="nohover">'
           + '      {{title}}'
           + '    </li>'
-          + '    <li v-repeat="section : sections()" now="{{section.now}}">'
+          + '    <li v-repeat="section : sections" now="{{section.now}}">'
           + '      <a href="#{{section.id}}">{{section.title}}</a>'
           + '    </li>'
           + '  </ol>'
@@ -33,7 +33,7 @@ Vue.component('hpot_footer', {
           + '    <li class="nohover">'
           + '      {{title}}'
           + '    </li>'
-          + '    <li v-repeat="section : sections()" now="{{section.now}}">'
+          + '    <li v-repeat="section : sections" now="{{section.now}}">'
           + '      <a href="#{{section.id}}">{{section.title}}</a>'
           + '    </li>'
           + '  </ol>'
@@ -42,16 +42,14 @@ Vue.component('hpot_footer', {
 
 function mkSections(sections, id) {
   var sections = sections.map(function (x) { return _.extend({}, x) });
-  return function () {
-    for (var i = sections.length - 1; i >= 0; i--) {
-      if (sections[i].id === id) {
-        sections[i].now = true;
-      } else {
-        sections[i].now = false;
-      }
-    };
-    return sections;
+  for (var i = sections.length - 1; i >= 0; i--) {
+    if (sections[i].id === id) {
+      sections[i].now = true;
+    } else {
+      sections[i].now = false;
+    }
   }
+  return sections;
 }
 
 var sections1 = [
