@@ -129,34 +129,47 @@ div.logo .word {
 
 ol.chapters {
   list-style: none;
+  width: 37em;
+  margin: 0;
+  padding: 0;
+}
+
+ol.chapters li {
   width: 18em;
   margin: 2em auto 2em;
   padding: 0;
 }
 
-ol.chapters li {
-  width: 2em;
-  margin: 0 0.5em;
+ol.chapters li p {
+  color: #555;
+  font-weight: bold;
+}
+
+ol.chapters li ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ol.chapters li ol li {
+  width: 1.5em;
+  margin: 0 0.25em;
   padding: 0;
   display: inline-block;
   text-align: center;
 }
 
-ol.chapters li a {
+ol.chapters li ol li a {
   color: #ccc;
   text-decoration: none;
 }
 
-ol.chapters li {
+ol.chapters li ol li {
   border-bottom: solid 3px #fff;
 }
 
-ol.chapters li:hover {
+ol.chapters li ol li:hover {
   border-bottom: solid 3px #88f;
-}
-
-ol.mobile-chapters {
-  display: none;
 }
 
 div.pages {

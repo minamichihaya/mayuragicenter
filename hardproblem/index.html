@@ -19,18 +19,20 @@
     <div class="mainpage">
       <div class="contents">
 
-        <ol class="chapters">
-          <li v-repeat="chapter : mainpage.chapters">
-            <a href="#{{chapter.id}}">{{chapter.sectPrefix}}</a>
-          </li>
-        </ol>
-
         <div v-component="hpot_logo"></div>
 
 
-        <ol class="mobile-chapters">
+        <ol class="chapters">
           <li v-repeat="chapter : mainpage.chapters">
-            <a href="#{{chapter.id}}">{{chapter.sectPrefix}}</a>
+            <p class="header">
+              <span class="sectPrefix">{{chapter.sectPrefix}}</span>
+              <span class="title">{{chapter.title}}</span>
+            </p>
+            <ol>
+              <li v-repeat="section : chapter.sections">
+                <a href="#{{section.id}}">{{section.title}}</a>
+              </li>
+            </ol>
           </li>
         </ol>
       </div>
