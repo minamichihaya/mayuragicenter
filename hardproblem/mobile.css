@@ -146,10 +146,10 @@ div.contents img {
 }
 
 /**************************************\
- * Contents
+ * Logo of Contents
 \**************************************/
 div.contents div.logo {
-  border: solid 1px #555;
+  border: solid 1px #ccc;
 }
 
 div.contents div.logo img {
