@@ -2,45 +2,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
-  <link rel="stylesheet" type="text/css" media="screen and (min-width: 24em)" href="../css/desktop.css" />
-  <link rel="stylesheet" type="text/css" media="not screen and (min-width: 24em)" href="../css/mobile.css" />
+  <link rel="stylesheet" type="text/css" media="screen and (min-width: 24em)" href="desktop.css" />
+  <link rel="stylesheet" type="text/css" media="not screen and (min-width: 24em)" href="mobile.css" />
   <title>真摇中心</title>
 </head>
-<body>
-  <div id="pages" class="pages">
-    <div class="subpage" v-repeat="subpage : subpages" id="{{subpage.id}}">
-      <div v-component="hpot_header" v-with="subpage"></div>
-      <div class="contents">
-        <p class="text"></p>
-        <div v-component="hpot_footer" v-with="subpage">
-      </div></div>
-    </div>
+<body id="mainpage">
+  <div v-component="hpot-mainpage-header"></div>
 
-    <div class="mainpage">
-      <div v-component="hpot_header_of_main"></div>
-
-      <div class="contents">
-
-        <ol class="chapters">
-          <li v-repeat="chapter : mainpage.chapters">
-            <p class="header">
-              <span class="sectPrefix">{{chapter.sectPrefix}}</span>
-              <span class="title">{{chapter.title}}</span>
-            </p>
-            <ol>
-              <li v-repeat="section : chapter.sections">
-                <a href="#{{section.id}}">{{section.title}}</a>
-              </li>
-            </ol>
-          </li>
-        </ol>
-      </div>
-    </div>
+  <div class="contents">
+    <div v-component="hpot-index"></div>
   </div>
 </body>
 </html>
 
-<script src="../vendor/underscore-min.js"></script>
+<script src="config.js"></script>
 <script src="../vendor/vue.min.js"></script>
-<script src="../lib/util.js"></script>
-<script src="app.js"></script>
+<script src="components.js"></script>
+<script src="index.js"></script>
