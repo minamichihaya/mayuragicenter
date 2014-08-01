@@ -7,9 +7,9 @@ body {
  * Header
 \**************************************/
 div.header {
-  width: 100%;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 div.header .hr {
@@ -18,43 +18,46 @@ div.header .hr {
   height: 0.2em;
 }
 
-div.header div.hr + p.word {
-  margin-left: 2em;
+/**************************************\
+ * Header of Main page
+\**************************************/
+div.hpot-main-header img {
+  width: 100%;
+  height: auto;
 }
 
-div.header p.word {
+div.hpot-main-header p.word {
   color: #888;
-  font-size: 0.75em;
-  margin: 0;
-  display: inline-block;
+  text-align: center;
+}
+
+/**************************************\
+ * Header of Novel page
+\**************************************/
+div.hpot-page-header img {
+  width: 50%;
+}
+
+div.hpot-page-header p.word {
+  display: none;
 }
 
 /**************************************\
  * Section Index of Header
 \**************************************/
-div.header div.hpot-section-index {
-  float: right;
-  margin: 2em;
-}
-
 div.header div.hpot-section-index ol {
   list-style: none;
-  margin: 0;
+  margin: 1em 0;
   padding: 0;
-  display: inline-block;
 }
 
 div.header div.hpot-section-index ol li {
-  min-width: 2em;
-  margin: 0 0.125em;
+  color: #ccc;
+  min-width: 1.5em;
+  margin: 0.25em 0.125em;
   padding: 0;
   display: inline-block;
   text-align: center;
-}
-
-div.header div.hpot-section-index p.title {
-  color: #ccc;
-  display: inline-block;
 }
 
 div.header div.hpot-section-index ol li a {
@@ -70,15 +73,11 @@ div.header div.hpot-section-index ol li[now="true"] {
   border-bottom: solid 3px #88f;
 }
 
-div.header div.hpot-section-index ol li:hover {
-  border-bottom: solid 3px #88f;
-}
-
 /**************************************\
  * Footer
 \**************************************/
 div.footer {
-  margin: 5em 0 0;
+  margin: 1em 0 0;
   padding: 0;
 }
 
@@ -93,44 +92,37 @@ div.footer div.hr {
 \**************************************/
 div.footer div.hpot-index > ol {
   list-style: none;
-  width: 37em;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
-div.footer div.hpot-index div.hpot-section-index > ol {
+div.footer div.hpot-section-index > ol {
   list-style: none;
-  width: auto;
-  display: inline-block;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
-div.footer div.hpot-index div.hpot-section-index > p.title {
+div.footer div.hpot-section-index li {
   color: #ccc;
-  width: 16em;
-  display: inline-block;
-}
-
-div.footer div.hpot-index div.hpot-section-index > ol li {
-  width: 2em;
-  margin: 0 0.125em;
+  min-width: 1.5em;
+  margin: 0.25em 0.125em;
   padding: 0;
   display: inline-block;
   text-align: center;
 }
 
-div.footer div.hpot-index div.hpot-section-index > ol li a {
+div.footer div.hpot-section-index li a {
   color: #ccc;
   text-decoration: none;
 }
 
-div.footer div.hpot-index div.hpot-section-index > ol li {
+div.footer div.hpot-section-index li {
   border-bottom: solid 3px #fff;
 }
 
-div.footer div.hpot-index div.hpot-section-index > ol li[now="true"],
-div.footer div.hpot-index div.hpot-section-index > ol li:hover {
+div.footer div.hpot-section-index li[now="true"] {
   border-bottom: solid 3px #88f;
 }
 
@@ -139,54 +131,48 @@ div.footer div.hpot-index div.hpot-section-index > ol li:hover {
 \**************************************/
 div.contents {
   color: #555;
-  width: 37em;
-  margin: 5em auto 5em;
+  margin: 0.75em;
   padding: 0;
 }
 
-div.contents div.text {
-  line-height: 2;
+div.contents p.text {
 }
 
-div.contents div.text {
-  white-space: pre-wrap;
+div.contents img {
+  width: 100%;
+  height: auto;
 }
 
 /**************************************\
  * Index of Main page
 \**************************************/
-#main-hpot-index > ol {
+#main-hpot-index ol {
   list-style: none;
-  width: 37em;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
 #main-hpot-index > ol li {
-  width: 37em;
-  margin: 0;
+  width: 100%;
+  margin: 0.5em auto 0.5em;
   padding: 0;
 }
 
 #main-hpot-index > ol li p.title {
-  width: 16em;
   color: #555;
   font-weight: bold;
-  display: inline-block;
 }
 
 #main-hpot-index > ol li ol {
-  width: auto;
   list-style: none;
   margin: 0;
   padding: 0;
-  display: inline-block;
 }
 
 #main-hpot-index > ol li ol li {
-  color: #ccc;
-  width: 2em;
-  margin: 0 0.125em;
+  width: 1.5em;
+  margin: 0 0.25em;
   padding: 0;
   display: inline-block;
   text-align: center;
@@ -201,7 +187,6 @@ div.contents div.text {
   border-bottom: solid 3px #fff;
 }
 
-#main-hpot-index > ol li ol li[now="true"],
 #main-hpot-index > ol li ol li:hover {
   border-bottom: solid 3px #88f;
 }
