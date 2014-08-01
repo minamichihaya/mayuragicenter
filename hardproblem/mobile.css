@@ -135,7 +135,7 @@ div.contents {
   padding: 0;
 }
 
-div.contents p.text {
+div.contents div.text {
   white-space: pre-wrap;
 }
 
