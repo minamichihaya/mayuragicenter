@@ -137,12 +137,7 @@ div.contents {
 
 div.contents div.text {
   white-space: pre-wrap;
-  font-size: 1em;
-}
-
-div.contents ruby {
-  white-space: pre-wrap;
-  font-size: 1em;
+  line-height: 2;
 }
 
 div.contents img {
