@@ -49,11 +49,7 @@ div.hpot-main-header p.word {
 /**************************************\
  * Header of Novel page
 \**************************************/
-div.hpot-page-header img {
-  width: 50%;
-}
-
-div.hpot-page-header p.word {
+div.hpot-page-header {
   display: none;
 }
 
