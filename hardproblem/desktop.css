@@ -1,3 +1,9 @@
+@media not screen and (max-device-width: 480px) {
+
+/**************************************\
+ * CSS for desktop
+\**************************************/
+
 body {
   margin: 0;
   padding: 0;
@@ -219,4 +225,6 @@ div.contents div.logo img {
 #main-hpot-index > ol li ol li[now="true"],
 #main-hpot-index > ol li ol li:hover {
   border-bottom: solid 3px #88f;
+}
+
 }

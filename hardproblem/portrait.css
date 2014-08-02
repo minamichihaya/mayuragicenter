@@ -1,3 +1,9 @@
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+
+/**************************************\
+ * CSS for mobile (portrait)
+\**************************************/
+
 body {
   margin: 0;
   padding: 0;
@@ -212,4 +218,6 @@ div.contents div.logo img {
 
 #main-hpot-index > ol li ol li:hover {
   border-bottom: solid 3px #88f;
+}
+
 }
