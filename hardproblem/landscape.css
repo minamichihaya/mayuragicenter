@@ -54,47 +54,6 @@ div.hpot-page-header {
 }
 
 /**************************************\
- * Section Index of Header
-\**************************************/
-div.header div.hpot-section-index {
-  text-align: center;
-  margin: 2em;
-}
-
-div.header div.hpot-section-index ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-}
-
-div.header div.hpot-section-index ol li {
-  min-width: 2em;
-  margin: 0 0.125em;
-  padding: 0;
-  display: inline-block;
-  text-align: center;
-}
-
-div.header div.hpot-section-index p.title {
-  color: #ccc;
-  display: inline-block;
-}
-
-div.header div.hpot-section-index ol li a {
-  color: #ccc;
-  text-decoration: none;
-}
-
-div.header div.hpot-section-index ol li {
-  border-bottom: solid 3px #fff;
-}
-
-div.header div.hpot-section-index ol li[now="true"] {
-  border-bottom: solid 3px #88f;
-}
-
-/**************************************\
  * Footer
 \**************************************/
 div.footer {
