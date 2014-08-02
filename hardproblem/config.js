@@ -1,6 +1,18 @@
 HPOTCFG = {}
 HPOTCFG.chapters = [
                     {
+                      sectPrefix: "",
+                      title: "プロローグ",
+                      id: "0-01",
+                      sections:
+                        [
+                          {
+                            title: "1",
+                            id: "0-01",
+                          },
+                        ],
+                    },
+                    {
                       sectPrefix: "§1",
                       title: "虹を閉じ込めた瞳",
                       id: "1-01",
