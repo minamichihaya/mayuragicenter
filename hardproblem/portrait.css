@@ -60,6 +60,10 @@ div.hpot-page-header p.word {
 /**************************************\
  * Section Index of Header
 \**************************************/
+div.header div.hpot-section-index p.title {
+  color: #ccc;
+}
+
 div.header div.hpot-section-index ol {
   list-style: none;
   margin: 1em 0;
@@ -126,6 +130,10 @@ div.footer div.hpot-section-index li {
   padding: 0;
   display: inline-block;
   text-align: center;
+}
+
+div.footer div.hpot-section-index p.title {
+  color: #ccc;
 }
 
 div.footer div.hpot-section-index li a {
