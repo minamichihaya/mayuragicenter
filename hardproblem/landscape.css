@@ -117,7 +117,7 @@ div.footer div.hr {
 \**************************************/
 div.footer div.hpot-index > ol {
   list-style: none;
-  width: 37em;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -193,13 +193,12 @@ div.contents div.logo img {
 \**************************************/
 #main-hpot-index > ol {
   list-style: none;
-  width: 37em;
-  margin: 0 auto 0;
+  width: 100%;
+  margin: 0;
   padding: 0;
 }
 
 #main-hpot-index > ol li {
-  width: 37em;
   margin: 0;
   padding: 0;
 }
