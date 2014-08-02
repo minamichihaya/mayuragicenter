@@ -61,7 +61,7 @@ div.hpot-page-header p.word {
  * Section Index of Header
 \**************************************/
 div.header div.hpot-section-index {
-  float: right;
+  text-align: center;
   margin: 2em;
 }
 
@@ -194,7 +194,7 @@ div.contents div.logo img {
 #main-hpot-index > ol {
   list-style: none;
   width: 37em;
-  margin: 0;
+  margin: 0 auto 0;
   padding: 0;
 }
 
