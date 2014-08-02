@@ -36,7 +36,7 @@ Vue.component('hpot-section-index', {
   className: "hpot-section-index",
   template: '<p class="title">'
           + '  <span class="sect-prefix">{{chapter.sectPrefix}}</span>'
-          + '  <span class="sect-prefix">{{chapter.title}}</span>'
+          + '  <span class="title-text">{{chapter.title}}</span>'
           + '</p>'
           + '<ol>'
           + '  <li v-repeat="section : chapter.sections" now="{{now === section.id}}">'
