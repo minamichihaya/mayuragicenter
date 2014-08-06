@@ -57,6 +57,43 @@ table.picture>caption{
 
 .caption{
   margin-top:1em;
-  font:normal/100% "メイリオ",sans-serif;
+  font:medium/100% "メイリオ",sans-serif;
   text-align:center;
+}
+
+table.novel{
+  table-layout:auto;
+  width:640px;
+  margin-top:0.5em;
+  margin-left:auto;
+  margin-right:auto;
+  border: solid 1px #555555
+}
+
+table.novel td{
+  border: solid 1px #555555
+}
+
+.noveltitle{
+  text-align:center;
+  }
+  
+.noveldata1{
+  text-align:center;
+  font:medium/100% "メイリオ",sans-serif;
+  height:2em;
+  }
+ 
+.noveldata2{
+  text-align:center;
+  font:large/100% "メイリオ",sans-serif;
+  height:3em;
+  }
+
+.novelabst{
+  padding-left:1em;
+  padding-right:1em;
+  padding-top:0.5em;
+  padding-bottom:0.5em;
+  text-align:justify;
 }
