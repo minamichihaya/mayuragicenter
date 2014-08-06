@@ -55,6 +55,12 @@ table.picture>caption{
   border: 1px #000000 solid;
 }
 
+.picturetitle{
+  margin-top:1em;
+  font:large/100% "メイリオ",sans-serif;
+  text-align:center;
+}
+
 .caption{
   margin-top:1em;
   font:medium/100% "メイリオ",sans-serif;
