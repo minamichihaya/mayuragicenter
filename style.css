@@ -1,8 +1,18 @@
-.bd{
-  width: 37em;
-  margin: 0 auto 0;
-  padding: 0;
+a:link{color:#ff0000;}
+a:visited {color:#ff0000;}
+
+.logo{
+  margin-top:2em;
   text-align: center;
-  list-style: none;
-  font-family:"メイリオ",sans-serif; 
+}
+
+table{
+  table-layout:fixed;
+  width:400px;
+  margin-top:3em;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+  font:large/200% "メイリオ",sans-serif;
+  padding: 0;
 }
