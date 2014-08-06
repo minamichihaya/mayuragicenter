@@ -17,10 +17,15 @@ table.top{
   padding: 0;
 }
 
+.picture_text{
+  text-align:center;
+  margin-top:3em;
+}
+
 table.picture{
   table-layout:fixed;
   width:640px;
-  margin-top:4em;
+  margin-top:3em;
   margin-left:auto;
   margin-right:auto;
 }
@@ -38,5 +43,20 @@ table.picture>caption{
   font:large/200% "メイリオ",sans-serif;
   text-align:center;
   margin-top:4em;
-  margin-bottom:2em;}
+  margin-bottom:2em;
+}
 
+.image{
+  margin-top:3em;
+  text-align:center;
+}
+
+.image img{
+  border: 1px #000000 solid;
+}
+
+.caption{
+  margin-top:1em;
+  font:normal/100% "メイリオ",sans-serif;
+  text-align:center;
+}
