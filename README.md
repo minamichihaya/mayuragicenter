@@ -7,5 +7,5 @@
  
 ## Webfonts
 
-* SourceHanSansJP
-* SourceHanSansCN
+* Source Han Sans JP
+* Source Han Sans CN
