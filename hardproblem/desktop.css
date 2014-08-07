@@ -1,6 +1,8 @@
 @font-face {
   font-family: "源ノ角ゴシック JP Regular";
   src: url("../fonts/SourceHanSansJP-Regular.otf") format("opentype") ;
+  font-family: "Source Han Sans JP Regular";
+  src: url("../fonts/SourceHanSansJP-Regular.otf") format("opentype") ;
   font-family: "Source Han Sans CN Regular";
   src: url("../fonts/SourceHanSansCN-Regular.otf") format("opentype") ;
 }
@@ -164,7 +166,7 @@ div.contents {
 
 div.contents div.text {
   line-height: 2;
-  font-family: "源ノ角ゴシック JP Regular" !important ; 
+  font-family: "源ノ角ゴシック JP Regular","Source Han Sans JP Regular","ヒラギノ角ゴ Pro W3",メイリオ,sans-serif !important ; 
 }
 
 div.contents div.text {
@@ -173,7 +175,7 @@ div.contents div.text {
 
 span.simplified {
   line-height: 2;
-  font-family: "Source Han Sans CN Regular";
+  font-family: "Source Han Sans CN Regular","Hei","Microsoft YaHei",sans-serif !important ;
 }
 
 /**************************************\
