@@ -228,3 +228,8 @@ div.contents div.logo img {
 }
 
 }
+
+@font-face {
+  font-family: "源ノ角ゴシック JP Regular";
+  src: url("https://dl.dropboxusercontent.com/u/125933124/fonts/SourceHanSansJP-Regular.otf");
+}
