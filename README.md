@@ -8,4 +8,4 @@
 ## Webfonts
 
 * SourceHanSansJP
-* SouceHanSansCN
+* SourceHanSansCN
