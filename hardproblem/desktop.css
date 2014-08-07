@@ -1,6 +1,8 @@
 @font-face {
   font-family: "源ノ角ゴシック JP Regular";
   src: url("../fonts/SourceHanSansJP-Regular.otf") format("opentype") ;
+  font-family: "Source Han Sans CN Regular";
+  src: url("../fonts/SourceHanSansCN-Regular.otf") format("opentype") ;
 }
 
 
@@ -167,6 +169,11 @@ div.contents div.text {
 
 div.contents div.text {
   white-space: pre-wrap;
+}
+
+span.simplified {
+  line-height: 2;
+  font-family: "Source Han Sans CN Regular";
 }
 
 /**************************************\
