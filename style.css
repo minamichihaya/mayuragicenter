@@ -1,6 +1,10 @@
 a:link{color:#ff0000;}
 a:visited {color:#ff0000;}
 
+*{
+  font-family:"メイリオ","Meiryo",sans-serif;
+}
+
 .logo{
   margin-top:2em;
   text-align: center;
@@ -13,7 +17,7 @@ table.top{
   margin-left:auto;
   margin-right:auto;
   text-align:center;
-  font:large/200% "メイリオ",sans-serif;
+  font:large/200% "メイリオ","Meiryo",sans-serif;
   padding: 0;
 }
 
