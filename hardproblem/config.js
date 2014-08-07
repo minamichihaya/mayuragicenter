@@ -54,7 +54,7 @@ HPOTCFG.chapters = [
                     },
                     {
                       sectPrefix: "§2",
-                      title: "海へ行こう",
+                      title: "海へいこう",
                       sections:
                         [
                           {
