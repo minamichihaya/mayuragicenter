@@ -167,6 +167,7 @@ div.contents {
 div.contents div.text {
   line-height: 2;
   font-family: "源ノ角ゴシック JP Regular","Source Han Sans JP Regular","ヒラギノ角ゴ Pro W3",メイリオ,sans-serif !important ; 
+  text-align:justify;
 }
 
 div.contents div.text {
