@@ -179,6 +179,12 @@ span.simplified {
   font-family: "Source Han Sans CN Regular","Hei","Microsoft YaHei",sans-serif !important ;
 }
 
+span.times {
+  line-height: 2;
+  font-family: "Times New Roman","Times",serif !important ;
+  font-size: large;
+}
+
 /**************************************\
  * Logo of Contents
 \**************************************/
