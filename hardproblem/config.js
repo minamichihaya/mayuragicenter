@@ -120,7 +120,7 @@ HPOTCFG.chapters = [
                     },
                     {
                       sectPrefix: "§4",
-                      title: "ことしはひとりじゃない",
+                      title: "因果の玉突き",
                       sections:
                         [
                           {
