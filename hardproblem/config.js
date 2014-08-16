@@ -116,6 +116,10 @@ HPOTCFG.chapters = [
                             title: "7",
                             id: "3-07",
                           },
+                          {
+                            title: "8",
+                            id: "3-08",
+                          },
                         ],
                     },
                     {
