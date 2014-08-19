@@ -3,12 +3,12 @@ HPOTCFG.chapters = [
                     {
                       sectPrefix: "",
                       title: "プロローグ",
-                      id: "0-01",
+                      id: "0",
                       sections:
                         [
                           {
-                            title: "1",
-                            id: "0-01",
+                            title: "*",
+                            id: "0",
                           },
                         ],
                     },
