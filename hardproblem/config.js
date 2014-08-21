@@ -147,6 +147,10 @@ HPOTCFG.chapters = [
                             title: "5",
                             id: "4-05",
                           },
+                          {
+                            title: "6",
+                            id: "4-06",
+                          },
                         ],
                     },
                     {
