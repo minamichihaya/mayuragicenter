@@ -156,6 +156,13 @@ HPOTCFG.chapters = [
                     {
                       sectPrefix: "§5",
                       title: "(タイトル未定)",
+                      sections:
+                        [
+                          {
+                            title: "1",
+                            id: "5-01",
+                          },
+                         ],
                     },
                     {
                       sectPrefix: "§6",
