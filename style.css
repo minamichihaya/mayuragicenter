@@ -143,7 +143,7 @@ table.short td{
 
 table.link{
   table-layout:auto;
-  width:640px;
+  width:750px;
   margin-top:1em;
   margin-left:auto;
   margin-right:auto;
@@ -151,17 +151,16 @@ table.link{
 
 table.link td.banner{
   text-align:center;
-  padding-top:0em;
-  padding-bottom:0em;
+  padding-top:0.5em;
+  padding-bottom:0.5em;
+  width:250px;
 }
 
 table.link td.nobanner{
   text-align:center;
-  padding-top:0em;
-  padding-bottom:0em;
-  margin-left:auto;
-  margin-right:auto;
-  border: 1px #000000 solid;
+  padding-top:0.5em;
+  padding-bottom:0.5em;
+  width:250px;
 }
 
 table.link img{
@@ -174,3 +173,11 @@ table.link img{
   text-align:center;
 }
 
+.pbanner{
+  border: 1px #000000 solid;
+  padding-top:0.5em;
+  padding-bottom:0.5em;
+  padding-right:1em;
+  padding-left:1em;
+  text-align:center;
+}
