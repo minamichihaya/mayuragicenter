@@ -140,3 +140,22 @@ table.short{
 table.short td{
   border: solid 1px #555555
 }
+
+table.link{
+  table-layout:auto;
+  width:700px;
+  margin-top:3em;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+table.link td.banner{
+  text-align:center;
+  padding-top:0.5em;
+  padding-bottom:0.5em;
+}
+
+table.link img{
+  border: 1px #000000 solid;
+}
+
