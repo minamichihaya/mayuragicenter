@@ -172,14 +172,7 @@ table.link{
   margin-right:auto;
 }
 
-table.link td.banner{
-  text-align:center;
-  padding-top:0.5em;
-  padding-bottom:0.5em;
-  width:250px;
-}
-
-table.link td.nobanner{
+table.link td{
   text-align:center;
   padding-top:0.5em;
   padding-bottom:0.5em;
@@ -187,20 +180,37 @@ table.link td.nobanner{
 }
 
 table.link img{
-  border: 1px #000000 solid;
+  border: 1px #AAAAAA solid;
+  opacity:0.6;
 }
 
-.linktop{
-  margin-top:3em;
-  margin-bottom:1em;
-  text-align:center;
+table.link img:hover{
+  border: 1px #000000 solid;
+  opacity:1;
 }
 
 .pbanner{
+  border: 1px #AAAAAA solid;
+  padding-top:0.5em;
+  padding-bottom:0.5em;
+  padding-right:1em;
+  padding-left:1em;
+  text-align:center;
+  opacity:0.6;
+}
+
+.pbanner:hover{
   border: 1px #000000 solid;
   padding-top:0.5em;
   padding-bottom:0.5em;
   padding-right:1em;
   padding-left:1em;
+  text-align:center;
+  opacity:1;
+}
+
+.linktop{
+  margin-top:3em;
+  margin-bottom:1em;
   text-align:center;
 }
