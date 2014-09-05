@@ -1,8 +1,14 @@
 /*全般*/
 
-a:link{color:#ff0000;}
+a:link{
+  color:#ff0000;
+  text-decoration: none;
+}
 
-a:visited {color:#ff0000;}
+a:visited {
+  color:#ff0000;
+  text-decoration: none;
+}
 
 html {
 overflow-y:scroll;
@@ -220,6 +226,7 @@ table.link img:hover{
   padding-right:1em;
   padding-left:1em;
   text-align:center;
+  color: #000000;
   opacity:1;
 }
 
