@@ -164,10 +164,30 @@ table.picture>caption{
 
 /*リンクページ*/
 
+
+table.linktop{
+  table-layout:auto;
+  width:430px;
+  margin-top:4em;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+table.linktop img{
+  border: 1px #AAAAAA solid;
+  opacity:0.6;
+}
+
+table.linktop img:hover{
+  border: 1px #000000 solid;
+  opacity:1;
+}
+
+
 table.link{
   table-layout:auto;
   width:640px;
-  margin-top:1em;
+  margin-top:0em;
   margin-left:auto;
   margin-right:auto;
 }
@@ -176,7 +196,8 @@ table.link td{
   text-align:center;
   padding-top:0.5em;
   padding-bottom:0.5em;
-  width:250px;
+  width:auto;
+  height:70px
 }
 
 table.link img{
@@ -209,8 +230,3 @@ table.link img:hover{
   opacity:1;
 }
 
-.linktop{
-  margin-top:3em;
-  margin-bottom:1em;
-  text-align:center;
-}
