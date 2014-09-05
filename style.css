@@ -167,7 +167,7 @@ table.picture>caption{
 
 table.linktop{
   table-layout:fixed;
-  width:430px;
+  width:512px;
   height:70px;
   margin-top:4em;
   margin-left:auto;
@@ -187,8 +187,8 @@ table.linktop img:hover{
 
 
 table.link{
-  table-layout:auto;
-  width:640px;
+  table-layout:fixed;
+  width:768px;
   margin-top:0em;
   margin-left:auto;
   margin-right:auto;
@@ -230,5 +230,9 @@ table.link img:hover{
   padding-left:1em;
   text-align:center;
   opacity:1;
+}
+
+.shorten{
+  font-size:small;
 }
 
