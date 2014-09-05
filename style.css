@@ -125,13 +125,13 @@ table.picture{
 }
 
 table.picture img{
-  border: 1px #AAAAAA solid;
-  Opacity: 0.6;
+  border: 1px #000000 solid;
+  Opacity: 1;
 }
 
 table.picture img:hover{
-  Opacity: 1;
-  border: 1px #000000 solid;
+  Opacity: 0.6;
+  border: 1px #AAAAAA solid;
 }
 
 table.picture>caption{
@@ -177,13 +177,13 @@ table.linktop{
 }
 
 table.linktop img{
-  border: 1px #AAAAAA solid;
-  opacity:0.6;
+  border: 1px #000000 solid;
+  opacity:1;
 }
 
 table.linktop img:hover{
-  border: 1px #000000 solid;
-  opacity:1;
+  border: 1px #AAAAAA solid;
+  opacity:0.6;
 }
 
 
@@ -204,16 +204,26 @@ table.link td{
 }
 
 table.link img{
-  border: 1px #AAAAAA solid;
-  opacity:0.6;
+  border: 1px #000000 solid;
+  opacity:1;
 }
 
 table.link img:hover{
-  border: 1px #000000 solid;
-  opacity:1;
+  border: 1px #AAAAAA solid;
+  opacity:0.6;
 }
 
 .pbanner{
+  border: 1px #000000 solid;
+  padding-top:0.5em;
+  padding-bottom:0.5em;
+  padding-right:1em;
+  padding-left:1em;
+  text-align:center;
+  opacity:1;
+}
+
+.pbanner:hover{
   border: 1px #AAAAAA solid;
   padding-top:0.5em;
   padding-bottom:0.5em;
@@ -221,16 +231,6 @@ table.link img:hover{
   padding-left:1em;
   text-align:center;
   opacity:0.6;
-}
-
-.pbanner:hover{
-  border: 1px #000000 solid;
-  padding-top:0.5em;
-  padding-bottom:0.5em;
-  padding-right:1em;
-  padding-left:1em;
-  text-align:center;
-  opacity:1;
 }
 
 .shorten{
