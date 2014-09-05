@@ -1,3 +1,5 @@
+/*全般*/
+
 a:link{color:#ff0000;}
 
 a:visited {color:#ff0000;}
@@ -14,6 +16,17 @@ overflow-y:scroll;
   margin-top:2em;
   text-align: center;
 }
+
+.back{
+  font:large/200% "メイリオ",sans-serif;
+  text-align:center;
+  margin-top:4em;
+  margin-bottom:2em;
+}
+
+
+
+/*トップページ*/
 
 table.top{
   table-layout:fixed;
@@ -38,55 +51,8 @@ table.top{
 }
 
 
-.picture_text{
-  text-align:center;
-  margin-top:3em;
-}
 
-table.picture{
-  table-layout:fixed;
-  width:640px;
-  margin-top:3em;
-  margin-left:auto;
-  margin-right:auto;
-}
-
-table.picture img{
-  border: 1px #000000 solid;
-}
-
-table.picture>caption{
-  font:large/150% "メイリオ",sans-serif;
-  text-align:left;
-}
-
-.back{
-  font:large/200% "メイリオ",sans-serif;
-  text-align:center;
-  margin-top:4em;
-  margin-bottom:2em;
-}
-
-.image{
-  margin-top:3em;
-  text-align:center;
-}
-
-.image img{
-  border: 1px #000000 solid;
-}
-
-.picturetitle{
-  margin-top:1em;
-  font:large/100% "メイリオ",sans-serif;
-  text-align:center;
-}
-
-.caption{
-  margin-top:1em;
-  font:medium/100% "メイリオ",sans-serif;
-  text-align:center;
-}
+/*小説ページ*/
 
 table.novel{
   table-layout:auto;
@@ -140,6 +106,63 @@ table.short{
 table.short td{
   border: solid 1px #555555
 }
+
+
+
+/*お絵かきページ*/
+
+.picture_text{
+  text-align:center;
+  margin-top:3em;
+}
+
+table.picture{
+  table-layout:fixed;
+  width:640px;
+  margin-top:3em;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+table.picture img{
+  border: 1px #AAAAAA solid;
+  Opacity: 0.7
+}
+
+table.picture img:hover{
+  Opacity: 1;
+  border: 1px #000000 solid;
+}
+
+table.picture>caption{
+  font:large/150% "メイリオ",sans-serif;
+  text-align:left;
+}
+
+.image{
+  margin-top:3em;
+  text-align:center;
+}
+
+.image img{
+  border: 1px #000000 solid;
+}
+
+.picturetitle{
+  margin-top:1em;
+  font:large/100% "メイリオ",sans-serif;
+  text-align:center;
+}
+
+.caption{
+  margin-top:1em;
+  font:medium/100% "メイリオ",sans-serif;
+  text-align:center;
+}
+
+
+
+/*リンクページ*/
 
 table.link{
   table-layout:auto;
