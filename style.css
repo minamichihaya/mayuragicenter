@@ -166,12 +166,13 @@ table.picture>caption{
 
 
 table.linktop{
-  table-layout:auto;
+  table-layout:fixed;
   width:430px;
   height:70px;
   margin-top:4em;
   margin-left:auto;
   margin-right:auto;
+  text-align:center;
 }
 
 table.linktop img{
