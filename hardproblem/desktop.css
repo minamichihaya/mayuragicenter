@@ -219,6 +219,7 @@ div.contents div.logo img {
 \**************************************/
 #main-hpot-index {
   float: left;
+  margin-top: 6em;
 }
 
 #main-hpot-index > ol {
