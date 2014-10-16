@@ -202,6 +202,10 @@ div.contents div.logo img {
   width: 100%;
 }
 
+div.hpot-main-header {
+  display: none;
+}
+
 /**************************************\
  * Contents of Main contents
 \**************************************/
