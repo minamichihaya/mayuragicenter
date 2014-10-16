@@ -85,7 +85,7 @@ HPOTCFG.chapters = [
                     },
                     {
                       sectPrefix: "§3",
-                      title: "その柔肌は誰のために",
+                      title: "その柔肌は誰がために",
                       sections:
                         [
                           {
@@ -159,7 +159,7 @@ HPOTCFG.chapters = [
                       sections:
                         [
                           {
-                            title: "1",
+                            title: "*",
                             id: "5-01",
                           },
                          ],
