@@ -203,8 +203,25 @@ div.contents div.logo img {
 }
 
 /**************************************\
+ * Contents of Main contents
+\**************************************/
+#main-contents {
+  width: 74em;
+}
+
+#main-contents img.hpot-cover {
+  float: left;
+  width: 37em;
+}
+
+/**************************************\
  * Index of Main page
 \**************************************/
+#main-hpot-index {
+  float: left;
+  margin-top: 6em;
+}
+
 #main-hpot-index > ol {
   list-style: none;
   width: 37em;

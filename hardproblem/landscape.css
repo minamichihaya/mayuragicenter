@@ -34,6 +34,13 @@ div.header .hr {
 }
 
 /**************************************\
+ * Contents of Main contents
+\**************************************/
+#main-contents img.hpot-cover {
+  display: none; /* FIXME */
+}
+
+/**************************************\
  * Header of Main page
 \**************************************/
 div.hpot-main-header img {
