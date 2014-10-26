@@ -1,6 +1,6 @@
 Vue.component('hpot-main-header', {
   className: 'header hpot-header hpot-main-header',
-  template: '<a href="../hardproblem"><img src="../img/hpot_logo.jpg" /></a>'
+  template: '<a href="../hardproblem"><img src="../img/hardproblem_logo.png" /></a>'
           + '<div class="hr"></div>'
           + '<p class="word">'
           + '  機械になりたい、って思った。'
@@ -12,7 +12,7 @@ Vue.component('hpot-main-header', {
 
 Vue.component('hpot-page-header', {
   className: 'header hpot-header hpot-page-header',
-  template: '<a href="../hardproblem"><img src="../img/hpot_logo.jpg" /></a>'
+  template: '<a href="../hardproblem"><img src="../img/hardproblem_logo.png" /></a>'
           + '<div v-component="hpot-section-index"></div>'
           + '<div class="hr"></div>'
 });
