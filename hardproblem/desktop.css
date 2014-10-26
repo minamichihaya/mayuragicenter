@@ -215,7 +215,7 @@ div.hpot-main-header {
 
 #main-contents img.hpot-cover {
   float: left;
-  width: 37em;
+  position: relative; top:-4em;
 }
 
 /**************************************\
@@ -223,14 +223,15 @@ div.hpot-main-header {
 \**************************************/
 #main-hpot-index {
   float: left;
-  margin-top: 6em;
+  margin-top: 0em;
 }
 
 #main-hpot-index > ol {
   list-style: none;
   width: 37em;
   margin: 0;
-  padding: 0;
+  padding: right:1em;
+  position: relative; top:1em;
 }
 
 #main-hpot-index > ol li {

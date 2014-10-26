@@ -168,4 +168,20 @@ HPOTCFG.chapters = [
                       sectPrefix: "§6",
                       title: "窓の向こう(仮)",
                     },
+                    {
+                      sectPrefix: "",
+                      title: "エピローグ",
+                    },
+                    {
+                      sectPrefix: "",
+                      title: "あとがき",
+                    },
+                    {
+                      sectPrefix: "",
+                      title: "References",
+                    },
+                    {
+                      sectPrefix: "",
+                      title: "Acknowledgements",
+                    }
                   ];
