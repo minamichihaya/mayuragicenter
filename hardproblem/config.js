@@ -155,7 +155,7 @@ HPOTCFG.chapters = [
                     },
                     {
                       sectPrefix: "§5",
-                      title: "(タイトル未定)",
+                      title: "止まらない歯車(仮)",
                       sections:
                         [
                           {
@@ -166,7 +166,7 @@ HPOTCFG.chapters = [
                     },
                     {
                       sectPrefix: "§6",
-                      title: "窓の向こう(仮)",
+                      title: "もうひとつの部屋(仮)",
                     },
                     {
                       sectPrefix: "",

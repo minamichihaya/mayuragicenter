@@ -20,6 +20,9 @@
  * CSS for desktop
 \**************************************/
 
+* {font-family:メイリオ,sans-serif; 
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -164,15 +167,15 @@ div.footer div.hpot-index div.hpot-section-index > ol li:hover {
  * Contents
 \**************************************/
 div.contents {
-  color: #444;
+  color: #666;
   width: 37em;
   margin: 5em auto 5em;
   padding: 0;
 }
 
 div.contents div.text {
-  line-height: 2;
-  font-family: "源ノ角ゴシック JP Regular","Source Han Sans JP Regular","ヒラギノ角ゴ Pro W3",メイリオ,sans-serif !important ; 
+  line-height: 2.23;
+  font-weight:light;
   text-align:justify;
 }
 
@@ -182,7 +185,9 @@ div.contents div.text {
 
 span.simplified {
   line-height: 2;
-  font-family: "Source Han Sans CN Regular","Hei","Microsoft YaHei",sans-serif !important ;
+  font-family: "Microsoft YaHei",sans-serif !important ;
+  vertical-align:0%;
+  font-size:100%;
 }
 
 span.times {
@@ -210,40 +215,43 @@ div.hpot-main-header {
  * Contents of Main contents
 \**************************************/
 #main-contents {
-  width: 74em;
+  width: 68em;
 }
 
 #main-contents img.hpot-cover {
   float: left;
-  position: relative; top:-4em;
+  position: relative; top:-3em;right:-0.5em;
 }
 
 /**************************************\
  * Index of Main page
 \**************************************/
 #main-hpot-index {
-  float: left;
-  margin-top: 0em;
+  right:auto;
+  float: right;
+  margin-top: 1em;
+  width:33em;
+  position:relative;left:-0.5em;
 }
 
 #main-hpot-index > ol {
   list-style: none;
-  width: 37em;
+  width: 33em;
   margin: 0;
-  padding: right:1em;
+  padding: right:0em;
   position: relative; top:1em;
 }
 
 #main-hpot-index > ol li {
-  width: 37em;
+  width: 33em;
   margin: 0;
   padding: 0;
 }
 
 #main-hpot-index > ol li p.title {
-  width: 16em;
+  width: 14em;
   color: #555;
-  font-weight: bold;
+  font-weight: normal;
   display: inline-block;
 }
 
@@ -265,7 +273,7 @@ div.hpot-main-header {
 }
 
 #main-hpot-index > ol li ol li a {
-  color: #ccc;
+  color: #bbb;
   text-decoration: none;
 }
 

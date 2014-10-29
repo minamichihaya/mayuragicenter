@@ -205,7 +205,7 @@ div.contents div.logo img {
 
 #main-hpot-index > ol li p.title {
   color: #555;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 #main-hpot-index > ol li ol {
@@ -223,7 +223,7 @@ div.contents div.logo img {
 }
 
 #main-hpot-index > ol li ol li a {
-  color: #ccc;
+  color: #999;
   text-decoration: none;
 }
 
