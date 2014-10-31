@@ -63,7 +63,8 @@ table.top{
 table.novel{
   table-layout:auto;
   width:640px;
-  margin-top:0.5em;
+  margin-top:1.5em;
+  margin-bottom:5.5em;
   margin-left:auto;
   margin-right:auto;
   border: solid 1px #555555
