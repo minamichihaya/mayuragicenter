@@ -20,8 +20,7 @@
  * CSS for desktop
 \**************************************/
 
-* {font-family:メイリオ,sans-serif; 
-}
+* {}
 
 body {
   margin: 0;
@@ -84,6 +83,7 @@ div.header div.hpot-section-index ol li {
 div.header div.hpot-section-index p.title {
   color: #ccc;
   display: inline-block;
+  margin-right:1em;
 }
 
 div.header div.hpot-section-index ol li a {
@@ -177,6 +177,7 @@ div.contents div.text {
   line-height: 2.23;
   font-weight:light;
   text-align:justify;
+  font-family:"ヒラギノ角ゴ Pro W3","メイリオ","ＭＳ ゴシック",sans-serif;
 }
 
 div.contents div.text {
@@ -185,7 +186,7 @@ div.contents div.text {
 
 span.simplified {
   line-height: 2;
-  font-family: "Microsoft YaHei",sans-serif !important ;
+  font-family:"Han","Microsoft YaHei","SimHei",sans-serif !important ;
   vertical-align:0%;
   font-size:100%;
 }
@@ -232,6 +233,7 @@ div.hpot-main-header {
   margin-top: 1em;
   width:33em;
   position:relative;left:-0.5em;
+  font-family:"游明朝 Demibold","ヒラギノ明朝W4","HG明朝B","ＭＳ 明朝",serif;
 }
 
 #main-hpot-index > ol {
@@ -251,7 +253,7 @@ div.hpot-main-header {
 #main-hpot-index > ol li p.title {
   width: 14em;
   color: #555;
-  font-weight: normal;
+  font-weight: bold;
   display: inline-block;
 }
 

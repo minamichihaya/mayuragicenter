@@ -14,7 +14,7 @@ HPOTCFG.chapters = [
                     },
                     {
                       sectPrefix: "§1",
-                      title: "虹を閉じ込めた瞳",
+                      title: "　虹を閉じ込めた瞳",
                       id: "1-01",
                       sections:
                         [
@@ -54,7 +54,7 @@ HPOTCFG.chapters = [
                     },
                     {
                       sectPrefix: "§2",
-                      title: "海へいこう",
+                      title: "　海へいこう",
                       sections:
                         [
                           {
@@ -85,7 +85,7 @@ HPOTCFG.chapters = [
                     },
                     {
                       sectPrefix: "§3",
-                      title: "その柔肌は誰がために",
+                      title: "　その柔肌は誰がために",
                       sections:
                         [
                           {
@@ -124,7 +124,7 @@ HPOTCFG.chapters = [
                     },
                     {
                       sectPrefix: "§4",
-                      title: "因果の玉突き",
+                      title: "　因果の玉突き",
                       sections:
                         [
                           {
@@ -155,7 +155,7 @@ HPOTCFG.chapters = [
                     },
                     {
                       sectPrefix: "§5",
-                      title: "止まらない歯車(仮)",
+                      title: "　止まらない歯車(仮)",
                       sections:
                         [
                           {
@@ -166,7 +166,7 @@ HPOTCFG.chapters = [
                     },
                     {
                       sectPrefix: "§6",
-                      title: "もうひとつの部屋(仮)",
+                      title: "　もうひとつの部屋(仮)",
                     },
                     {
                       sectPrefix: "",
