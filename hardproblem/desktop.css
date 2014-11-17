@@ -63,7 +63,7 @@ div.header p.word {
 \**************************************/
 div.header div.hpot-section-index {
   float: right;
-  margin: 2em;
+  margin: 0.25em 2em;
 }
 
 div.header div.hpot-section-index ol {
@@ -102,6 +102,14 @@ div.header div.hpot-section-index ol li[now="true"] {
 
 div.header div.hpot-section-index ol li:hover {
   border-bottom: solid 3px #88f;
+}
+
+/**************************************\
+ * Font Select
+\**************************************/
+div.header select.fontselect {
+  marigin-top: 0.25em;
+  float: right;
 }
 
 /**************************************\
