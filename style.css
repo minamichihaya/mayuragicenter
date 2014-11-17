@@ -1,4 +1,6 @@
-/*全般*/
+/**************************************\
+ *全般
+\**************************************/
 
 a:link{
   color:#ff0000;
@@ -32,7 +34,9 @@ overflow-y:scroll;
 
 
 
-/*トップページ*/
+/**************************************\
+ *トップページ
+\**************************************/
 
 table.top{
   table-layout:fixed;
@@ -58,7 +62,9 @@ table.top{
 
 
 
-/*小説ページ*/
+/**************************************\
+ *小説ページ
+\**************************************/
 
 table.novel{
   table-layout:auto;
@@ -116,7 +122,9 @@ table.short td{
 
 
 
-/*お絵かきページ*/
+/**************************************\
+ *お絵かきページ
+\**************************************/
 
 .picture_text{
   text-align:center;
@@ -168,8 +176,42 @@ table.picture>caption{
 }
 
 
+/**************************************\
+ *音楽ページ
+\**************************************/
 
-/*リンクページ*/
+div.music_text{
+  text-align:center;
+  margin-top:3em;}
+
+table.music{
+  margin-right:auto;
+  margin-left:auto;
+  width:640px;
+  table-layout:auto;
+  padding-top:1em;
+}
+
+tr.music_column{
+  text-align:left;
+  font-size:large;
+  text-decoration:underline;
+  height:3em;
+}
+
+tr.music_list{
+  text-align:left;
+  height:3em;
+  font-size:smaller;
+}
+
+td.music_title{
+  font-size:large;
+}
+
+/**************************************\
+ *リンクページ
+\**************************************/
 
 
 table.linktop{
