@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "游明朝 Demibold";
+  src: url("../fonts/yumindb.ttf") format("truetype") ;
+}
+
+@font-face {
+  font-family: "AR PL SungtiL GB";
+  src: url("../fonts/gbsn00lp.ttf") format("truetype") ;
+}
+
+div.contents div.text {
+  font-family:"游明朝 Demibold";
+}
+
+span.simplified {
+  font-family:"AR PL SungtiL GB";
+  font-weight:bolder;
+}

@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "花園明朝A";
+  src: url("../fonts/HanaMinA.ttf") format("truetype") ;
+}
+
+div.contents div.text {
+  font-family:"花園明朝A";
+}
+
+span.simplified {
+  font-family:"花園明朝A";
+}

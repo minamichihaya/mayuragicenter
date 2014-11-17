@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Noto Sans CJK JP Regular";
+  src: url("../fonts/NotoSansCJKjp-Regular.otf") format("opentype") ;
+}
+
+@font-face {
+  font-family: "Noto Sans CJK SC Regular";
+  src: url("../fonts/NotoSansCJKsc-Regular.otf") format("opentype") ;
+}
+
+div.contents div.text {
+  font-family:"Noto Sans CJK JP Regular"
+}
+
+span.simplified {
+  font-family:"Noto Sans CJK SC Regular"
+}
