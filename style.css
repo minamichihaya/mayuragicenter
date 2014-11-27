@@ -40,7 +40,7 @@ overflow-y:scroll;
 
 table.top{
   table-layout:fixed;
-  width:400px;
+  width:512px;
   margin-top:3em;
   margin-left:auto;
   margin-right:auto;
@@ -58,6 +58,7 @@ table.top{
   font:midium/100% "メイリオ","Meiryo",sans-serif;
   padding: 1em;
   border: 1px #000000 solid;
+  visibility:hidden;
 }
 
 
@@ -210,29 +211,34 @@ td.music_title{
 }
 
 /**************************************\
+ *イベントページ
+\**************************************/
+
+div.event_text{
+  text-align:center;
+  margin-top:3em;
+  margin-bottom:4em;}
+
+div.event_list{
+  margin:auto;
+  text-align:center;
+  margin-top:2em;}
+  
+span.event{
+  font-weight:bold;
+  font-size:large;
+}
+
+/**************************************\
  *リンクページ
 \**************************************/
 
-
-table.linktop{
-  table-layout:fixed;
-  width:512px;
-  height:70px;
-  margin-top:4em;
-  margin-bottom:0.7em;
-  margin-left:auto;
-  margin-right:auto;
-  text-align:center;
-}
-
-table.linktop img{
-  border: 1px #000000 solid;
-  opacity:1;
-}
-
-table.linktop img:hover{
-  border: 1px #AAAAAA solid;
-  opacity:0.6;
+div.link_category{
+  width:800px;
+  margin:auto;
+  border-bottom:solid;
+  margin-top:3em;
+  font-size:large;
 }
 
 
