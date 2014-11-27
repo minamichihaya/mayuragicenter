@@ -236,9 +236,10 @@ span.event{
 div.link_category{
   width:800px;
   margin:auto;
-  border-bottom:solid;
+  border-bottom:double #999999;
   margin-top:3em;
   font-size:large;
+  padding-left:0.5em;
 }
 
 
