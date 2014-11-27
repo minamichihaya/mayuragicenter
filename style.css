@@ -40,12 +40,12 @@ overflow-y:scroll;
 
 table.top{
   table-layout:fixed;
-  width:512px;
+  width:640px;
   margin-top:3em;
   margin-left:auto;
   margin-right:auto;
   text-align:center;
-  font:large/200% "メイリオ","Meiryo",sans-serif;
+  font:large/300% "メイリオ","Meiryo",sans-serif;
   padding: 0;
 }
 
