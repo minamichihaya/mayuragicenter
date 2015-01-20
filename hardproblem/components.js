@@ -58,7 +58,7 @@ Vue.component('hpot-section-index-in-page-header', {
           + '</ol>'
           + '<br />'
           + '<select onchange="document.getElementById(\'fontsets\').href = value;" class="fontselect">'
-          + '<option value="../fonts/meiryo.css">メイリオ + Microsoft YaHei</option>'
+          + '<option value="../fonts/meiryo.css" selected>メイリオ + Microsoft YaHei</option>'
           + '<option value="../fonts/notosans.css">Noto Sans CJK</option>'
           + '<option value="../fonts/yu_mincho.css">游明朝 + AR PL SungtiL GB</option>'
           + '<option value="../fonts/hanazono_mincho.css">花園明朝</option>'
