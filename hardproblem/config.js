@@ -1,4 +1,5 @@
 HPOTCFG = {}
+HPOTCFG.defaultFont = "../fonts/meiryo.css";
 HPOTCFG.chapters = [
                     {
                       sectPrefix: "",

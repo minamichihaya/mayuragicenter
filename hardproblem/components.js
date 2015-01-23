@@ -1,3 +1,47 @@
+function getOrInitConfig() {
+  if (typeof localStorage === "undefined") {
+    return undefined;
+  } else {
+    var config = localStorage.getItem("config");
+    if (config) {
+      return JSON.parse(config);
+    } else {
+      var defaultFont = HPOTCFG.defaultFont;
+      if (defaultFont) {
+        config = JSON.stringify({ font: defaultFont });
+      } else {
+        config = JSON.stringify({});
+      }
+      localStorage.setItem("config", config);
+      return JSON.parse(config);
+    }
+  }
+}
+
+function setConfig(config) {
+  localStorage.setItem("config", JSON.stringify(config));
+}
+
+function selectFont(value) {
+  document.getElementById("fontsets").href = value;
+  if (typeof localStorage !== "undefined") {
+    var config = getOrInitConfig();
+    config.font = value;
+    setConfig(config);
+  }
+  if (value) {
+    var font = value;
+    var selections = document.querySelectorAll("#fontselect option");
+    for (var i = 0; i < selections.length; ++i) {
+      var selection = selections[i];
+      if (selection.value === font) {
+        selection.selected = "true";
+      } else {
+        delete selections.selected;
+      }
+    }
+  }
+}
 Vue.component('hpot-main-header', {
   className: 'header hpot-header hpot-main-header',
   template: '<a href="../hardproblem"><img src="../img/hardproblem_logo.png" /></a>'
@@ -57,8 +101,8 @@ Vue.component('hpot-section-index-in-page-header', {
           + '  </li>'
           + '</ol>'
           + '<br />'
-          + '<select onchange="document.getElementById(\'fontsets\').href = value;" class="fontselect">'
-          + '<option value="../fonts/meiryo.css" selected>メイリオ + Microsoft YaHei</option>'
+          + '<select id="fontselect" onchange="selectFont(value)" class="fontselect">'
+          + '<option value="../fonts/meiryo.css">メイリオ + Microsoft YaHei</option>'
           + '<option value="../fonts/notosans.css">Noto Sans CJK</option>'
           + '<option value="../fonts/yu_mincho.css">游明朝 + AR PL SungtiL GB</option>'
           + '<option value="../fonts/hanazono_mincho.css">花園明朝</option>'
