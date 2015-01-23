@@ -24,7 +24,7 @@ div.header {
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family:"游明朝 Demibold","ヒラギノ明朝W4","HG明朝B","ＭＳ 明朝",serif;
+  font-family:"游明朝 Demibold","ヒラギノ明朝 ProN W3","Hiragino Mincho Pro","HG明朝B","ＭＳ 明朝",serif;
 }
 
 div.header .hr {
@@ -69,13 +69,13 @@ div.header div.hpot-section-index ol li {
 }
 
 div.header div.hpot-section-index p.title {
-  color: #ccc;
+  color: #aaa;
   display: inline-block;
   margin-right:1em;
 }
 
 div.header div.hpot-section-index ol li a {
-  color: #ccc;
+  color: #aaa;
   text-decoration: none;
 }
 
@@ -105,7 +105,7 @@ div.header select.fontselect {
 div.footer {
   margin: 5em 0 0;
   padding: 0;
-  font-family:"游明朝 Demibold","ヒラギノ明朝W4","HG明朝B","ＭＳ 明朝",serif;
+  font-family:"游明朝 Demibold","ヒラギノ明朝 ProN W3","Hiragino Mincho Pro","HG明朝B","ＭＳ 明朝",serif;
 }
 
 div.footer div.hr {
@@ -133,7 +133,7 @@ div.footer div.hpot-index div.hpot-section-index > ol {
 }
 
 div.footer div.hpot-index div.hpot-section-index > p.title {
-  color: #ccc;
+  color: #aaa;
   width: 16em;
   display: inline-block;
 }
@@ -147,7 +147,7 @@ div.footer div.hpot-index div.hpot-section-index > ol li {
 }
 
 div.footer div.hpot-index div.hpot-section-index > ol li a {
-  color: #ccc;
+  color: #aaa;
   text-decoration: none;
 }
 
@@ -174,7 +174,6 @@ div.contents div.text {
   line-height: 2.23;
   font-weight:light;
   text-align:justify;
-  font-family:"ヒラギノ角ゴ Pro W3","メイリオ","ＭＳ ゴシック",sans-serif;
 }
 
 div.contents div.text {
@@ -183,7 +182,6 @@ div.contents div.text {
 
 span.simplified {
   line-height: 2;
-  font-family:"Han","Microsoft YaHei","SimHei",sans-serif;
   vertical-align:0%;
   font-size:100%;
 }
@@ -237,7 +235,7 @@ div.hpot-main-header {
   margin-top: 1em;
   width:33em;
   position:relative;left:-0.5em;
-  font-family:"游明朝 Demibold","ヒラギノ明朝W4","HG明朝B","ＭＳ 明朝",serif;
+  font-family:"游明朝 Demibold","ヒラギノ明朝 ProN W3","Hiragino Mincho Pro","HG明朝B","ＭＳ 明朝",serif;
 }
 
 #main-hpot-index > ol {
@@ -279,7 +277,7 @@ div.hpot-main-header {
 }
 
 #main-hpot-index > ol li ol li a {
-  color: #bbb;
+  color: #aaa;
   text-decoration: none;
 }
 
