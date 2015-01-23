@@ -55,7 +55,7 @@ Vue.component('hpot-main-header', {
 
 Vue.component('hpot-page-header', {
   className: 'header hpot-header hpot-page-header',
-  template: '<a href="../hardproblem"><img src="../img/hardproblem_logo.png" /></a>'
+  template: '<a href="../hardproblem"><img src="../img/hardproblem_logo_header.png" /></a>'
           + '<div v-component="hpot-section-index-in-page-header"></div>'
           + '<div class="hr"></div>'
 });
