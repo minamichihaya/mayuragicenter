@@ -17,7 +17,7 @@ overflow-y:scroll;
 }
 
 *{
-  font-family:;
+  font-family:"メイリオ","Meiryo",sans-serif;
 }
 
 .logo{
@@ -26,7 +26,7 @@ overflow-y:scroll;
 }
 
 .back{
-  font:large/200%;
+  font:large/200% "メイリオ",sans-serif;
   text-align:center;
   margin-top:4em;
   margin-bottom:2em;
@@ -45,7 +45,7 @@ table.top{
   margin-left:auto;
   margin-right:auto;
   text-align:center;
-  font:large/300%;
+  font:large/300% "メイリオ","Meiryo",sans-serif;
   padding: 0;
 }
 
@@ -55,7 +55,7 @@ table.top{
   margin-left:auto;
   margin-right:auto;
   text-align:center;
-  font:midium/100%;
+  font:midium/100% "メイリオ","Meiryo",sans-serif;
   padding: 1em;
   border: 1px #000000 solid;
   visibility:;
@@ -74,11 +74,11 @@ table.novel{
   margin-bottom:5.5em;
   margin-left:auto;
   margin-right:auto;
-  border: solid 0px #555555
+  border: solid 1px #555555
 }
 
 table.novel td{
-  border: solid 1px #dddddd
+  border: solid 1px #555555
 }
 
 .noveltitle td{
@@ -89,13 +89,13 @@ table.novel td{
   
 .noveldata1{
   text-align:center;
-  font:medium/100%;
+  font:medium/100% "メイリオ",sans-serif;
   height:2em;
   }
  
 .noveldata2{
   text-align:center;
-  font:medium/100%;
+  font:medium/100% "メイリオ",sans-serif;
   height:3em;
   }
 
@@ -105,7 +105,7 @@ table.novel td{
   padding-top:0.5em;
   padding-bottom:0.5em;
   text-align:justify;
-　font:large/100%;
+　font:large/100% "メイリオ",sans-serif;
 }
 
 table.short{
@@ -114,11 +114,11 @@ table.short{
   margin-top:0.5em;
   margin-left:auto;
   margin-right:auto;
-  border: solid 0px #555555
+  border: solid 1px #555555
 }
 
 table.short td{
-  border: solid 1px #cccccc
+  border: solid 1px #555555
 }
 
 
@@ -151,7 +151,7 @@ table.picture img:hover{
 }
 
 table.picture>caption{
-  font:large/150%;
+  font:large/150% "メイリオ",sans-serif;
   text-align:left;
 }
 
@@ -166,13 +166,13 @@ table.picture>caption{
 
 .picturetitle{
   margin-top:1em;
-  font:large/100%;
+  font:large/100% "メイリオ",sans-serif;
   text-align:center;
 }
 
 .caption{
   margin-top:1em;
-  font:medium/100%;
+  font:medium/100% "メイリオ",sans-serif;
   text-align:center;
 }
 
