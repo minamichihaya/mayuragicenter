@@ -6,14 +6,9 @@ function getOrInitConfig() {
     if (config) {
       return JSON.parse(config);
     } else {
-      var defaultFont = HPOTCFG.defaultFont;
-      if (defaultFont) {
-        config = JSON.stringify({ font: defaultFont });
-      } else {
-        config = JSON.stringify({});
-      }
+      config = JSON.stringify({});
       localStorage.setItem("config", config);
-      return JSON.parse(config);
+      return {};
     }
   }
 }
@@ -29,16 +24,20 @@ function selectFont(value) {
     config.font = value;
     setConfig(config);
   }
+  var font;
   if (value) {
-    var font = value;
-    var selections = document.querySelectorAll("#fontselect option");
-    for (var i = 0; i < selections.length; ++i) {
-      var selection = selections[i];
-      if (selection.value === font) {
-        selection.selected = "true";
-      } else {
-        delete selections.selected;
-      }
+    font = value;
+  } else {
+    font = HPOTCFG.defaultFont;
+  }
+
+  var selections = document.querySelectorAll("#fontselect option");
+  for (var i = 0; i < selections.length; ++i) {
+    var selection = selections[i];
+    if (selection.value === font) {
+      selection.selected = "true";
+    } else {
+      delete selections.selected;
     }
   }
 }

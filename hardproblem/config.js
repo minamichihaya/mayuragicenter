@@ -1,5 +1,23 @@
 HPOTCFG = {}
+// option 要素の value を指定
+// <option value="VALUE">
+//   or
+// <option>VALUE</option>
+//
+// 例1: <option>ブラウザ指定</value> なら
+// HPOTCFG.defaultFont = "ブラウザ指定";
+// 例2: <option value="../fonts/meiryo.css">メイリオ</option> なら
+// HPOTCFG.defaultFont = "../fonts/meiryo.css";
+
+// どれかひとつをアンコメントすること
 HPOTCFG.defaultFont = "../fonts/meiryo.css";
+// HPOTCFG.defaultFont = "../fonts/notosans.css";
+// HPOTCFG.defaultFont = "../fonts/yu_mincho.css";
+// HPOTCFG.defaultFont = "../fonts/hanazono_mincho.css";
+// HPOTCFG.defaultFont = "../fonts/sans-serif.css";
+// HPOTCFG.defaultFont = "../fonts/serif.css";
+// HPOTCFG.defaultFont = "ブラウザ指定";
+
 HPOTCFG.chapters = [
                     {
                       sectPrefix: "",
