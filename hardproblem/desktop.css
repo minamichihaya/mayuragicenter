@@ -14,6 +14,9 @@ body {
 
 a img {
   border-style: none;
+  margin-left:1em;
+  margin-top:0.7em;
+  margin-bottom:0.5em;
 }
 
 /**************************************\
@@ -42,6 +45,10 @@ div.header p.word {
   font-size: 0.75em;
   margin: 0;
   display: inline-block;
+}
+
+div.hpot-page-header img {
+
 }
 
 /**************************************\
