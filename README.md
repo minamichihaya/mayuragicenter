@@ -3,7 +3,7 @@
 ## Authors
 
 * [pasberth](https://twitter.com/pasberth)
-* [MINAMI Xōtarō](https://twitter.com/mayuragicenter)
+* [Minami Xōtarō](https://twitter.com/mayuragicenter)
  
 ## Webfonts
 
