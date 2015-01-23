@@ -3,9 +3,14 @@
 ## Authors
 
 * [pasberth](https://twitter.com/pasberth)
-* [南正太郎](https://twitter.com/mayuragicenter)
+* [MINAMI Xōtarō](https://twitter.com/mayuragicenter)
  
 ## Webfonts
 
-* Source Han Sans JP
-* Source Han Sans CN
+* メイリオ
+* Microsoft YaHei
+* Noto Sans CJK JP Regular
+* Noto Sans CJK SC Regular
+* 游明朝 Demibold
+* AR PL SungTiL GB
+* 花園明朝A
