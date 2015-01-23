@@ -181,15 +181,22 @@ div.contents div.text {
 
 span.simplified {
   line-height: 2;
-  font-family:"Han","Microsoft YaHei","SimHei",sans-serif !important ;
+  font-family:"Han","Microsoft YaHei","SimHei",sans-serif;
   vertical-align:0%;
   font-size:100%;
 }
 
-span.times {
+span.ref_category {
   line-height: 2;
-  font-family: "Times New Roman","Times",serif !important ;
+  font-size: xx-large;
+  font-weight:bold;
+}
+
+li.ref_title {
   font-size: large;
+  margin-top:1em;
+  margin-bottom:-2em;
+  font-weight:bold;
 }
 
 /**************************************\
