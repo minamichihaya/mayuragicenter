@@ -101,12 +101,12 @@ Vue.component('hpot-section-index-in-page-header', {
           + '</ol>'
           + '<br />'
           + '<select id="fontselect" onchange="selectFont(value)" class="fontselect">'
+          + '<option selected>ブラウザ指定フォント</option>'
           + '<option value="../fonts/meiryo.css">メイリオ + Microsoft YaHei</option>'
           + '<option value="../fonts/notosans.css">Noto Sans CJK</option>'
           + '<option value="../fonts/yu_mincho.css">游明朝 + AR PL SungtiL GB</option>'
           + '<option value="../fonts/hanazono_mincho.css">花園明朝</option>'
           + '<option value="../fonts/sans-serif.css">MSゴシック／ヒラギノ角ゴ</option>'
           + '<option value="../fonts/serif.css">MS明朝／ヒラギノ明朝</option>'
-          + '<option>ブラウザ指定</option>'
           + '</select>'
 });
