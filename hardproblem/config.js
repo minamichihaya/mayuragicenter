@@ -26,7 +26,7 @@ HPOTCFG.chapters = [
                       sections:
                         [
                           {
-                            title: "1",
+                            title: "*",
                             id: "0",
                           },
                         ],
@@ -64,10 +64,6 @@ HPOTCFG.chapters = [
                           {
                             title: "7",
                             id: "1-07",
-                          },
-                          {
-                            title: "8",
-                            id: "1-08",
                           },
                         ],
                     },
@@ -217,28 +213,24 @@ HPOTCFG.chapters = [
                       sections:
                         [
                           {
-                            title: "-",
+                            title: "1",
                             id: "6-01",
                           },
                           {
-                            title: "-",
+                            title: "2",
                             id: "6-02",
                           },
                           {
-                            title: "-",
+                            title: "3",
                             id: "6-03",
                           },
                           {
-                            title: "-",
+                            title: "4",
                             id: "6-04",
                           },
                           {
-                            title: "-",
+                            title: "5",
                             id: "6-05",
-                          },
-                          {
-                            title: "-",
-                            id: "6-06",
                           },
                         ],
                     },
@@ -249,7 +241,7 @@ HPOTCFG.chapters = [
                       sections:
                         [
                           {
-                            title: "-",
+                            title: "*",
                             id: "7",
                           },
                         ],
@@ -261,20 +253,8 @@ HPOTCFG.chapters = [
                       sections:
                         [
                           {
-                            title: "-",
+                            title: "*",
                             id: "pos",
-                          },
-                        ],
-                    },
-                    {
-                      sectPrefix: "",
-                      title: "References",
-                      id: "ref",
-                      sections:
-                        [
-                          {
-                            title: "-",
-                            id: "ref",
                           },
                         ],
                     },
@@ -285,8 +265,20 @@ HPOTCFG.chapters = [
                       sections:
                         [
                           {
-                            title: "-",
+                            title: "*",
                             id: "ack",
+                          },
+                        ],
+                    },
+                    {
+                      sectPrefix: "",
+                      title: "References",
+                      id: "ref",
+                      sections:
+                        [
+                          {
+                            title: "*",
+                            id: "ref",
                           },
                         ],
                     }
