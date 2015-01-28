@@ -213,23 +213,23 @@ HPOTCFG.chapters = [
                       sections:
                         [
                           {
-                            title: "1",
+                            title: "-",
                             id: "6-01",
                           },
                           {
-                            title: "2",
+                            title: "-",
                             id: "6-02",
                           },
                           {
-                            title: "3",
+                            title: "-",
                             id: "6-03",
                           },
                           {
-                            title: "4",
+                            title: "-",
                             id: "6-04",
                           },
                           {
-                            title: "5",
+                            title: "-",
                             id: "6-05",
                           },
                         ],
@@ -241,7 +241,7 @@ HPOTCFG.chapters = [
                       sections:
                         [
                           {
-                            title: "*",
+                            title: "-",
                             id: "7",
                           },
                         ],
@@ -253,7 +253,7 @@ HPOTCFG.chapters = [
                       sections:
                         [
                           {
-                            title: "*",
+                            title: "-",
                             id: "pos",
                           },
                         ],
@@ -265,7 +265,7 @@ HPOTCFG.chapters = [
                       sections:
                         [
                           {
-                            title: "*",
+                            title: "-",
                             id: "ack",
                           },
                         ],
@@ -277,7 +277,7 @@ HPOTCFG.chapters = [
                       sections:
                         [
                           {
-                            title: "*",
+                            title: "-",
                             id: "ref",
                           },
                         ],
