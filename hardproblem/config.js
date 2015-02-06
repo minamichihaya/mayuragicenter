@@ -213,23 +213,23 @@ HPOTCFG.chapters = [
                       sections:
                         [
                           {
-                            title: "-",
+                            title: "1",
                             id: "6-01",
                           },
                           {
-                            title: "-",
+                            title: "2",
                             id: "6-02",
                           },
                           {
-                            title: "-",
+                            title: "3",
                             id: "6-03",
                           },
                           {
-                            title: "-",
+                            title: "4",
                             id: "6-04",
                           },
                           {
-                            title: "-",
+                            title: "5",
                             id: "6-05",
                           },
                         ],
@@ -241,7 +241,7 @@ HPOTCFG.chapters = [
                       sections:
                         [
                           {
-                            title: "-",
+                            title: "*",
                             id: "7",
                           },
                         ],
@@ -249,36 +249,36 @@ HPOTCFG.chapters = [
                     {
                       sectPrefix: "",
                       title: "あとがき",
-                      id: "pos",
+                      id: "postscript",
                       sections:
                         [
                           {
-                            title: "-",
-                            id: "pos",
+                            title: "*",
+                            id: "postscript",
                           },
                         ],
                     },
                     {
                       sectPrefix: "",
                       title: "Acknowledgements",
-                      id: "ack",
+                      id: "acknowledgements",
                       sections:
                         [
                           {
-                            title: "-",
-                            id: "ack",
+                            title: "*",
+                            id: "acknowledgements",
                           },
                         ],
                     },
                     {
                       sectPrefix: "",
                       title: "References",
-                      id: "ref",
+                      id: "references",
                       sections:
                         [
                           {
-                            title: "-",
-                            id: "ref",
+                            title: "*",
+                            id: "references",
                           },
                         ],
                     }
