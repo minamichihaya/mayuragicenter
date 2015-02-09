@@ -238,6 +238,10 @@ div.hpot-main-header {
  * Index of Main page
 \**************************************/
 
+body.index {
+  background-color:#F8F8F8;
+}
+
 #main-hpot-index {
   right:auto;
   float: right;
