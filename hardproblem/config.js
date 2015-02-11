@@ -10,13 +10,14 @@ HPOTCFG = {}
 // HPOTCFG.defaultFont = "../fonts/meiryo.css";
 
 // どれかひとつをアンコメントすること
-HPOTCFG.defaultFont = "../fonts/meiryo.css";
+HPOTCFG.defaultFont = "ブラウザ指定";
+// HPOTCFG.defaultFont = "../fonts/meiryo.css";
 // HPOTCFG.defaultFont = "../fonts/notosans.css";
 // HPOTCFG.defaultFont = "../fonts/yu_mincho.css";
 // HPOTCFG.defaultFont = "../fonts/hanazono_mincho.css";
 // HPOTCFG.defaultFont = "../fonts/sans-serif.css";
 // HPOTCFG.defaultFont = "../fonts/serif.css";
-// HPOTCFG.defaultFont = "ブラウザ指定";
+
 
 HPOTCFG.chapters = [
                     {
