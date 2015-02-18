@@ -8,5 +8,5 @@ if(flag7 == -1){
     document.getElementById("cover").src="../img/title2.png";
   }
 }else{
-    document.getElementById("cover").src="../img/title2.png";
+    document.getElementById("cover").src="../img/title3.png";
 }
