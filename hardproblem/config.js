@@ -1,25 +1,25 @@
-HPOTCFG = {}
+HPFTCFG = {}
 // option 要素の value を指定
 // <option value="VALUE">
 //   or
 // <option>VALUE</option>
 //
 // 例1: <option>ブラウザ指定</value> なら
-// HPOTCFG.defaultFont = "ブラウザ指定";
+// HPFTCFG.defaultFont = "ブラウザ指定";
 // 例2: <option value="../fonts/meiryo.css">メイリオ</option> なら
-// HPOTCFG.defaultFont = "../fonts/meiryo.css";
+// HPFTCFG.defaultFont = "../fonts/meiryo.css";
 
 // どれかひとつをアンコメントすること
-HPOTCFG.defaultFont = "ブラウザ指定";
-// HPOTCFG.defaultFont = "../fonts/meiryo.css";
-// HPOTCFG.defaultFont = "../fonts/notosans.css";
-// HPOTCFG.defaultFont = "../fonts/yu_mincho.css";
-// HPOTCFG.defaultFont = "../fonts/hanazono_mincho.css";
-// HPOTCFG.defaultFont = "../fonts/sans-serif.css";
-// HPOTCFG.defaultFont = "../fonts/serif.css";
+HPFTCFG.defaultFont = "ブラウザ指定";
+// HPFTCFG.defaultFont = "../fonts/meiryo.css";
+// HPFTCFG.defaultFont = "../fonts/notosans.css";
+// HPFTCFG.defaultFont = "../fonts/yu_mincho.css";
+// HPFTCFG.defaultFont = "../fonts/hanazono_mincho.css";
+// HPFTCFG.defaultFont = "../fonts/sans-serif.css";
+// HPFTCFG.defaultFont = "../fonts/serif.css";
 
 
-HPOTCFG.chapters = [
+HPFTCFG.chapters = [
                     {
                       sectPrefix: "",
                       title: "プロローグ",

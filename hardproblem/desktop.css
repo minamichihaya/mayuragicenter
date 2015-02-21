@@ -47,27 +47,27 @@ div.header p.word {
   display: inline-block;
 }
 
-div.hpot-page-header img {
+div.hpft-page-header img {
 
 }
 
 /**************************************\
  * Section Index of Header
 \**************************************/
-div.header div.hpot-section-index {
+div.header div.hpft-section-index {
   position: absolute;
   right: 2em;
   top: 0.25em;
 }
 
-div.header div.hpot-section-index ol {
+div.header div.hpft-section-index ol {
   list-style: none;
   margin: 0;
   padding: 0;
   display: inline-block;
 }
 
-div.header div.hpot-section-index ol li {
+div.header div.hpft-section-index ol li {
   min-width: 2em;
   margin: 0 0.125em;
   padding: 0;
@@ -75,26 +75,26 @@ div.header div.hpot-section-index ol li {
   text-align: center;
 }
 
-div.header div.hpot-section-index p.title {
+div.header div.hpft-section-index p.title {
   color: #aaa;
   display: inline-block;
   margin-right:1em;
 }
 
-div.header div.hpot-section-index ol li a {
+div.header div.hpft-section-index ol li a {
   color: #aaa;
   text-decoration: none;
 }
 
-div.header div.hpot-section-index ol li {
+div.header div.hpft-section-index ol li {
   border-bottom: solid 3px #fff;
 }
 
-div.header div.hpot-section-index ol li[now="true"] {
+div.header div.hpft-section-index ol li[now="true"] {
   border-bottom: solid 3px #88f;
 }
 
-div.header div.hpot-section-index ol li:hover {
+div.header div.hpft-section-index ol li:hover {
   border-bottom: solid 3px #88f;
 }
 
@@ -124,14 +124,14 @@ div.footer div.hr {
 /**************************************\
  * Index of Footer
 \**************************************/
-div.footer div.hpot-index > ol {
+div.footer div.hpft-index > ol {
   list-style: none;
   width: 37em;
   margin: 0;
   padding: 0;
 }
 
-div.footer div.hpot-index div.hpot-section-index > ol {
+div.footer div.hpft-index div.hpft-section-index > ol {
   list-style: none;
   width: auto;
   display: inline-block;
@@ -139,13 +139,13 @@ div.footer div.hpot-index div.hpot-section-index > ol {
   padding: 0;
 }
 
-div.footer div.hpot-index div.hpot-section-index > p.title {
+div.footer div.hpft-index div.hpft-section-index > p.title {
   color: #aaa;
   width: 16em;
   display: inline-block;
 }
 
-div.footer div.hpot-index div.hpot-section-index > ol li {
+div.footer div.hpft-index div.hpft-section-index > ol li {
   width: 2em;
   margin: 0 0.125em;
   padding: 0;
@@ -153,17 +153,17 @@ div.footer div.hpot-index div.hpot-section-index > ol li {
   text-align: center;
 }
 
-div.footer div.hpot-index div.hpot-section-index > ol li a {
+div.footer div.hpft-index div.hpft-section-index > ol li a {
   color: #aaa;
   text-decoration: none;
 }
 
-div.footer div.hpot-index div.hpot-section-index > ol li {
+div.footer div.hpft-index div.hpft-section-index > ol li {
   border-bottom: solid 3px #fff;
 }
 
-div.footer div.hpot-index div.hpot-section-index > ol li[now="true"],
-div.footer div.hpot-index div.hpot-section-index > ol li:hover {
+div.footer div.hpft-index div.hpft-section-index > ol li[now="true"],
+div.footer div.hpft-index div.hpft-section-index > ol li:hover {
   border-bottom: solid 3px #88f;
 }
 
@@ -217,7 +217,7 @@ div.contents div.logo img {
   width: 100%;
 }
 
-div.hpot-main-header {
+div.hpft-main-header {
   display: none;
 }
 
@@ -228,7 +228,7 @@ div.hpot-main-header {
   width: 68em;
 }
 
-#main-contents img.hpot-cover {
+#main-contents img.hpft-cover {
   float: left;
   position: relative; top:-3em;right:1.5em;
   border:double 4px;
@@ -242,7 +242,7 @@ body.index {
   background-color:#F8F8F8;
 }
 
-#main-hpot-index {
+#main-hpft-index {
   right:auto;
   float: right;
   margin-top: 1em;
@@ -251,7 +251,7 @@ body.index {
   font-family:"游明朝 Demibold","ヒラギノ明朝 ProN W3","Hiragino Mincho Pro","HG明朝B","ＭＳ 明朝",serif;
 }
 
-#main-hpot-index > ol {
+#main-hpft-index > ol {
   list-style: none;
   width: 33em;
   margin: 0;
@@ -265,20 +265,20 @@ body.index {
   background-color:#FFFFFF;
 }
 
-#main-hpot-index > ol li {
+#main-hpft-index > ol li {
   width: 33em;
   margin: 0;
   padding: 0;
 }
 
-#main-hpot-index > ol li p.title {
+#main-hpft-index > ol li p.title {
   width: 14em;
   color: #555;
   font-weight: bold;
   display: inline-block;
 }
 
-#main-hpot-index > ol li ol {
+#main-hpft-index > ol li ol {
   width: auto;
   list-style: none;
   margin: 0;
@@ -286,7 +286,7 @@ body.index {
   display: inline-block;
 }
 
-#main-hpot-index > ol li ol li {
+#main-hpft-index > ol li ol li {
   color: #ccc;
   width: 2em;
   margin: 0 0.125em;
@@ -295,17 +295,17 @@ body.index {
   text-align: center;
 }
 
-#main-hpot-index > ol li ol li a {
+#main-hpft-index > ol li ol li a {
   color: #aaa;
   text-decoration: none;
 }
 
-#main-hpot-index > ol li ol li {
+#main-hpft-index > ol li ol li {
   border-bottom: solid 3px #fff;
 }
 
-#main-hpot-index > ol li ol li[now="true"],
-#main-hpot-index > ol li ol li:hover {
+#main-hpft-index > ol li ol li[now="true"],
+#main-hpft-index > ol li ol li:hover {
   border-bottom: solid 3px #88f;
 }
 

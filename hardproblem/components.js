@@ -28,7 +28,7 @@ function selectFont(value) {
   if (value) {
     font = value;
   } else {
-    font = HPOTCFG.defaultFont;
+    font = HPFTCFG.defaultFont;
   }
 
   var selections = document.querySelectorAll("#fontselect option");
@@ -41,8 +41,8 @@ function selectFont(value) {
     }
   }
 }
-Vue.component('hpot-main-header', {
-  className: 'header hpot-header hpot-main-header',
+Vue.component('hpft-main-header', {
+  className: 'header hpft-header hpft-main-header',
   template: '<a href="../hardproblem"><img src="../img/hardproblem_logo.png" /></a>'
           + '<div class="hr"></div>'
           + '<p class="word">'
@@ -53,30 +53,30 @@ Vue.component('hpot-main-header', {
           + '</p>'
 });
 
-Vue.component('hpot-page-header', {
-  className: 'header hpot-header hpot-page-header',
+Vue.component('hpft-page-header', {
+  className: 'header hpft-header hpft-page-header',
   template: '<a href="../hardproblem"><img src="../img/hardproblem_logo_header.png" /></a>'
-          + '<div v-component="hpot-section-index-in-page-header"></div>'
+          + '<div v-component="hpft-section-index-in-page-header"></div>'
           + '<div class="hr"></div>'
 });
 
-Vue.component('hpot-page-footer', {
-  className: 'footer hpot-footer hpot-page-footer',
+Vue.component('hpft-page-footer', {
+  className: 'footer hpft-footer hpft-page-footer',
   template: '<div class="hr"></div>'
-          + '<div v-component="hpot-index"></div>',
+          + '<div v-component="hpft-index"></div>',
 });
 
-Vue.component('hpot-index', {
-  className: 'hpot-index',
+Vue.component('hpft-index', {
+  className: 'hpft-index',
   template: '<ol>'
           + '  <li v-repeat="chapter : chapters">'
-          + '    <div v-component="hpot-section-index"></div>'
+          + '    <div v-component="hpft-section-index"></div>'
           + '  </li>'
           + '</ol>'
 });
 
-Vue.component('hpot-section-index', {
-  className: "hpot-section-index",
+Vue.component('hpft-section-index', {
+  className: "hpft-section-index",
   template: '<p class="title">'
           + '  <span class="sect-prefix">{{chapter.sectPrefix}}</span>'
           + '  <span class="title-text">{{chapter.title}}</span>'
@@ -88,8 +88,8 @@ Vue.component('hpot-section-index', {
           + '</div>'
 });
 
-Vue.component('hpot-section-index-in-page-header', {
-  className: "hpot-section-index",
+Vue.component('hpft-section-index-in-page-header', {
+  className: "hpft-section-index",
   template: '<p class="title">'
           + '  <span class="sect-prefix">{{chapter.sectPrefix}}</span>'
           + '  <span class="title-text">{{chapter.title}}</span>'
