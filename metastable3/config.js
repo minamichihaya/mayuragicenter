@@ -54,6 +54,10 @@ METASTABLECFG.chapters = [
                             title: "4",
                             id: "1-04",
                           },
+                          {
+                            title: "5",
+                            id: "1-05",
+                          },
                         ],
                     },
                     {
