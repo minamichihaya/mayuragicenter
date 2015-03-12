@@ -38,11 +38,22 @@ p.title{
   font-size:xx-large;
 }
 
+p.subtitle{
+  margin-top:3em;
+  margin-right:auto;
+  margin-left:auto;
+  text-align:left;
+  font-size:large;
+  width:640px;
+  text-decoration:underline;
+}
+
 p.caption{
   margin-right:auto;
   margin-left:auto;
   text-align:left;
-  width:800px;
+  width:640px;
+  line-height:180%;
 }
 
 table.alphabet{
@@ -70,3 +81,26 @@ tr.alphabet_column{
   font-weight:bold;
 }
 
+table.tone{
+  table-layout:auto;
+  width:640px;
+  margin-top:2em;
+  margin-bottom:2em;
+  margin-left:auto;
+  margin-right:auto;
+  border: solid 1px #dddddd;
+  border-spacing:0px;
+}
+
+table.tone td{
+  border-bottom: solid 1px #dddddd;
+  border-top: solid 1px #dddddd;
+  border-right: solid 1px #dddddd;
+  border-left: solid 1px #dddddd;
+  text-align:center;
+  height:4em;
+}
+
+tr.tone_column{
+  font-weight:bold;
+}
