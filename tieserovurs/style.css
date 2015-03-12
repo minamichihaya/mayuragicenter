@@ -1,0 +1,72 @@
+a:link{
+  color:#ff0d00;
+  text-decoration: none;
+}
+
+a:visited {
+  color:#ff0d00;
+  text-decoration: none;
+}
+
+body{
+  font-family:sans-serif;
+  overflow-y:scroll;
+}
+
+.logo{
+  margin-top:32px;
+  margin-bottom:3em;
+  text-align:center;
+}
+
+table.index{
+  margin-right:auto;
+  margin-left:auto;
+  text-align:center;
+  font-size:large;
+  width:1024px;
+  table-layout:fixed;
+}
+
+table.index tr{
+  height:5em;
+}
+
+p.title{
+  margin-top:2em;
+  text-align:center;
+  font-size:xx-large;
+}
+
+p.caption{
+  margin-right:auto;
+  margin-left:auto;
+  text-align:left;
+  width:800px;
+}
+
+table.alphabet{
+  table-layout:auto;
+  width:800px;
+  margin-top:2em;
+  margin-bottom:5em;
+  margin-left:auto;
+  margin-right:auto;
+  border: solid 1px #dddddd;
+  border-spacing:0px;
+}
+
+
+table.alphabet td{
+  border-bottom: solid 1px #dddddd;
+  border-top: solid 1px #dddddd;
+  border-right: solid 1px #dddddd;
+  border-left: solid 1px #dddddd;
+  text-align:center;
+  height:4em;
+}
+
+tr.alphabet_column{
+  font-weight:bold;
+}
+
