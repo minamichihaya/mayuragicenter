@@ -27,7 +27,7 @@ div.header {
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family:"游明朝 Demibold","ヒラギノ明朝 ProN W3","Hiragino Mincho Pro","HG明朝B","ＭＳ 明朝",serif;
+  font-family:"游明朝 Demibold","ヒラギノ明朝 ProN W3","Hiragino Mincho Pro","HG明朝B",serif;
 }
 
 div.header .hr {
@@ -112,7 +112,7 @@ div.header select.fontselect {
 div.footer {
   margin: 5em 0 0;
   padding: 0;
-  font-family:"游明朝 Demibold","ヒラギノ明朝 ProN W3","Hiragino Mincho Pro","HG明朝B","ＭＳ 明朝",serif;
+  font-family:"游明朝 Demibold","ヒラギノ明朝 ProN W3","Hiragino Mincho Pro","HG明朝B",serif;
 }
 
 div.footer div.hr {
@@ -248,7 +248,7 @@ body.index {
   margin-top: 1em;
   width:33em;
   position:relative;left:-0.5em;
-  font-family:"游明朝 Demibold","ヒラギノ明朝 ProN W3","Hiragino Mincho Pro","HG明朝B","ＭＳ 明朝",serif;
+  font-family:"游明朝 Demibold","ヒラギノ明朝 ProN W3","Hiragino Mincho Pro","HG明朝B",serif;
 }
 
 #main-hpft-index > ol {
@@ -258,6 +258,7 @@ body.index {
   padding-right:1em;
   padding-top:4em;
   padding-bottom:4.1em;
+  height:39.9em;
   position: relative; top:-4em; left:-1em;
   border-top:double 4px;
   border-bottom:double 4px;
