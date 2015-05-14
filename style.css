@@ -226,12 +226,30 @@ td.music_title{
 div.event_text{
   text-align:center;
   margin-top:3em;
-  margin-bottom:4em;}
+  margin-bottom:2em;}
 
-div.event_list{
-  margin:auto;
-  text-align:center;
-  margin-top:2em;}
+table.event{
+  table-layout:auto;
+  width:auto;
+  margin-top:0em;
+  margin-bottom:5em;
+  margin-left:auto;
+  margin-right:auto;
+  border-spacing:0px;
+}
+ 
+td.eventdate{
+  width:130px;
+  height:70px;
+  }
+  
+td.eventtitle{
+  vertical-align:bottom;
+  }
+
+td.eventcaption{
+  vertical-align:top;
+  }
   
 span.event{
   font-weight:bold;
