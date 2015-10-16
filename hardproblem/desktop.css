@@ -16,8 +16,20 @@ a img {
   border-style: none;
   margin-left:1em;
   margin-top:0.7em;
-  margin-bottom:0.5em;
+  margin-bottom:0em;
 }
+
+
+table.appendix {
+  position:relative; top:-3em; left:-1.5em;
+  width:40em;
+  height:3em;
+  text-align:center;
+  table-layout:fixed;
+  margin-bottom:0px;
+}
+
+
 
 /**************************************\
  * Header
@@ -246,6 +258,7 @@ body.index {
   right:auto;
   float: right;
   margin-top: 1em;
+  margin-bottom: -1em;
   width:33em;
   position:relative;left:-0.5em;
   font-family:"游明朝 Demibold","ヒラギノ明朝 ProN W3","Hiragino Mincho Pro","HG明朝B",serif;
