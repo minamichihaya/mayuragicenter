@@ -4,30 +4,19 @@
  * CSS for mobile (portrait)
 \**************************************/
 
-* {}
-
 body {
   margin: 0;
   padding: 0;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -o-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 a img {
   border-style: none;
-  margin-left:1em;
-  margin-top:0.7em;
-  margin-bottom:0em;
 }
-
-
-table.appendix {
-  position:relative; top:-3em; left:-1.5em;
-  width:40em;
-  height:3em;
-  text-align:center;
-  table-layout:fixed;
-  margin-bottom:0px;
-}
-
 
 /**************************************\
  * Header
@@ -201,67 +190,40 @@ div.contents div.logo img {
 /**************************************\
  * Index of Main page
 \**************************************/
-body.index {
-  background-color:#F8F8F8;
-}
-
-#main-hpft-index {
-  right:auto;
-  float: right;
-  margin-top: 1em;
-  margin-bottom: -1em;
-  width:33em;
-  position:relative;left:-0.5em;
-  font-family:"游明朝 Demibold","ヒラギノ明朝 ProN W3","Hiragino Mincho Pro","HG明朝B",serif;
-}
-
-#main-hpft-index > ol {
+#main-hpft-index ol {
   list-style: none;
-  width: 33em;
+  width: 100%;
   margin: 0;
-  padding-right:1em;
-  padding-top:4em;
-  padding-bottom:4.1em;
-  height:39.9em;
-  position: relative; top:-4em; left:-1em;
-  border-top:double 4px;
-  border-bottom:double 4px;
-  border-right:double 4px;
-  background-color:#FFFFFF;
+  padding: 0;
 }
 
 #main-hpft-index > ol li {
-  width: 33em;
-  margin: 0;
+  width: 100%;
+  margin: 0.5em auto 0.5em;
   padding: 0;
 }
 
 #main-hpft-index > ol li p.title {
-  width: 14em;
   color: #555;
-  font-weight: bold;
-  display: inline-block;
+  font-weight: normal;
 }
 
 #main-hpft-index > ol li ol {
-  width: auto;
   list-style: none;
   margin: 0;
   padding: 0;
-  display: inline-block;
 }
 
 #main-hpft-index > ol li ol li {
-  color: #ccc;
-  width: 2em;
-  margin: 0 0.125em;
+  width: 1.5em;
+  margin: 0 0.25em;
   padding: 0;
   display: inline-block;
   text-align: center;
 }
 
 #main-hpft-index > ol li ol li a {
-  color: #aaa;
+  color: #999;
   text-decoration: none;
 }
 
@@ -269,12 +231,8 @@ body.index {
   border-bottom: solid 3px #fff;
 }
 
-#main-hpft-index > ol li ol li[now="true"],
 #main-hpft-index > ol li ol li:hover {
   border-bottom: solid 3px #88f;
 }
-
-}
-
 
 }
