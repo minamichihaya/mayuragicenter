@@ -23,13 +23,24 @@ a img {
 table.appendix {
   position:relative; top:-3em; left:-1.5em;
   width:40em;
-  height:3em;
+  height:0em;
   text-align:center;
   table-layout:fixed;
   margin-bottom:0px;
 }
 
+div.back{
+  position:relative; top:-3em;
+  font-size:large;
+  text-align:center;
+  margin-top:0em;
+  margin-bottom:0em;
+}
 
+a:link{
+  color:#ff0000;
+  text-decoration: none;
+}
 
 /**************************************\
  * Header
