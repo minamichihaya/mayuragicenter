@@ -240,15 +240,12 @@ table.event{
  
 td.eventdate{
   width:130px;
-  height:70px;
+  vertical-align:top;
   }
   
-td.eventtitle{
-  vertical-align:bottom;
-  }
-
-td.eventcaption{
+td.event{
   vertical-align:top;
+  padding-bottom:1em;
   }
   
 span.event{
