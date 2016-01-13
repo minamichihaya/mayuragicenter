@@ -34,7 +34,7 @@ METASTABLECFG.chapters = [
                     },
                     {
                       sectPrefix: "§1",
-                      title: "　涙と夕焼け",
+                      title: "　夕日と涙",
                       id: "1-01",
                       sections:
                         [
