@@ -16,7 +16,30 @@ a img {
   border-style: none;
   margin-left:1em;
   margin-top:0.7em;
-  margin-bottom:0.5em;
+  margin-bottom:0em;
+}
+
+
+table.appendix {
+  position:relative; top:-3em; left:-1.5em;
+  width:40em;
+  height:0em;
+  text-align:center;
+  table-layout:fixed;
+  margin-bottom:0px;
+}
+
+div.back{
+  position:relative; top:-3em;
+  font-size:large;
+  text-align:center;
+  margin-top:0em;
+  margin-bottom:0em;
+}
+
+a:link{
+  color:#ff0000;
+  text-decoration: none;
 }
 
 /**************************************\
@@ -27,7 +50,7 @@ div.header {
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family:"游明朝 Demibold","ヒラギノ明朝 ProN W3","Hiragino Mincho Pro","HG明朝B","ＭＳ 明朝",serif;
+  font-family:"游明朝 Demibold","ヒラギノ明朝 ProN W3","Hiragino Mincho Pro","HG明朝B",serif;
 }
 
 div.header .hr {
@@ -91,11 +114,11 @@ div.header div.metastable-section-index ol li {
 }
 
 div.header div.metastable-section-index ol li[now="true"] {
-  border-bottom: solid 3px #f88;
+  border-bottom: solid 3px #88f;
 }
 
 div.header div.metastable-section-index ol li:hover {
-  border-bottom: solid 3px #f88;
+  border-bottom: solid 3px #88f;
 }
 
 /**************************************\
@@ -112,7 +135,7 @@ div.header select.fontselect {
 div.footer {
   margin: 5em 0 0;
   padding: 0;
-  font-family:"游明朝 Demibold","ヒラギノ明朝 ProN W3","Hiragino Mincho Pro","HG明朝B","ＭＳ 明朝",serif;
+  font-family:"游明朝 Demibold","ヒラギノ明朝 ProN W3","Hiragino Mincho Pro","HG明朝B",serif;
 }
 
 div.footer div.hr {
@@ -164,7 +187,7 @@ div.footer div.metastable-index div.metastable-section-index > ol li {
 
 div.footer div.metastable-index div.metastable-section-index > ol li[now="true"],
 div.footer div.metastable-index div.metastable-section-index > ol li:hover {
-  border-bottom: solid 3px #f88;
+  border-bottom: solid 3px #88f;
 }
 
 /**************************************\
@@ -246,9 +269,10 @@ body.index {
   right:auto;
   float: right;
   margin-top: 1em;
+  margin-bottom: -1em;
   width:33em;
   position:relative;left:-0.5em;
-  font-family:"游明朝 Demibold","ヒラギノ明朝 ProN W3","Hiragino Mincho Pro","HG明朝B","ＭＳ 明朝",serif;
+  font-family:"游明朝 Demibold","ヒラギノ明朝 ProN W3","Hiragino Mincho Pro","HG明朝B",serif;
 }
 
 #main-metastable-index > ol {
@@ -258,6 +282,7 @@ body.index {
   padding-right:1em;
   padding-top:4em;
   padding-bottom:4.1em;
+  height:39.9em;
   position: relative; top:-4em; left:-1em;
   border-top:double 4px;
   border-bottom:double 4px;
@@ -306,7 +331,7 @@ body.index {
 
 #main-metastable-index > ol li ol li[now="true"],
 #main-metastable-index > ol li ol li:hover {
-  border-bottom: solid 3px #f88;
+  border-bottom: solid 3px #88f;
 }
 
 }
