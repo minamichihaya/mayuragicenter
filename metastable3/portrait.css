@@ -96,7 +96,7 @@ div.header div.metastable-section-index ol li {
 }
 
 div.header div.metastable-section-index ol li[now="true"] {
-  border-bottom: solid 3px #88f;
+  border-bottom: solid 3px #f88;
 }
 
 /**************************************\
@@ -153,7 +153,7 @@ div.footer div.metastable-section-index li {
 }
 
 div.footer div.metastable-section-index li[now="true"] {
-  border-bottom: solid 3px #88f;
+  border-bottom: solid 3px #f88;
 }
 
 /**************************************\
@@ -232,7 +232,7 @@ div.contents div.logo img {
 }
 
 #main-metastable-index > ol li ol li:hover {
-  border-bottom: solid 3px #88f;
+  border-bottom: solid 3px #f88;
 }
 
 }

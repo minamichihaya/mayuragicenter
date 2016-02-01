@@ -114,11 +114,11 @@ div.header div.metastable-section-index ol li {
 }
 
 div.header div.metastable-section-index ol li[now="true"] {
-  border-bottom: solid 3px #88f;
+  border-bottom: solid 3px #f88;
 }
 
 div.header div.metastable-section-index ol li:hover {
-  border-bottom: solid 3px #88f;
+  border-bottom: solid 3px #f88;
 }
 
 /**************************************\
@@ -187,7 +187,7 @@ div.footer div.metastable-index div.metastable-section-index > ol li {
 
 div.footer div.metastable-index div.metastable-section-index > ol li[now="true"],
 div.footer div.metastable-index div.metastable-section-index > ol li:hover {
-  border-bottom: solid 3px #88f;
+  border-bottom: solid 3px #f88;
 }
 
 /**************************************\
@@ -331,7 +331,7 @@ body.index {
 
 #main-metastable-index > ol li ol li[now="true"],
 #main-metastable-index > ol li ol li:hover {
-  border-bottom: solid 3px #88f;
+  border-bottom: solid 3px #f88;
 }
 
 }
