@@ -58,7 +58,7 @@ METASTABLECFG.chapters = [
                     },
                     {
                       sectPrefix: "§2",
-                      title: "　",
+                      title: "　The First Rooming",
                       sections:
                         [
                         ],
