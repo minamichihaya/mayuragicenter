@@ -113,6 +113,27 @@ METASTABLECFG.chapters = [
                         ],
                     },
                     {
+                      sectPrefix: "§7",
+                      title: "　",
+                      sections:
+                        [
+                        ],
+                    },
+                    {
+                      sectPrefix: "§8",
+                      title: "　",
+                      sections:
+                        [
+                        ],
+                    },
+                    {
+                      sectPrefix: "§9",
+                      title: "　",
+                      sections:
+                        [
+                        ],
+                    },
+                    {
                       sectPrefix: "",
                       title: "エピローグ",
                       id: "7",
