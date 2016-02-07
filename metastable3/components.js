@@ -46,11 +46,9 @@ Vue.component('metastable-main-header', {
   template: '<a href="../metastable3"><img src="../img/metastable3_logo.png" /></a>'
           + '<div class="hr"></div>'
           + '<p class="word">'
-          + '  機械になりたい、って思った。'
+          + '  ひとつ、ふたつ、たくさん。'
           + '</p>'
-          + '<p class="word">'
-          + '  いまでもそう思ってる。'
-          + '</p>'
+          
 });
 
 Vue.component('metastable-page-header', {
