@@ -86,7 +86,7 @@ METASTABLECFG.chapters = [
                     },
                     {
                       sectPrefix: "§3",
-                      title: "　",
+                      title: "　Emergency",
                       sections:
                         [
                         ],
