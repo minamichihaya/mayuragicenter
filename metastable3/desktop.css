@@ -20,21 +20,25 @@ a img {
 }
 
 
-table.appendix {
-  position:relative; top:-3em; left:-1.5em;
+table.link {
+  position:relative; top:-3em; left:-2em;
   width:40em;
   height:0em;
   text-align:center;
   table-layout:fixed;
   margin-bottom:0px;
+  float: left;
 }
 
+
 div.back{
-  position:relative; top:-3em;
+  position:relative;
   font-size:large;
   text-align:center;
   margin-top:0em;
   margin-bottom:0em;
+  float: left;
+  width: 100%; 
 }
 
 a:link{
