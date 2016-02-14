@@ -22,7 +22,7 @@ METASTABLECFG.defaultFont = "ブラウザ指定";
 METASTABLECFG.chapters = [
                     {
                       sectPrefix: "",
-                      title: "プロローグ",
+                      title: "Prologue",
                       id: "0",
                       sections:
                         [
@@ -135,7 +135,7 @@ METASTABLECFG.chapters = [
                     },
                     {
                       sectPrefix: "",
-                      title: "エピローグ",
+                      title: "Epilogue",
                       id: "7",
                       sections:
                         [
