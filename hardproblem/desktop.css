@@ -1,6 +1,7 @@
 
 @media not screen and (max-device-width: 480px) {
 
+	
 /**************************************\
  * CSS for desktop
 \**************************************/
@@ -20,14 +21,15 @@ a img {
 }
 
 
-table.appendix {
-  position:relative; top:-3em; left:-1.5em;
+table.link {
+  position:relative; top:-3em; left:-2em;
   width:40em;
   height:0em;
   text-align:center;
   table-layout:fixed;
   margin-bottom:0px;
 }
+
 
 div.back{
   position:relative; top:-3em;
@@ -335,5 +337,3 @@ body.index {
 }
 
 }
-
-

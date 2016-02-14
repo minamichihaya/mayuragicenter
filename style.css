@@ -70,7 +70,7 @@ table.novel{
   table-layout:auto;
   width:800px;
   margin-top:5em;
-  margin-bottom:5em;
+  margin-bottom:0em;
   margin-left:auto;
   margin-right:auto;
   border: solid 1px #dddddd;
@@ -125,6 +125,11 @@ table.short{
 
 table.short td{
   border: solid 0px #cccccc
+
+}
+
+.margin_novel_01{
+  margin-top:5em;
 }
 
 
