@@ -28,15 +28,18 @@ table.link {
   text-align:center;
   table-layout:fixed;
   margin-bottom:0px;
+  float: left;
 }
 
 
 div.back{
-  position:relative; top:-3em;
+  position:relative;
   font-size:large;
   text-align:center;
   margin-top:0em;
   margin-bottom:0em;
+  float: left;
+  width: 100%; 
 }
 
 a:link{
