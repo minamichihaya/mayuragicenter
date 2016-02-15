@@ -1,5 +1,5 @@
 string=document.cookie;
-flag4=string.indexOf("ms3flag3");
+flag4=string.indexOf("ms3flag4");
 flag7=string.indexOf("ms3flag7");
 if(flag7 == -1){
   if(flag4 == -1){
