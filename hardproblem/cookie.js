@@ -1,5 +1,5 @@
 string=document.cookie;
-flag4=string.indexOf("hpftflag3");
+flag4=string.indexOf("hpftflag4");
 flag7=string.indexOf("hpftflag7");
 if(flag7 == -1){
   if(flag4 == -1){
