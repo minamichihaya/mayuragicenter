@@ -92,6 +92,16 @@ METASTABLECFG.chapters = [
                         ],
                     },
                     {
+                      sectPrefix: "",
+                      title: "閑話　",
+                      id: "0",
+                      sections:
+                        [
+                        ],
+                    },
+
+
+                    {
                       sectPrefix: "§4",
                       title: "　",
                       sections:
@@ -112,6 +122,16 @@ METASTABLECFG.chapters = [
                         [
                         ],
                     },
+                    
+                    {
+                      sectPrefix: "",
+                      title: "閑話　",
+                      id: "0",
+                      sections:
+                        [
+                        ],
+                    },                    
+                    
                     {
                       sectPrefix: "§7",
                       title: "　",
