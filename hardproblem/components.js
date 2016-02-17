@@ -43,7 +43,7 @@ function selectFont(value) {
 }
 Vue.component('hpft-main-header', {
   className: 'header hpft-header hpft-main-header',
-  template: '<a href="../hardproblem"><img src="../img/hardproblem_logo.png" /></a>'
+  template: '<a href="../hardproblem"><img id="p-cover" src="../img/hardproblem_logo.png" /></a>'
           + '<div class="hr"></div>'
           + '<p class="word">'
           + '  機械になりたい、って思った。'
