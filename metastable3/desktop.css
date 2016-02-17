@@ -20,15 +20,21 @@ a img {
 }
 
 
-table.link {
-  position:relative; top:-3em; left:-2em;
-  width:40em;
-  height:0em;
+figure.link{
+  position:relative; top:-4em; left:-4em;
+  width:80em;
   text-align:center;
-  table-layout:fixed;
+  margin-bottom:0px;
+  float: left;
+  list-style-type:none;
+}
+
+li.link{
+  text-align:center;
   margin-bottom:0px;
   float: left;
 }
+
 
 
 div.back{
