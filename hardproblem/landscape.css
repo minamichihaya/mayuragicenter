@@ -18,6 +18,22 @@ a img {
   border-style: none;
 }
 
+
+figure.link{
+  position:relative; top:-4em; left:-4em;
+  width:60em;
+  text-align:center;
+  margin-bottom:0px;
+  float: left;
+  list-style-type:none;
+}
+
+li.link{
+  text-align:center;
+  margin-bottom:0px;
+  float: left;
+}
+
 /**************************************\
  * Header
 \**************************************/
