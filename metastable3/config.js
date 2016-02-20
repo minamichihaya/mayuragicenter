@@ -89,12 +89,36 @@ METASTABLECFG.chapters = [
                       title: "　Emergency",
                       sections:
                         [
+                          {
+                            title: "1",
+                            id: "3-01",
+                          },
+                          {
+                            title: "2",
+                            id: "3-02",
+                          },
+                          {
+                            title: "3",
+                            id: "3-03",
+                          },
+                          {
+                            title: "4",
+                            id: "3-04",
+                          },
+                          {
+                            title: "5",
+                            id: "3-05",
+                          },   
+                          {
+                            title: "6",
+                            id: "3-06",
+                          },   
                         ],
                     },
                     {
                       sectPrefix: "",
-                      title: "閑話　",
-                      id: "0",
+                      title: "閑話　The Mechanical Boy",
+                      id: "3.5",
                       sections:
                         [
                         ],
