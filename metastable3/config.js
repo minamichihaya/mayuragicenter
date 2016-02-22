@@ -117,7 +117,7 @@ METASTABLECFG.chapters = [
                     },
                     {
                       sectPrefix: "",
-                      title: "閑話　The Mechanical Boy",
+                      title: "機械の少年",
                       id: "3.5",
                       sections:
                         [
@@ -149,7 +149,7 @@ METASTABLECFG.chapters = [
                     
                     {
                       sectPrefix: "",
-                      title: "閑話　",
+                      title: "--",
                       id: "0",
                       sections:
                         [
