@@ -12,10 +12,20 @@
 
 <body>
 
-  <div class="logo">
-    <img src="img/top.png" class="topbanner">
-  </div>
 
+  <div class="logo">
+<script type="text/javascript">
+   var imglist = new Array(
+      "img/top_ms3_1_1.png",
+      "img/top_ms3_1_2.png",
+      "img/top_hpft_1.png",
+      "img/top_hpft_2.png" );
+   var selectnum = Math.floor(Math.random() * imglist.length);
+   var output = "<img src=" + imglist[selectnum] + " class='topbanner'>";
+   document.write(output);
+</script>
+  </div>
+  
   <table class="top">
     <tbody>
       <tr>
