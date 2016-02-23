@@ -30,14 +30,21 @@ overflow-y:scroll;
 }
 
 
-
 /**************************************\
  *トップページ
 \**************************************/
 
+img.topbanner{
+border-style:solid;
+border-width:1px;
+border-color:#999999;
+
+}
+
 table.top{
+  background-color:white;
   table-layout:fixed;
-  width:640px;
+  width:1024px;
   margin-top:3em;
   margin-left:auto;
   margin-right:auto;
@@ -65,6 +72,12 @@ table.top{
 /**************************************\
  *小説ページ
 \**************************************/
+
+img.novelbanner{
+  border-style:solid;
+  border-width:1px;
+  border-color:#999999;
+}
 
 table.novel{
   table-layout:auto;
@@ -138,6 +151,12 @@ table.short td{
  *お絵かきページ
 \**************************************/
 
+img.picturebanner{
+  border-style:solid;
+  border-width:1px;
+  border-color:#999999;
+}
+
 .picture_text{
   text-align:center;
   margin-top:3em;
@@ -195,6 +214,12 @@ table.picture>caption{
  *音楽ページ
 \**************************************/
 
+img.musicbanner{
+  border-style:solid;
+  border-width:1px;
+  border-color:#999999;
+}
+
 div.music_text{
   text-align:center;
   margin-top:3em;}
@@ -227,6 +252,12 @@ td.music_title{
 /**************************************\
  *イベントページ
 \**************************************/
+
+img.eventbanner{
+  border-style:solid;
+  border-width:1px;
+  border-color:#999999;
+}
 
 div.event_text{
   text-align:center;
@@ -261,6 +292,12 @@ span.event{
 /**************************************\
  *リンクページ
 \**************************************/
+
+img.linkbanner{
+  border-style:solid;
+  border-width:1px;
+  border-color:#999999;
+}
 
 div.link_category{
   width:800px;
