@@ -34,6 +34,11 @@ overflow-y:scroll;
  *トップページ
 \**************************************/
 
+div.logo img:hover{
+  Opacity: 0.8;
+  border: 1px #AAAAAA solid;
+}
+
 img.topbanner{
 border-style:solid;
 border-width:1px;
