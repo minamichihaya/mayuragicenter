@@ -42,8 +42,8 @@ body{
 \**************************************/
 
 
-.siteimg{
-  margin-top:32px;
+div.siteimg{
+  margin-top:3em;
   text-align: center;
 }
 
@@ -59,17 +59,21 @@ border-color:#999999;
 
 }
 
-table.top{
-  background-color:white;
-  table-layout:fixed;
+ul.top{
   width:1024px;
-  margin-top:3em;
-  margin-left:auto;
-  margin-right:auto;
-  text-align:center;
+  margin-top:2em;
+  right:40px;
+  position:relative;
+
+}
+
+li.top{
+  float:left;
+  list-style-type:none;
   font-size:large;
   line-height:300%;
-  padding: 0;
+  width:256px;
+  text-align:center;
 }
 
 
