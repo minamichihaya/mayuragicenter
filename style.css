@@ -181,33 +181,38 @@ img.picturebanner{
 }
 
 .picture_text{
+  width:1024px;
   text-align:center;
   margin-top:3em;
 }
 
-table.picture{
-  table-layout:fixed;
-  width:850px;
-  margin-top:3em;
-  margin-left:auto;
-  margin-right:auto;
+p.picturecaption{
+  position:relative;
+  top:1em;
+  font-size:large;
 }
 
-table.picture img{
+li.picture{
+  float:left;
+  margin:3px;
+  list-style-type:none;
+}
+
+ul.picture{
+  margin-top:3em;
+}
+
+li.picture img{
   border: 1px #000000 solid;
   Opacity: 1;
 }
 
-table.picture img:hover{
+li.picture img:hover{
   Opacity: 0.6;
   border: 1px #AAAAAA solid;
 }
 
-table.picture>caption{
-  font-size:large;
-  line-height:150%;
-  text-align:left;
-}
+
 
 .image{
   margin-top:3em;
