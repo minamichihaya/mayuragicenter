@@ -1,35 +1,30 @@
 <html>
 
 <head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css" type="text/css">
   <title>真揺中心</title>
   <link rel="shortcut icon" href="img/icon.png" type="image/png">
   <meta name="author" content="南正太郎">
   <meta name="generator" content="Mery">
   <meta name="keywords" content="小説,南正太郎,ふたりのハードプロブレム,Metastable3" />
-  <meta charset="UTF-8">
-  <script type="text/javascript" src="jquery/jquery-2.2.1.min.js"></script>
-  <script type="text/javascript" src="jquery/jquery.bxslider.min.js"></script>
-  <link rel="stylesheet" href="style.css" type="text/css">
-  <link href="jquery/jquery.bxslider.css" rel="stylesheet">
 </head>
 
 <body>
 
-<script>
-$(document).ready(function(){
-$('.bxslider').bxSlider({
-infiniteLoop: false
-});
-});
-</script>
-
-
-    <ul class="bxslider">
-      <li><a href='hardproblem'><img src='img/top_hpft_1.png'></a></li>
-      <li><a href='hardproblem'><img src='img/top_hpft_2.png'></a></li>
-      <li><a href='metastable3'><img src='img/top_ms3_1.png'></a></li>
-    </ul>
-
+  <div class="siteimg">
+    <script type="text/javascript">
+      var imglist = new Array(
+        "<a href='metastable3'><img src='img/top_ms3_1.png' class='topbanner'></a>",
+        "<a href='hardproblem'><img src='img/top_hpft_2.png' class='topbanner'></a>",
+        "<a href='hardproblem'><img src='img/top_hpft_1.png' class='topbanner'></a>"
+      );
+      var selectnum = Math.floor(Math.random() * imglist.length);
+      var output = imglist[selectnum];
+      document.write(output);
+    </script>
+  </div>
+  
 
 　　<ul class="top">
      <li class="top"><a href="picture.html">ヘタレ絵</a></li>
