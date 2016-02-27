@@ -42,23 +42,6 @@ body{
 \**************************************/
 
 
-div.siteimg{
-  margin-top:3em;
-  text-align: center;
-}
-
-div.siteimg img:hover{
-  Opacity: 0.8;
-  border: 1px #AAAAAA solid;
-}
-
-img.topbanner{
-border-style:solid;
-border-width:1px;
-border-color:#999999;
-
-}
-
 ul.top{
   width:1024px;
   margin-top:2em;
