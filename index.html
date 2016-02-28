@@ -8,23 +8,21 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css" type="text/css">
   <link rel="shortcut icon" href="img/icon.png" type="image/png">
+  <link rel="stylesheet" href="plugin/flexslider/flexslider.css" type="text/css">
+  
 </head>
 
 <body>
 
-  <div class="siteimg">
-    <script type="text/javascript">
-      var imglist = new Array(
-        "<a href='metastable3'><img src='img/top_ms3_1.png' class='topbanner'></a>",
-        "<a href='hardproblem'><img src='img/top_hpft_2.png' class='topbanner'></a>",
-        "<a href='hardproblem'><img src='img/top_hpft_1.png' class='topbanner'></a>"
-      );
-      var selectnum = Math.floor(Math.random() * imglist.length);
-      var output = imglist[selectnum];
-      document.write(output);
-    </script>
-  </div>
-  
+
+    <div class="flexslider">
+      <ul class="slides">
+        <li><a href='metastable3'><img src='img/top_ms3_1.png' class='topbanner'></a></li>
+        <li><a href='hardproblem'><img src='img/top_hpft_2.png' class='topbanner'></a></li>
+        <li><a href='hardproblem'><img src='img/top_hpft_1.png' class='topbanner'></li>
+      </ul>
+    </div>
+
 
 　　<ul class="top">
      <li class="top"><a href="picture.html">ヘタレ絵</a></li>
@@ -51,6 +49,20 @@
     カタログは<a href="https://c.bunfree.net/c/tokyo21" target="_blank">コチラ</a>。
   </div>
 
-  
+  <script src="plugin/jquery-2.2.1.min.js"></script>
+  <script src="plugin/flexslider/jquery.flexslider-min.js"></script>
+  <script>
+    $(window).load(function() {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        pauseOnAction: false,
+        slideshowSpeed: 10000,
+        animationDuration: 10000,
+        animationLoop: true,
+        mousewheel: true,
+        touch: true,
+      });
+    });
+  </script>
 </body>
 </html>

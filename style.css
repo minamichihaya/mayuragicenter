@@ -42,12 +42,12 @@ body{
 \**************************************/
 
 
-div.siteimg{
+div.flexslider{
   margin-top:3em;
   text-align: center;
 }
 
-div.siteimg img:hover{
+div.flexslider img:hover{
   Opacity: 0.8;
   border: 1px #AAAAAA solid;
 }
