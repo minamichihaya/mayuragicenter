@@ -81,6 +81,7 @@ METASTABLECFG.chapters = [
                             title: "5",
                             id: "2-05",
                           },                        
+                        
                         ],
                     },
                     {
@@ -116,30 +117,10 @@ METASTABLECFG.chapters = [
                     },
                     {
                       sectPrefix: "",
-                      title: "閑話　運動会と機械の少年",
+                      title: "閑話　機械の少年",
                       id: "3.5",
                       sections:
                         [
-                                                      {
-                            title: "1",
-                            id: "3g-01",
-                          },
-                          {
-                            title: "2",
-                            id: "3g-02",
-                          },
-                          {
-                            title: "3",
-                            id: "3g-03",
-                          },
-                          {
-                            title: "4",
-                            id: "3g-04",
-                          },
-                          {
-                            title: "5",
-                            id: "3g-05",
-                          },              
                         ],
                     },
 
@@ -168,7 +149,7 @@ METASTABLECFG.chapters = [
                     
                     {
                       sectPrefix: "",
-                      title: "閑話　",
+                      title: "閑話",
                       id: "0",
                       sections:
                         [
