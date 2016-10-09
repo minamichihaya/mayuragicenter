@@ -86,8 +86,8 @@ Vue.component('metastable-section-index', {
           + '</div>'
 });
 
-Vue.component('metastable-section-index-in-page-header', {
-  className: "metastable-section-index",
+Vue.component('hpft-section-index-in-page-header', {
+  className: "hpft-section-index",
   template: '<p class="title">'
           + '  <span class="sect-prefix">{{chapter.sectPrefix}}</span>'
           + '  <span class="title-text">{{chapter.title}}</span>'
@@ -99,12 +99,12 @@ Vue.component('metastable-section-index-in-page-header', {
           + '</ol>'
           + '<br />'
           + '<select id="fontselect" onchange="selectFont(value)" class="fontselect">'
-          + '<option selected>ブラウザ指定フォント</option>'
-          + '<option value="../fonts/meiryo.css">メイリオ + Microsoft YaHei</option>'
-          + '<option value="../fonts/notosans.css">Noto Sans CJK</option>'
-          + '<option value="../fonts/yu_mincho.css">游明朝 + AR PL SungtiL GB</option>'
-          + '<option value="../fonts/hanazono_mincho.css">花園明朝</option>'
-          + '<option value="../fonts/sans-serif.css">MSゴシック／ヒラギノ角ゴ</option>'
-          + '<option value="../fonts/serif.css">MS明朝／ヒラギノ明朝</option>'
+          + '<option selected>指定なし</option>'
+          + '<option value="../fonts/yu_mincho.css">游明朝</option>'
+          + '<option value="../fonts/notosans.css">Noto Sans</option>'
+          + '<option value="../fonts/meiryo.css">メイリオ</option>'
+          + '<option value="../fonts/msmincho.css">MS明朝</option>'
+          + '<option value="../fonts/serif.css">ブラウザ指定(明朝)</option>'
+          + '<option value="../fonts/sans-serif.css">ブラウザ指定(ゴシック)</option>'
           + '</select>'
 });

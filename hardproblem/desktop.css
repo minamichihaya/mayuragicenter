@@ -201,14 +201,15 @@ div.footer div.hpft-index div.hpft-section-index > ol li:hover {
 \**************************************/
 div.contents {
   color: #666;
-  width: 37em;
+  width: 40em;
   margin: 5em auto 5em;
   padding: 0;
 }
 
 div.contents div.text {
-  line-height: 2.23;
-  font-weight:light;
+  line-height: 2;
+  font-weight:normal;
+  font-size:17.5px;
   text-align:justify;
 }
 
