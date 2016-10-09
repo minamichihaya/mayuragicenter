@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "游明朝 Demibold";
-  src: url("../fonts/yumindb.ttf") format("truetype") ;
+  font-family: "游明朝","游明朝体","Yu Mincho","YuMincho";
+  src: url("../fonts/yumin.ttf") format("truetype") ;
 }
 
 @font-face {
@@ -9,10 +9,9 @@
 }
 
 div.contents div.text {
-  font-family:"游明朝 Demibold";
+  font-family:"游明朝","游明朝体","Yu Mincho","YuMincho";
 }
 
 span.simplified {
   font-family:"AR PL SungtiL GB";
-  font-weight:bolder;
 }

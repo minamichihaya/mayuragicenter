@@ -20,7 +20,7 @@ a:hover {
 html {
     overflow-y:scroll;
     background-color:white;
-    font-family: "Noto Sans CJK JP Light","源ノ角ゴシック JP Light","游ゴシック", sans-serif
+    font-family: "Noto Sans CJK JP Light","源ノ角ゴシック JP Light","游ゴシック", sans-serif;
 }
 
 .logo{
