@@ -1,17 +1,17 @@
 @font-face {
-  font-family: "Noto Sans CJK JP Regular";
-  src: url("../fonts/NotoSansCJKjp-Regular.otf") format("opentype") ;
+  font-family: "Noto Sans CJK JP Light";
+  src: url("../fonts/NotoSansCJKjp-Light.otf") format("opentype") ;
 }
 
 @font-face {
-  font-family: "Noto Sans CJK SC Regular";
-  src: url("../fonts/NotoSansCJKsc-Regular.otf") format("opentype") ;
+  font-family: "Noto Sans CJK SC Light";
+  src: url("../fonts/NotoSansCJKsc-Light.otf") format("opentype") ;
 }
 
 div.contents div.text {
-  font-family:"Noto Sans CJK JP Regular"
+  font-family:"Noto Sans CJK JP Light"
 }
 
 span.simplified {
-  font-family:"Noto Sans CJK SC Regular"
+  font-family:"Noto Sans CJK SC Light"
 }
