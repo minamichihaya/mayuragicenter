@@ -1,16 +1,3 @@
-string=document.cookie;
-flag4=string.indexOf("hpftflag4");
-flag7=string.indexOf("hpftflag7");
-var Num;
-if(flag7 == -1){
-  if(flag4 == -1){
-    num="1"
-  }else{
-    num="2"
-  }else{
-    num="3"
-};
-
 function getOrInitConfig() {
   if (typeof localStorage === "undefined") {
     return undefined;
