@@ -70,7 +70,7 @@ Vue.component('hpft-main-header', {
 
 Vue.component('hpft-page-header', {
   className: 'header hpft-header hpft-page-header',
-  template: '<a href="../hardproblem"><img id="headerlogo" src="../img/hardproblem_logo_' + num + '_header.png" style="width:200px;"/></a>'
+  template: '<a href="../hardproblem"><img id="headerlogo" src="../img/hardproblem_logo_' + num + '_header.png" /></a>'
           + '<div v-component="hpft-section-index-in-page-header"></div>'
           + '<div class="hr"></div>'
 });
