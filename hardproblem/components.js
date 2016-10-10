@@ -25,11 +25,11 @@ function getOrInitConfig() {
       return {};
     }
   }
-}
+};
 
 function setConfig(config) {
   localStorage.setItem("config", JSON.stringify(config));
-}
+};
 
 function selectFont(value) {
   document.getElementById("fontsets").href = value;
@@ -54,7 +54,8 @@ function selectFont(value) {
       delete selections.selected;
     }
   }
-}
+};
+
 Vue.component('hpft-main-header', {
   className: 'header hpft-header hpft-main-header',
   template: '<a href="../hardproblem"><img src="../img/hardproblem_logo.png" /></a>'
