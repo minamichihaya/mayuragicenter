@@ -52,7 +52,7 @@ div.header .hr {
  * Contents of Main contents
 \**************************************/
 #main-contents img.hpft-cover {
-  display: none; /* FIXME */
+  display: ; /* FIXME */
 }
 
 /**************************************\
