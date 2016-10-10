@@ -1,3 +1,16 @@
+string=document.cookie;
+flag4=string.indexOf("hpftflag4");
+flag7=string.indexOf("hpftflag7");
+var Num;
+if(flag7 == -1){
+  if(flag4 == -1){
+    num="1"
+  }else{
+    num="2"
+  }else{
+    num="3"
+};
+
 function getOrInitConfig() {
   if (typeof localStorage === "undefined") {
     return undefined;
@@ -55,7 +68,7 @@ Vue.component('hpft-main-header', {
 
 Vue.component('hpft-page-header', {
   className: 'header hpft-header hpft-page-header',
-  template: '<a href="../hardproblem"><img id="headerlogo" src="../img/hardproblem_logo_1_header.png" /></a>'
+  template: '<a href="../hardproblem"><img id="headerlogo" src="../img/hardproblem_logo_' + Num + '_header.png" /></a>'
           + '<div v-component="hpft-section-index-in-page-header"></div>'
           + '<div class="hr"></div>'
 });

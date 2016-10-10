@@ -12,4 +12,4 @@ if(flag7 == -1){
 }else{
     document.getElementById("cover").src="../img/title3.png";
     document.getElementById("headerlogo").src="../img/hardproblem_logo_3_header.png"
-}
+};
