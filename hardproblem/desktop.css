@@ -56,7 +56,8 @@ div.header {
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family:"游明朝 Demibold","ヒラギノ明朝 ProN W3","Hiragino Mincho Pro","HG明朝B",serif;
+  font-family:"游明朝","HG明朝B",serif;
+  font-weight:bold;
 }
 
 div.header .hr {
@@ -133,6 +134,7 @@ div.header div.hpft-section-index ol li:hover {
 div.header select.fontselect {
   marigin-top: 0.25em;
   float: right;
+  font-family: "Yu Gothic UI","Meiryo UI",sans-serif;
 }
 
 /**************************************\
@@ -243,6 +245,7 @@ div.contents div.logo {
 }
 
 div.contents div.logo img {
+
 }
 
 div.hpft-main-header {
