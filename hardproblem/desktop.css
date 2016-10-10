@@ -200,7 +200,6 @@ div.footer div.hpft-index div.hpft-section-index > ol li:hover {
  * Contents
 \**************************************/
 div.contents {
-  color: #666;
   width: 40em;
   margin: 5em auto 5em;
   padding: 0;
@@ -208,7 +207,6 @@ div.contents {
 
 div.contents div.text {
   line-height: 2;
-  font-weight:;
   font-size:17.5px;
   text-align:justify;
 }
@@ -220,8 +218,8 @@ div.contents div.text {
 span.simplified {
   line-height: 2;
   vertical-align:0%;
-  font-size:100%;
 }
+
 
 span.ref_category {
   line-height: 2;
@@ -241,10 +239,10 @@ li.ref_title {
 \**************************************/
 div.contents div.logo {
   border: solid 1px #ccc;
+  width:100%;
 }
 
 div.contents div.logo img {
-  width: 100%;
 }
 
 div.hpft-main-header {

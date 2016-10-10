@@ -9,9 +9,13 @@
 }
 
 div.contents div.text {
-  font-family:"Noto Sans CJK JP Light"
+  font-family:"Noto Sans CJK JP Light";
+  color:#555;
 }
 
 span.simplified {
   font-family:"Noto Sans CJK SC Light"
+  font-size:100%;
+  color:#555;
+  text-shadow: 0px 0px 0px #FFFFFF;
 }

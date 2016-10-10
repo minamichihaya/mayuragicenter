@@ -1,2 +1,9 @@
-div.contents div.text {font-family:serif;}
-span.simplified {font-family:serif;}
+div.contents div.text {
+    font-family:serif;
+    color:#222;
+}
+
+span.simplified {
+    font-family:serif;
+    color:#222;
+}

@@ -55,7 +55,7 @@ Vue.component('hpft-main-header', {
 
 Vue.component('hpft-page-header', {
   className: 'header hpft-header hpft-page-header',
-  template: '<a href="../hardproblem"><img src="../img/hardproblem_logo_header.png" /></a>'
+  template: '<a href="../hardproblem"><img id="headerlogo" src="../img/hardproblem_logo_1_header.png" /></a>'
           + '<div v-component="hpft-section-index-in-page-header"></div>'
           + '<div class="hr"></div>'
 });
@@ -101,7 +101,7 @@ Vue.component('hpft-section-index-in-page-header', {
           + '</ol>'
           + '<br />'
           + '<select id="fontselect" onchange="selectFont(value)" class="fontselect">'
-          + '<option value="../fonts/yu_mincho.css" selected>游明朝／IPAex明朝</option>'
+          + '<option value="../fonts/yu_mincho.css" selected>游明朝</option>'
           + '<option value="../fonts/notosans.css">Noto Sans CJK</option>'
           + '<option value="../fonts/meiryo.css">メイリオ</option>'
           + '<option value="../fonts/msmincho.css">MS明朝</option>'

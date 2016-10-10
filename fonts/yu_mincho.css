@@ -1,7 +1,9 @@
+/*
 @font-face {
   font-family: "IPAex明朝";
   src: url("../fonts/ipaexm.ttf") format("truetype") ;
 }
+*/
 
 @font-face {
   font-family: "AR PL SungtiL GB";
@@ -10,9 +12,12 @@
 
 div.contents div.text {
   font-family:"游明朝","游明朝体","Yu Mincho","YuMincho","IPAex明朝";
-  color:black;
+  color:#000;
 }
 
 span.simplified {
-  font-family:"AR PL SungtiL GB";
+  font-family:"SimSun","AR PL SungtiL GB";
+  font-size:105%;
+  color:#404040;
+  text-shadow: 0px 0px 0.5px #BBB;
 }
