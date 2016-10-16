@@ -71,7 +71,6 @@ HeadAndBody = HeadAndBody.replace("images/???/favicon.png","images/" + Phase + "
 document.getElementsByTagName("html")[0].innerHTML = HeadAndBody;
 
 
-alert("kokomade");
 /********************************************************************
     ヘッダー／フッターのリンク修正
 *********************************************************************/
