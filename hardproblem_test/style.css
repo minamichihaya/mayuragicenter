@@ -349,39 +349,7 @@ div.TextBackground{
     position: relative;
 }
 
-
-div.TextPageCloseButton a:link{
-    font-family: monospace,sans-serif;
-    font-size:35px;
-    font-weight: bold;
-    position:absolute;
-    right:0px;
-    top:0px;
-    text-align: right;
-    color: #777;
-}
-
-div.TextPageCloseButton a:visited{
-    color: #777;
-}
-
-div.TextPageCloseButton a:hover{
-    color: #777;
-}
-
-div.TextPageCloseButton{
-    font-family: monospace,sans-serif;
-    font-size:35px;
-    font-weight: bold;
-    position:absolute;
-    right:10px;
-    top:10px;
-    text-align: right;
-    color: #888;
-}
-
-
-img.SectionCover{
+img#SectionCover{
     width:784px;
     border: solid 1px #888;
     display: inline;
@@ -406,6 +374,7 @@ div.Text{
     text-align: justify;
     color:black;
     margin-bottom: 75px;
+    margin-top:50px;
 }
 
 div.Navigator{
@@ -430,7 +399,7 @@ span.NaviBar{
     margin-left: 50px;
 }
 
-div#header{
+div#Header{
     padding-top: 30px;
     padding-bottom: 50px;
 }
@@ -438,5 +407,5 @@ div#header{
 div#Footer{
     position: relative;
     bottom:40px;
-    margin-top: 30px;
+    margin-top: 150px;
 }
