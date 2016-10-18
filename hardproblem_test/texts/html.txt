@@ -1,4 +1,4 @@
-<head>
+﻿<head>
 
 <title>???</title>
 <meta name="author" content="南正太郎">
@@ -19,7 +19,7 @@
 <div class="Navigator" id="Header">
 <span class="NaviText" id="HeaderPrev"><a href="???" class="NaviPrev">Prev</a></span>
 <span class="NaviBar">|</span>
-<span class="NaviText"><a href="index.html">Top</a></span>
+<span class="NaviText"><a href="../hardproblem/">Top</a></span>
 <span class="NaviBar">|</span>
 <span class="NaviText" id="HeaderNext"><a href="???" class="NaviNext">Next</a></span>
 </div>
@@ -31,7 +31,7 @@
 <div class="Navigator" id="Footer">
 <span class="NaviText" id="FooterPrev"><a href="???" class="NaviPrev">Prev</a></span>
 <span class="NaviBar">|</span>
-<span class="NaviText"><a href="index.html">Top</a></span>
+<span class="NaviText"><a href="../hardproblem/">Top</a></span>
 <span class="NaviBar">|</span>
 <span class="NaviText" id="FooterNext"><a href="???" class="NaviNext">Next</a></span>
 </div>

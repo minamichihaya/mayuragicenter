@@ -8,19 +8,19 @@
         <meta name="keywords" content="小説, 南正太郎, ふたりのハードプロブレム">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css" type="text/css">
-        <link rel="shortcut icon" href="images/2/favicon.png"　type="image/png">
+        <link rel="shortcut icon" href="images/1/favicon.png"　type="image/png">
     </head>
 
     <body>
-        <div id="Cover">
+        <div id="Cover" style="display:none;">
             
-            <img src="images/2/logo.png" id="Logo" onclick="OpenIndex()">
+            <img src="images/1/logo.png" id="Logo" onclick="OpenIndex()">
             <div id="menu">
-                <a href="prologue.html"><img src="images/2/start.png" class="Button"></a>
-                <img src="images/2/continue.png" class="Button">
-                <img src="images/2/characters.png" class="Button" onclick="OpenCharacters()">
-                <img src="images/2/keywords.png" class="Button" onclick="OpenKeyWords()">
-                <img src="images/2/setting.png" class="Button" onclick="OpenSetting()">
+                <a href="prologue.html"><img src="images/1/start.png" class="Button"></a>
+                <img src="images/1/continue.png" class="Button">
+                <img src="images/1/characters.png" class="Button" onclick="OpenCharacters()">
+                <img src="images/1/keywords.png" class="Button" onclick="OpenKeyWords()">
+                <img src="images/1/setting.png" class="Button" onclick="OpenSetting()">
             </div>
 
             
@@ -185,5 +185,6 @@
     </body>
 
     <script type="text/javascript", src="script.js"></script>
+    <script>document.getElementById("Cover").style.display="block"</script>
         
 </html>
