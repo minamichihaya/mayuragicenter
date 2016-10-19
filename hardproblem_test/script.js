@@ -33,7 +33,7 @@
 
         */
 
-    var Phase = "2";
+    var Phase = "1";
 
 var NovelTitle = "ふたりのハードプロブレム";
 var SecList = [
