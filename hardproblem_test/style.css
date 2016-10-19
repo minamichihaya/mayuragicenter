@@ -6,8 +6,8 @@
 body{
     background-color: black;
     background-image: url(images/bgi.jpg);
+    background-repeat:repeat;
     background-position: center;
-    background-repeat:no-repeat;
     background-attachment: fixed;
     font-family: "游明朝",serif;
 }
@@ -31,6 +31,19 @@ a:hover{
     カバー
 ************************************/
 
+#OnLoading{
+    margin:auto;
+    vertical-align: middle;
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background-image: url(images/1/loading.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+}
 
 #Cover{
     width:1024px;
@@ -45,6 +58,7 @@ a:hover{
     background-image: url(images/1/cover.png);
     background-repeat: no-repeat;
     background-position: center;
+    display: none;
 }
 
 #Logo{

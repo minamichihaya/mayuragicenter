@@ -29,11 +29,41 @@ function GetSecData (SearchStr, SearchKey, OutputKey) {
                 return i;
             } else {
                 return SecList[i][OutputKey];
-                break;
             }
+            break;
         }
     }
 }
+
+/********************************************************************
+    栞の読み込み
+*********************************************************************/
+
+    /*
+    
+    CurrentPage = "1-2";
+
+    if (CurrentPage.indexOf("-") >= 0) {
+        CurrentSection = CurrentPage.split("-")[0];
+        CurrentSubsection = CurrentPage.split("-")[1];
+    } else {
+        CurrentSection = CurrentPage;
+        CurrentSubsection = "";
+    };
+
+
+    if (Number(CurrentSection) <= 3) {
+        Phase = "1";        
+    } else if (Number(CurrentSection) <= 6) {
+        Phase = "2";
+    } else {
+        Phase = "3";
+    };
+    
+    */
+
+var Phase = "1";
+    
 
 /**********************************************************************
 ***********************************************************************
@@ -43,10 +73,18 @@ function GetSecData (SearchStr, SearchKey, OutputKey) {
 ***********************************************************************
 **********************************************************************/
 
+function LoadingCover(){
+    document.getElementById("OnLoading").style.display="none";
+    document.getElementById("Cover").style.display="block";
+}
 
 function MakeCover(){
-    
-    
+    var target = document.getElementById("logo");
+    target.src = "images/" + Phase + "/logo.png"
+    target = document.getElementsByClassName("Button");
+    for (var i in target) {
+//        target[i].src.replace("images/")
+    }
 };
 
 function OpenIndex(){
@@ -116,36 +154,6 @@ function MakeContent() {
     var HTML = new Array();
     var Content;
 
-
-    /********************************************************************
-        栞の読み込み
-    *********************************************************************/
-
-    /*
-    
-    CurrentPage = "1-2";
-
-    if (CurrentPage.indexOf("-") >= 0) {
-        CurrentSection = CurrentPage.split("-")[0];
-        CurrentSubsection = CurrentPage.split("-")[1];
-    } else {
-        CurrentSection = CurrentPage;
-        CurrentSubsection = "";
-    };
-
-
-    if (Number(CurrentSection) <= 3) {
-        Phase = "1";        
-    } else if (Number(CurrentSection) <= 6) {
-        Phase = "2";
-    } else {
-        Phase = "3";
-    };
-    
-    */
-
-    Phase = "2";
-    
 
     /********************************************************************
         セクション番号の読み込み
