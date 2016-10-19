@@ -59,6 +59,7 @@ a:hover{
     background-repeat: no-repeat;
     background-position: center;
     display: none;
+    border: solid 1px #999;
 }
 
 #Logo{
@@ -183,7 +184,6 @@ img.Button:hover{
 }
 
 div#CharsBody{
-    width: 800px;
 	margin: auto; 
     margin-top:80px;
     font-family: "游明朝";
@@ -191,7 +191,7 @@ div#CharsBody{
 
 div.CharCard{
     height: 200px;
-    width:800px;
+    width:850px;
     margin:0 auto;
     margin-top:50px;
     margin-bottom:50px;
@@ -201,8 +201,8 @@ div.CharCard{
 img.CharImage{
     height:200px;
     float:left;
-    margin-right:30px;
-    margin-left: 30px;
+    margin-right: 30px;
+    margin-left: 0px;
 }
 
 div.CharText{
@@ -210,6 +210,7 @@ div.CharText{
     font-size:20px;
     font-weight: bolder;
     line-height: 1.7;
+    padding-right: 10px;
 }
 
 div.CharName{

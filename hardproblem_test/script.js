@@ -73,59 +73,59 @@ var Phase = "1";
 ***********************************************************************
 **********************************************************************/
 
-function LoadingCover(){
+function MakeCover(){
+    target = document.getElementById("OnLoading");
+    target.style.backgroundImage = 'url("images/' + Phase + '/loading.gif")';
+    target = document.getElementsByTagName("html");
+    target[0].innerHTML = target[0].innerHTML.replace(/images\/[1-3]\//g,"images/" + Phase + "/");
+    target = document.getElementById("Cover");
+    target.style.backgroundImage = 'url("images/' + Phase + '/cover.png")';
+}
+
+function DisplayCover(){
     document.getElementById("OnLoading").style.display="none";
     document.getElementById("Cover").style.display="block";
 }
 
-function MakeCover(){
-    var target = document.getElementById("logo");
-    target.src = "images/" + Phase + "/logo.png"
-    target = document.getElementsByClassName("Button");
-    for (var i in target) {
-//        target[i].src.replace("images/")
-    }
-};
-
 function OpenIndex(){
     var target = document.getElementById("Index");
     target.style.display="block";    
-};
+}
 
 function CloseIndex(){
     var target = document.getElementById("Index");
     target.style.display="none";
-};
+}
 
 function OpenCharacters(){
     var target = document.getElementById("Characters");
     target.style.display="block";    
-};
+}
 
 function CloseCharacters(){
     var target = document.getElementById("Characters");
     target.style.display="none";
-};
+}
 
 function OpenKeyWords(){
     var target = document.getElementById("KeyWords");
     target.style.display="block"; 
-};
+}
 
 function CloseKeyWords(){
     var target = document.getElementById("KeyWords");
     target.style.display="none";
-};
+}
 
 function OpenSetting(){
     var target = document.getElementById("Setting");
     target.style.display="block"; 
-};
+}
 
 function CloseSetting(){
     var target = document.getElementById("Setting");
     target.style.display="none";
-};
+}
 
 
 
@@ -150,10 +150,9 @@ function MakeContent() {
     var CurrentPage;
     var CurrentSection;
     var CurrentSubsection;
-    var Phase;
     var HTML = new Array();
     var Content;
-
+    
 
     /********************************************************************
         セクション番号の読み込み
