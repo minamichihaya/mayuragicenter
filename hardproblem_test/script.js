@@ -86,8 +86,6 @@ function ChangeLoading() {
 **********************************************************************/
 
 function MakeCover(){
-    target = document.getElementById("OnLoading");
-    target.style.backgroundImage = 'url("images/' + Phase + '/loading.gif")';
     target = document.getElementsByTagName("html");
     target[0].innerHTML = target[0].innerHTML.replace(/images\/[1-3]\//g,"images/" + Phase + "/");
     target = document.getElementById("Cover");
