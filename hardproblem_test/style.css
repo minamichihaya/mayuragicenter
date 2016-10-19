@@ -5,11 +5,25 @@
 
 body{
     background-color: black;
+    font-family: "游明朝",serif;
+}
+
+#Background{
+    height: 100%;
     background-image: url(images/bgi.jpg);
     background-repeat:repeat;
     background-position: center;
     background-attachment: fixed;
-    font-family: "游明朝",serif;
+    display: none;
+}
+
+#Loading{
+    height: 100%;
+    background-image: url(images/1/loading.gif);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: block;
 }
 
 a:link{
@@ -58,7 +72,6 @@ a:hover{
     background-image: url(images/1/cover.png);
     background-repeat: no-repeat;
     background-position: center;
-    display: none;
     border: solid 1px #999;
 }
 

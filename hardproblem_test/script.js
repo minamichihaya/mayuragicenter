@@ -6,6 +6,35 @@
 ***********************************************************************
 **********************************************************************/
 
+    /********************************************************************
+        栞の読み込み
+    *********************************************************************/
+
+        /*
+
+        CurrentPage = "1-2";
+
+        if (CurrentPage.indexOf("-") >= 0) {
+            CurrentSection = CurrentPage.split("-")[0];
+            CurrentSubsection = CurrentPage.split("-")[1];
+        } else {
+            CurrentSection = CurrentPage;
+            CurrentSubsection = "";
+        };
+
+
+        if (Number(CurrentSection) <= 3) {
+            Phase = "1";        
+        } else if (Number(CurrentSection) <= 6) {
+            Phase = "2";
+        } else {
+            Phase = "3";
+        };
+
+        */
+
+    var Phase = "2";
+
 var NovelTitle = "ふたりのハードプロブレム";
 var SecList = [
     {title:"プロローグ",section:"prologue",subsection:"0",phase:"1"},
@@ -35,34 +64,17 @@ function GetSecData (SearchStr, SearchKey, OutputKey) {
     }
 }
 
-/********************************************************************
-    栞の読み込み
-*********************************************************************/
 
-    /*
-    
-    CurrentPage = "1-2";
+function DisplayCover(){
+    document.getElementById("Loading").style.display = "none";
+    document.getElementById("Background").style.display = "block";
+}
 
-    if (CurrentPage.indexOf("-") >= 0) {
-        CurrentSection = CurrentPage.split("-")[0];
-        CurrentSubsection = CurrentPage.split("-")[1];
-    } else {
-        CurrentSection = CurrentPage;
-        CurrentSubsection = "";
-    };
+function ChangeLoading() {
+    document.getElementById("Loading").style.backgroundImage = 'url("images/' + Phase + '/loading.gif")';
+}
 
 
-    if (Number(CurrentSection) <= 3) {
-        Phase = "1";        
-    } else if (Number(CurrentSection) <= 6) {
-        Phase = "2";
-    } else {
-        Phase = "3";
-    };
-    
-    */
-
-var Phase = "1";
     
 
 /**********************************************************************
@@ -80,11 +92,6 @@ function MakeCover(){
     target[0].innerHTML = target[0].innerHTML.replace(/images\/[1-3]\//g,"images/" + Phase + "/");
     target = document.getElementById("Cover");
     target.style.backgroundImage = 'url("images/' + Phase + '/cover.png")';
-}
-
-function DisplayCover(){
-    document.getElementById("OnLoading").style.display="none";
-    document.getElementById("Cover").style.display="block";
 }
 
 function OpenIndex(){
