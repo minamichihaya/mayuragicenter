@@ -66,7 +66,7 @@ function GetSecData (SearchStr, SearchKey, OutputKey) {
 
 
 function DisplayCover(){
-    document.getElementById("Loading").style.display = "none";
+    document.getElementById("LoadingIcon").style.display = "none";
     document.getElementById("Background").style.display = "block";
 }
 

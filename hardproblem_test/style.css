@@ -9,21 +9,22 @@ body{
 }
 
 #Background{
+    width: 100%;
     height: 100%;
-    background-image: url(images/bgi.jpg);
-    background-repeat:repeat;
-    background-position: center;
-    background-attachment: fixed;
-    display: none;
+	position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
 }
 
-#Loading{
-    height: 100%;
-    background-image: url(images/1/loading.gif);
-    background-repeat:no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    display: block;
+#LoadingIcon{
+    width: 102px;
+    position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin:auto;
 }
 
 a:link{
@@ -46,13 +47,6 @@ a:hover{
 ************************************/
 
 #OnLoading{
-    margin:auto;
-    vertical-align: middle;
-    position: absolute;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
     background-image: url(images/1/loading.gif);
     background-repeat: no-repeat;
     background-position: center;
