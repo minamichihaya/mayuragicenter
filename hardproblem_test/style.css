@@ -25,6 +25,7 @@ body{
 	bottom: 0;
 	left: 0;
 	margin:auto;
+    display: block;
 }
 
 a:link{
@@ -46,12 +47,6 @@ a:hover{
     カバー
 ************************************/
 
-#OnLoading{
-    background-image: url(images/1/loading.gif);
-    background-repeat: no-repeat;
-    background-position: center;
-    display: block;
-}
 
 #Cover{
     width:1024px;
@@ -67,6 +62,7 @@ a:hover{
     background-repeat: no-repeat;
     background-position: center;
     border: solid 1px #999;
+    display: none;
 }
 
 #Logo{
