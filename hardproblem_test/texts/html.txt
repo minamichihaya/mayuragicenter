@@ -1,42 +1,34 @@
-﻿<head>
 
-<title>???</title>
-<meta name="author" content="南正太郎">
-<meta name="copyright" content="南正太郎">
-<meta name="description" content="機械になりたい、って思った。今でもそう思ってる。">
-<meta name="keywords" content="小説, 南正太郎, ふたりのハードプロブレム">
-<meta charset="UTF-8">
-<meta name="robots" content="index,follow">
-<link rel="shortcut icon" href="images/???/favicon.png" type="image/png">
-<script type="text/javascript" src="content.js"></script>
+<body onload="DisplayContent()">
+    <div id="Background">
+        <img src="images/bgi.jpg" class="BGI">
+        <img src="images/1/loading.gif" id="LoadingIcon">
+    </div>
 
-</head>
+    <div id="TextBackground">
 
-<body>
+        <div class="Navigator" id="Header">
+            <span class="NaviText" id="HeaderPrev"><a href="???" class="NaviPrev">Prev</a></span>
+            <span class="NaviBar">|</span>
+            <span class="NaviText"><a href="../hardproblem/">Top</a></span>
+            <span class="NaviBar">|</span>
+            <span class="NaviText" id="HeaderNext"><a href="???" class="NaviNext">Next</a></span>
+        </div>
 
-<div class="TextBackground">
+        <div id="SectionCover">
+            <img src="images/section1.png" id="SecCoverImg"> 
+            <img src="images/1/logo_sl.png" id="SecCoverLogo"> 
+        </div>
 
-<div class="Navigator" id="Header">
-<span class="NaviText" id="HeaderPrev"><a href="???" class="NaviPrev">Prev</a></span>
-<span class="NaviBar">|</span>
-<span class="NaviText"><a href="../hardproblem/">Top</a></span>
-<span class="NaviBar">|</span>
-<span class="NaviText" id="HeaderNext"><a href="???" class="NaviNext">Next</a></span>
-</div>
+        <div class="Text" id="Content"></div>
 
-<img src="images/section???.png" id="SectionCover">  
+        <div class="Navigator" id="Footer">
+            <span class="NaviText" id="FooterPrev"><a href="???" class="NaviPrev">Prev</a></span>
+            <span class="NaviBar">|</span>
+            <span class="NaviText"><a href="../hardproblem/">Top</a></span>
+            <span class="NaviBar">|</span>
+            <span class="NaviText" id="FooterNext"><a href="???" class="NaviNext">Next</a></span>
+        </div>
 
-<div class="Text" id="Content"></div>
-
-<div class="Navigator" id="Footer">
-<span class="NaviText" id="FooterPrev"><a href="???" class="NaviPrev">Prev</a></span>
-<span class="NaviBar">|</span>
-<span class="NaviText"><a href="../hardproblem/">Top</a></span>
-<span class="NaviBar">|</span>
-<span class="NaviText" id="FooterNext"><a href="???" class="NaviNext">Next</a></span>
-</div>
-
-</div>
-
+    </div>
 </body>
-
