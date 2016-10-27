@@ -72,8 +72,6 @@ function DisplayCover(){
 
 
 function DisplayContent() {
-    document.getElementById("LoadingIcon").style.display = "none";
-    document.getElementById("TextBackground").style.display = "block";
     LoadText();
 }
 
@@ -228,8 +226,24 @@ function MakeContent() {
     Text.open("GET", "texts/html.txt", false);
     Text.send("");
     target = document.getElementsByTagName("body");
-    
     target[0].outerHTML = Text.responseText;
+    
+    
+    /********************************************************************
+        CSSの読み込み
+    *********************************************************************/
+
+
+    HTML = document.getElementsByTagName("html");
+    HTML[0].innerHTML = HTML[0].innerHTML + '<link rel="stylesheet" href="style.css" type="text/css">';
+    
+    
+    /********************************************************************
+        各種タグ変更
+    *********************************************************************/
+
+    
+    
     target = document.getElementsByTagName("title");
     if (Subsection == "0") {
         target[0].innerHTML = SecTitle + "／" + target.innerHTML;
@@ -334,19 +348,6 @@ function MakeContent() {
             }
         }
     }
-                
-                
-    /********************************************************************
-        CSSの読み込み
-    *********************************************************************/
-
-
-    HTML = document.getElementsByTagName("html");
-    HTML[0].innerHTML = HTML[0].innerHTML + '<link rel="stylesheet" href="style.css" type="text/css">';
-    
-    
-    
-
 
 }
 
@@ -390,5 +391,8 @@ function MakeContent() {
         };
 
         document.getElementById("Content").innerHTML = Content;
+        
+        document.getElementById("LoadingIcon").style.display = "none";
+        document.getElementById("TextBackground").style.display = "block";
     }
 
