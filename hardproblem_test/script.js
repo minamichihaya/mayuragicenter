@@ -74,6 +74,7 @@ function DisplayCover(){
 function DisplayContent() {
     document.getElementById("LoadingIcon").style.display = "none";
     document.getElementById("TextBackground").style.display = "block";
+    LoadText();
 }
 
 function ChangeLoading() {
@@ -344,34 +345,50 @@ function MakeContent() {
     HTML[0].innerHTML = HTML[0].innerHTML + '<link rel="stylesheet" href="style.css" type="text/css">';
     
     
-    /********************************************************************
-        本文の表示
-    *********************************************************************/
-
-
-    if (Subsection !== "0") {
-        Text.open("GET", "texts/" + Section + "-" + Subsection + ".txt", false);
-    } else {
-        Text.open("GET", "texts/" + Section + ".txt", false);
-    };
-
-    Text.send("");
-
-    var Content = Text.responseText;
-
-    while (Content.indexOf('|') > -1) {
-        Content = Content.replace('|','<ruby>');
-        Content = Content.replace('《','<rp>[</rp><rt>');
-        Content = Content.replace('》','</rt><rp>]</rp></ruby>');
-    };
-
-    while (Content.indexOf('!sc') > -1) {
-        Content = Content.replace('!sc','<span class="SC">');
-        Content = Content.replace('sc!','</span>');
-    };
-
-    document.getElementById("Content").innerHTML = Content;
     
-    
+
+
 }
+
+    /********************************************************************
+            本文の表示
+    *********************************************************************/
+    function LoadText() {
+        var FileName = window.location.href.split("/").pop();
+
+        if (FileName.indexOf("-") !== -1) {
+            var Section = FileName.split("-")[0].substring(FileName[0].length - 1);
+            var Subsection = FileName.split("-")[1].substring(0, 1);
+        } else {
+            var Section = FileName.substring(0, FileName.indexOf(".htm"));
+            var Subsection = "0";
+        };
+
+        var SecTitle = GetSecData(Section,"section","title");
+
+        var Text = new XMLHttpRequest();
+
+        if (Subsection !== "0") {
+            Text.open("GET", "texts/" + Section + "-" + Subsection + ".txt", false);
+        } else {
+            Text.open("GET", "texts/" + Section + ".txt", false);
+        };
+
+        Text.send("");
+
+        var Content = Text.responseText;
+
+        while (Content.indexOf('|') > -1) {
+            Content = Content.replace('|','<ruby>');
+            Content = Content.replace('《','<rp>[</rp><rt>');
+            Content = Content.replace('》','</rt><rp>]</rp></ruby>');
+        };
+
+        while (Content.indexOf('!sc') > -1) {
+            Content = Content.replace('!sc','<span class="SC">');
+            Content = Content.replace('sc!','</span>');
+        };
+
+        document.getElementById("Content").innerHTML = Content;
+    }
 
