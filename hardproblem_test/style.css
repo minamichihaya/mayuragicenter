@@ -377,7 +377,7 @@ div#TextBackground{
     margin: 0 auto;
     text-align: center;
     position: relative;
-    display: none;
+    visibility: hidden;
 }
 
 
