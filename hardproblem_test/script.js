@@ -75,7 +75,7 @@
 function MakeCover(){
     
     var cky = document.cookie;
-    if (cky.indexOf("HPFTPhase=") == -1) {
+    if (cky.indexOf("HPFTPhase=") != -1) {
         var Phase = cky.slice(cky.indexOf("HPFTPhase=")+10,cky.indexOf("HPFTPhase=")+11);
     } else {
         var Phase = "1";
@@ -209,7 +209,7 @@ function MakeContent() {
     SecTitle = GetSecData(Section,"section","title");
     
     var cky = document.cookie;
-    if (cky.indexOf("HPFTPhase=") == -1) {
+    if (cky.indexOf("HPFTPhase=") != -1) {
         var Phase = cky.slice(cky.indexOf("HPFTPhase=")+10,cky.indexOf("HPFTPhase=")+11);
     } else {
         var Phase = GetSecData(Section,"section","phase");
