@@ -57,6 +57,12 @@
     }
 
     function ChangeLoading() {
+        var cky = document.cookie;
+        if (cky.indexOf("HPFTPhase=") != -1) {
+            var Phase = cky.slice(cky.indexOf("HPFTPhase=")+10,cky.indexOf("HPFTPhase=")+11);
+        } else {
+            var Phase = "1";
+        }
         document.getElementById("LoadingIcon").src = "images/" + Phase + "/loading.gif";
     }
 
