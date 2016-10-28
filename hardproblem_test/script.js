@@ -82,7 +82,7 @@ function MakeCover(){
     
     var cky = document.cookie;
     if (cky.indexOf("HPFTPhase=") != -1) {
-        var Phase = cky.slice(cky.indexOf("HPFTPhase=")+10,cky.indexOf("HPFTPhase=")+11);
+        var Phase = cky.slice(cky.indexOf("HPFTPhase=") + 10, cky.indexOf("HPFTPhase=") + 11);
     } else {
         var Phase = "1";
     }
@@ -356,13 +356,14 @@ function MakeContent() {
        栞の書き込み
     *********************************************************************/
     
-    var RecentPage = 'HPFTRecentPage=' + FileName.replace(".html","") + ';max-age=158112000;path=/hardproblem_text';
-    alert(document.cookie + "　→　" + RecentPage);
-    document.cookie = RecentPage;
+    var PageCookie = 'HPFTRecentPage=' + FileName.replace(".html","") + '; max-age=158112000';
+    document.cookie = PageCookie;
+    
     if (Number(Phase) < Number(GetSecData(Section,"section","phase"))) {
-        document.cookie = document.cookie + 'HPFTPhase=' + GetSecData(Section,"section","phase") + ';max-age=158112000;path=/hardproblem_text'; 
+        var PhaseCookie = 'HPFTPhase=' + GetSecData(Section,"section","phase") + '; max-age=158112000';
+        document.cookie = PhaseCookie;
     }
-    alert(document.cookie);
+    
 }
 
     /********************************************************************
