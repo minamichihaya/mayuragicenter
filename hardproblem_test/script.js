@@ -392,7 +392,7 @@ function MakeContent() {
 
         document.getElementById("Content").innerHTML = Content;
         
-        document.getElementById("LoadingIcon").style.display = "none";
         document.getElementById("TextBackground").style.visibility = "visible";
+        document.getElementById("LoadingIcon").style.display = "none";
     }
 
