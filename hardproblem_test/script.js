@@ -87,12 +87,17 @@ function MakeCover(){
         var Phase = "1";
     }
     
+    var RecentPage = cky.slice(cky.indexOf("HPFTRecentPage=") + 15);
+    RecentPage = RecentPage.slice(0, RecentPage.indexOf(".html"));
+    
     target = document.getElementsByTagName("html");
     target[0].innerHTML = target[0].innerHTML.replace(/images\/[1-3]\//g,"images/" + Phase + "/");
     target = document.getElementById("Cover");
     target.style.backgroundImage = 'url("images/' + Phase + '/cover.png")';
+    target = document.getElementById("Continue");
+    target.href = RecentPage + ".html";
     target = document.getElementById("Index1");
-    target.innerHTML = '<span class="SecSpan"><a href="' + SecList[0].section + '.html">' + SecList[0].title + '</a></span>';
+    target.innerHTML = '<span class="SecSpan" id="prologue"><a href="' + SecList[0].section + '.html">' + SecList[0].title + '</a></span>';
     target = document.getElementById("SectionTitle");
     for (var i=0; i<=SecList.length-1; i++) {
         if (SecList[i].subsection != "0") {
@@ -120,13 +125,30 @@ function MakeCover(){
     for (var i=1; i<=SecList.length-1; i++) {
         if (SecList[i].subsection=="0") {          
             target.innerHTML = target.innerHTML
-                                + '<span class="SecSpan"><a href="' + SecList[i].section + '.html">'
+                                + '<span class="SecSpan" id="' + SecList[i].section
+                                + '"><a href="' + SecList[i].section + '.html">'
                                 + SecList[i].title + '</a></span>';
             if (i!=SecList.length-1) {
                 target.innerHTML = target.innerHTML + '<br>';
             }
         }
     }
+    
+    if ((Phase != "3")||(RecentPage == "epilogue")) {
+        switch (RecentPage) {
+            case "afterwords":
+                break;
+            case "acknowledgements":
+                break;
+            case "references":
+                break;
+            default:
+                target = document.getElementById(RecentPage);
+                target.style.border = "solid 1px #fff";
+                break;
+        }
+    }
+    
 }
 
 function OpenIndex(){
@@ -355,7 +377,7 @@ function MakeContent() {
        栞の書き込み
     *********************************************************************/
     
-    var PageCookie = 'HPFTRecentPage=' + FileName.replace(".html","") + '; max-age=158112000';
+    var PageCookie = 'HPFTRecentPage=' + FileName + '; max-age=158112000';
     document.cookie = PageCookie;
     
     if (Number(Phase) < Number(GetSecData(Section,"section","phase"))) {
