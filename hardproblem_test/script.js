@@ -87,8 +87,6 @@ function MakeCover(){
         var Phase = "1";
     }
     
-    alert(Phase);
-    
     target = document.getElementsByTagName("html");
     target[0].innerHTML = target[0].innerHTML.replace(/images\/[1-3]\//g,"images/" + Phase + "/");
     target = document.getElementById("Cover");
@@ -217,9 +215,9 @@ function MakeContent() {
     
     var cky = document.cookie;
     if (cky.indexOf("HPFTPhase=") != -1) {
-        var Phase = cky.slice(cky.indexOf("HPFTPhase=")+10,cky.indexOf("HPFTPhase=")+11);
+        var Phase = cky.slice(cky.indexOf("HPFTPhase=") + 10, cky.indexOf("HPFTPhase=") + 11);
     } else {
-        var Phase = GetSecData(Section,"section","phase");
+        var Phase = "1";
     }
     
     /********************************************************************
