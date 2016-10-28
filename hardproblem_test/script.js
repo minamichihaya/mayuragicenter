@@ -358,7 +358,7 @@ function MakeContent() {
 
     document.cookie = 'HPFTRecentPage=' + FileName.replace(".html","") + ';max-age=158112000';
     if (Number(Phase) < Number(GetSecData(Section,"section","phase"))) {
-        document.cookie = 'HPFTPhase=' + GetSecData(Section,"section","phase") + ';max-age=158112000';   
+        document.cookie = document.cookie + 'HPFTPhase=' + GetSecData(Section,"section","phase") + ';max-age=158112000';   
     }
 }
 
