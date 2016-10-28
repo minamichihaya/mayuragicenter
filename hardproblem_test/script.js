@@ -355,11 +355,14 @@ function MakeContent() {
     /********************************************************************
        栞の書き込み
     *********************************************************************/
-
-    document.cookie = 'HPFTRecentPage=' + FileName.replace(".html","") + ';max-age=158112000';
+    
+    var RecentPage = 'HPFTRecentPage=' + FileName.replace(".html","") + ';max-age=158112000;path=/hardproblem_text';
+    alert(document.cookie + "　→　" + RecentPage);
+    document.cookie = RecentPage;
     if (Number(Phase) < Number(GetSecData(Section,"section","phase"))) {
-        document.cookie = document.cookie + 'HPFTPhase=' + GetSecData(Section,"section","phase") + ';max-age=158112000';   
+        document.cookie = document.cookie + 'HPFTPhase=' + GetSecData(Section,"section","phase") + ';max-age=158112000;path=/hardproblem_text'; 
     }
+    alert(document.cookie);
 }
 
     /********************************************************************
