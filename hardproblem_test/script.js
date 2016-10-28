@@ -6,78 +6,59 @@
 ***********************************************************************
 **********************************************************************/
 
+
+
     /********************************************************************
-        栞の読み込み
+        設定の読み込み
     *********************************************************************/
 
-        /*
-
-        CurrentPage = "1-2";
-
-        if (CurrentPage.indexOf("-") >= 0) {
-            CurrentSection = CurrentPage.split("-")[0];
-            CurrentSubsection = CurrentPage.split("-")[1];
-        } else {
-            CurrentSection = CurrentPage;
-            CurrentSubsection = "";
-        };
+    var DarkColor = false;
+    var Font = "MSMincho"
 
 
-        if (Number(CurrentSection) <= 3) {
-            Phase = "1";        
-        } else if (Number(CurrentSection) <= 6) {
-            Phase = "2";
-        } else {
-            Phase = "3";
-        };
-
-        */
-
-    var Phase = "1";
-
-var NovelTitle = "ふたりのハードプロブレム";
-var SecList = [
-    {title:"プロローグ",section:"prologue",subsection:"0",phase:"1"},
-    {title:"虹を閉じ込めた瞳",section:"1",subsection:["1","2","3","4","5","6","7"],phase:"1"},
-    {title:"海へいこう",section:"2",subsection:["1","2","3","4","5","6"],phase:"1"},
-    {title:"その柔肌は誰がために",section:"3",subsection:["1","2","3","4","5","6","7","8"],phase:"1"},
-    {title:"因果の玉突き",section:"4",subsection:["1","2","3","4","5","6"],phase:"2"},
-    {title:"機械の少女",section:"5",subsection:["1","2","3","4","5","6","7","8"],phase:"2"},
-    {title:"もうひとつの部屋",section:"6",subsection:["1","2","3","4","5"],phase:"2"},
-    {title:"エピローグ",section:"epilogue",subsection:"0",phase:"3"},
-    {title:"あとがき",section:"afterwords",subsection:"0",phase:"0"},
-    {title:"Acknowledgements",section:"acknowledgements",subsection:"0",phase:"0"},
-    {title:"References",section:"references",subsection:"0",phase:"0"}
-];
+    var NovelTitle = "ふたりのハードプロブレム";
+    var SecList = [
+        {title:"プロローグ",section:"prologue",subsection:"0",phase:"1"},
+        {title:"虹を閉じ込めた瞳",section:"1",subsection:["1","2","3","4","5","6","7"],phase:"1"},
+        {title:"海へいこう",section:"2",subsection:["1","2","3","4","5","6"],phase:"1"},
+        {title:"その柔肌は誰がために",section:"3",subsection:["1","2","3","4","5","6","7","8"],phase:"1"},
+        {title:"因果の玉突き",section:"4",subsection:["1","2","3","4","5","6"],phase:"2"},
+        {title:"機械の少女",section:"5",subsection:["1","2","3","4","5","6","7","8"],phase:"2"},
+        {title:"もうひとつの部屋",section:"6",subsection:["1","2","3","4","5"],phase:"2"},
+        {title:"エピローグ",section:"epilogue",subsection:"0",phase:"3"},
+        {title:"あとがき",section:"afterwords",subsection:"0",phase:"0"},
+        {title:"Acknowledgements",section:"acknowledgements",subsection:"0",phase:"0"},
+        {title:"References",section:"references",subsection:"0",phase:"0"}
+    ];
 
 
-function GetSecData (SearchStr, SearchKey, OutputKey) {
-    for (var i=0; i<=SecList.length; i++) {
-        if (SecList[i][SearchKey] == SearchStr) {
-            if (OutputKey == "index") {
-                return i;
-            } else {
-                return SecList[i][OutputKey];
+    function GetSecData (SearchStr, SearchKey, OutputKey) {
+        for (var i=0; i<=SecList.length; i++) {
+            if (SecList[i][SearchKey] == SearchStr) {
+                if (OutputKey == "index") {
+                    return i;
+                } else {
+                    return SecList[i][OutputKey];
+                }
+                break;
             }
-            break;
         }
     }
-}
 
 
-function DisplayCover(){
-    document.getElementById("LoadingIcon").style.display = "none";
-    document.getElementById("Cover").style.display = "block";
-}
+    function DisplayCover(){
+        document.getElementById("LoadingIcon").style.display = "none";
+        document.getElementById("Cover").style.display = "block";
+    }
 
 
-function DisplayContent() {
-    LoadText();
-}
+    function DisplayContent() {
+        LoadText();
+    }
 
-function ChangeLoading() {
-    document.getElementById("LoadingIcon").src = "images/" + Phase + "/loading.gif";
-}
+    function ChangeLoading() {
+        document.getElementById("LoadingIcon").src = "images/" + Phase + "/loading.gif";
+    }
 
 
 
@@ -92,6 +73,15 @@ function ChangeLoading() {
 **********************************************************************/
 
 function MakeCover(){
+    
+    var cky = document.cookie
+    if (cky.indexOf("HPFTPhase=") == -1) {
+        var Phase = cky.slice(cky.indexOf("HPFTPhase=")+10,cky.indexOf("HPFTPhase=")+11);
+    } else {
+        var Phase = "1";
+    }
+    
+    
     target = document.getElementsByTagName("html");
     target[0].innerHTML = target[0].innerHTML.replace(/images\/[1-3]\//g,"images/" + Phase + "/");
     target = document.getElementById("Cover");
@@ -217,6 +207,13 @@ function MakeContent() {
     };
 
     SecTitle = GetSecData(Section,"section","title");
+    
+    var cky = document.cookie
+    if (cky.indexOf("HPFTPhase=") == -1) {
+        var Phase = cky.slice(cky.indexOf("HPFTPhase=")+10,cky.indexOf("HPFTPhase=")+11);
+    } else {
+        var Phase = GetSecData(Section,"section","phase");
+    }
     
     /********************************************************************
         head/bodyの出力
@@ -349,6 +346,14 @@ function MakeContent() {
         }
     }
 
+    /********************************************************************
+       栞の書き込み
+    *********************************************************************/
+
+    document.cookie = 'HPFTRecentPage=' + FileName.replace(".html","") + ';max-age=158112000';
+    if (Number(Phase) < Number(GetSecData(Section,"section","phase"))) {
+        document.cookie = 'HPFTPhase=' + GetSecData(Section,"section","phase") + ';max-age=158112000'      
+    }
 }
 
     /********************************************************************
@@ -391,6 +396,44 @@ function MakeContent() {
         };
 
         document.getElementById("Content").innerHTML = Content;
+        
+        switch (Font) {
+            case "YuMincho":
+                document.getElementById("Content").style.fontFamily = '"游明朝","游明朝体","Yu Mincho","YuMincho"';
+                for (var i=0; i<=document.getElementsByClassName("SC").length - 1; i++) {
+                    document.getElementsByClassName("SC")[i].style.fontFamily = "SimSun";
+                    document.getElementsByClassName("SC")[i].style.fontSize = "105%";
+                    document.getElementsByClassName("SC")[i].style.color = '#404040';
+                }
+                break;
+            case "NotoSansCJK":
+                document.getElementById("Content").style.fontFamily = "Noto Sans CJK JP";
+                document.getElementById("Content").style.color = "#444";
+                document.getElementById("Content").style.fontWeight = "300";
+                for (var i=0; i<=document.getElementsByClassName("SC").length - 1; i++) {
+                    document.getElementsByClassName("SC")[i].style.fontFamily = "Noto Sans CJK SC";
+                }
+                break;
+            case "Meiryo":
+                document.getElementById("Content").style.fontFamily = '"メイリオ","Meiryo"';
+                document.getElementById("Content").style.color = "#444";
+                for (var i=0; i<=document.getElementsByClassName("SC").length - 1; i++) {
+                    document.getElementsByClassName("SC")[i].style.fontFamily = "Microsoft YaHei";
+                }
+                break;
+            case "MS Mincho":
+                document.getElementById("Content").style.fontFamily = '"MS Mincho","ＭＳ 明朝"';
+                for (var i=0; i<=document.getElementsByClassName("SC").length - 1; i++) {
+                    document.getElementsByClassName("SC")[i].style.fontFamily = "SimSun";
+                }
+                break;
+            case "DefaultSerif":
+                document.getElementById("Content").style.fontFamily = 'serif';
+                break;
+            case "DefaultSansSerif":
+                document.getElementById("Content").style.fontFamily = 'sans-serif';
+                break;
+        }
         
         document.getElementById("TextBackground").style.visibility = "visible";
         document.getElementById("LoadingIcon").style.display = "none";
