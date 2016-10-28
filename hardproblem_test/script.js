@@ -87,6 +87,7 @@ function MakeCover(){
         var Phase = "1";
     }
     
+    alert(Phase);
     
     target = document.getElementsByTagName("html");
     target[0].innerHTML = target[0].innerHTML.replace(/images\/[1-3]\//g,"images/" + Phase + "/");
