@@ -13,8 +13,6 @@
     *********************************************************************/
 
     var DarkColor = false;
-    var Font = "MSMincho"
-
 
     var NovelTitle = "ふたりのハードプロブレム";
     var SecList = [
@@ -87,8 +85,19 @@ function MakeCover(){
         var Phase = "1";
     }
     
-    var RecentPage = cky.slice(cky.indexOf("HPFTRecentPage=") + 15);
-    RecentPage = RecentPage.slice(0, RecentPage.indexOf(".html"));
+    if (cky.indexOf("HPFTRecentPage=") != -1){
+        var RecentPage = cky.slice(cky.indexOf("HPFTRecentPage=") + 15);
+        RecentPage = RecentPage.slice(0, RecentPage.indexOf(".html"));
+    } else {
+        var RecentPage = "prologue";
+    }
+    
+    if (cky.indexOf("HPFTFont=") != -1) {
+        var Font = cky.slice(cky.indexOf("HPFTFont=") + 9);
+        Font = Font.slice(0,Font.indexOf("XXX"));
+    } else {
+        var Font = "YuMincho";
+    }
     
     target = document.getElementsByTagName("html");
     target[0].innerHTML = target[0].innerHTML.replace(/images\/[1-3]\//g,"images/" + Phase + "/");
@@ -149,6 +158,8 @@ function MakeCover(){
         }
     }
     
+    
+    
 }
 
 function OpenIndex(){
@@ -191,7 +202,65 @@ function CloseSetting(){
     target.style.display="none";
 }
 
+function YuMincho(){
+    document.cookie = 'HPFTFont=YuMinchoXXX; max-age=31622400';
+    document.getElementById("YuMincho").innerHTML = "Yu Mincho" + " ✓";
+    document.getElementById("NotoSansCJK").innerHTML = "Noto Sans CJK";
+    document.getElementById("Meiryo").innerHTML = "Meiryo";
+    document.getElementById("MSMincho").innerHTML = "MS Mincho";
+    document.getElementById("DefaultSerif").innerHTML = "Default (Serif)";
+    document.getElementById("DefaultSansSerif").innerHTML = "Default (Sans-Serif)";
+}
 
+function NotoSansCJK(){
+    document.cookie = 'HPFTFont=NotoSansCJKXXX; max-age=31622400';
+    document.getElementById("YuMincho").innerHTML = "Yu Mincho";
+    document.getElementById("NotoSansCJK").innerHTML = "Noto Sans CJK" + " ✓";
+    document.getElementById("Meiryo").innerHTML = "Meiryo";
+    document.getElementById("MSMincho").innerHTML = "MS Mincho";
+    document.getElementById("DefaultSerif").innerHTML = "Default (Serif)";
+    document.getElementById("DefaultSansSerif").innerHTML = "Default (Sans-Serif)";
+}
+
+function Meiryo(){
+    document.cookie = 'HPFTFont=MeiryoXXX; max-age=31622400';
+    document.getElementById("YuMincho").innerHTML = "Yu Mincho";
+    document.getElementById("NotoSansCJK").innerHTML = "Noto Sans CJK";
+    document.getElementById("Meiryo").innerHTML = "Meiryo" + " ✓";
+    document.getElementById("MSMincho").innerHTML = "MS Mincho";
+    document.getElementById("DefaultSerif").innerHTML = "Default (Serif)";
+    document.getElementById("DefaultSansSerif").innerHTML = "Default (Sans-Serif)";
+}
+
+function MSMincho(){
+    document.cookie = 'HPFTFont=MSMinchoXXX; max-age=31622400';
+    document.getElementById("YuMincho").innerHTML = "Yu Mincho";
+    document.getElementById("NotoSansCJK").innerHTML = "Noto Sans CJK";
+    document.getElementById("Meiryo").innerHTML = "Meiryo";
+    document.getElementById("MSMincho").innerHTML = "MS Mincho" + " ✓";
+    document.getElementById("DefaultSerif").innerHTML = "Default (Serif)";
+    document.getElementById("DefaultSansSerif").innerHTML = "Default (Sans-Serif)";
+}
+
+function DefaultSerif(){
+    font = "HPFTFont=DefaultSerifXXX; max-age=31622400";
+    document.getElementById("YuMincho").innerHTML = "Yu Mincho";
+    document.getElementById("NotoSansCJK").innerHTML = "Noto Sans CJK";
+    document.getElementById("Meiryo").innerHTML = "Meiryo";
+    document.getElementById("MSMincho").innerHTML = "MS Mincho";
+    document.getElementById("DefaultSerif").innerHTML = "Default (Serif)" + " ✓";
+    document.getElementById("DefaultSansSerif").innerHTML = "Default (Sans-Serif)";
+}
+
+function DefaultSansSerif(){
+    font = "HPFTFont=DefaultSansSerifXXX; max-age=31622400";
+    document.getElementById("YuMincho").innerHTML = "Yu Mincho";
+    document.getElementById("NotoSansCJK").innerHTML = "Noto Sans CJK";
+    document.getElementById("Meiryo").innerHTML = "Meiryo";
+    document.getElementById("MSMincho").innerHTML = "MS Mincho";
+    document.getElementById("DefaultSerif").innerHTML = "Default (Serif)";
+    document.getElementById("DefaultSansSerif").innerHTML = "Default (Sans-Serif)" + " ✓";
+}
 
 /**********************************************************************
 ***********************************************************************
@@ -217,7 +286,6 @@ function MakeContent() {
     var HTML = new Array();
     var Content;
     var target;
-    
 
     /********************************************************************
         セクション番号の読み込み
@@ -240,6 +308,12 @@ function MakeContent() {
         var Phase = cky.slice(cky.indexOf("HPFTPhase=") + 10, cky.indexOf("HPFTPhase=") + 11);
     } else {
         var Phase = "1";
+    }
+    if (cky.indexOf("HPFTFont=") != -1) {
+        var Font = cky.slice(cky.indexOf("HPFTFont=") + 9);
+        Font = Font.slice(0,Font.indexOf("XXX"));
+    } else {
+        var Font = "YuMincho";
     }
     
     /********************************************************************
@@ -428,6 +502,14 @@ function MakeContent() {
 
         document.getElementById("Content").innerHTML = Content;
         
+        var cky=document.cookie;
+        if (cky.indexOf("HPFTFont=") != -1) {
+            var Font = cky.slice(cky.indexOf("HPFTFont=") + 9);
+            Font = Font.slice(0,Font.indexOf("XXX"));
+        } else {
+            var Font = "YuMincho";
+        }
+        
         switch (Font) {
             case "YuMincho":
                 document.getElementById("Content").style.fontFamily = '"游明朝","游明朝体","Yu Mincho","YuMincho"';
@@ -452,7 +534,7 @@ function MakeContent() {
                     document.getElementsByClassName("SC")[i].style.fontFamily = "Microsoft YaHei";
                 }
                 break;
-            case "MS Mincho":
+            case "MSMincho":
                 document.getElementById("Content").style.fontFamily = '"MS Mincho","ＭＳ 明朝"';
                 for (var i=0; i<=document.getElementsByClassName("SC").length - 1; i++) {
                     document.getElementsByClassName("SC")[i].style.fontFamily = "SimSun";
