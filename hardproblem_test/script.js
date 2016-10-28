@@ -74,7 +74,7 @@
 
 function MakeCover(){
     
-    var cky = document.cookie
+    var cky = document.cookie;
     if (cky.indexOf("HPFTPhase=") == -1) {
         var Phase = cky.slice(cky.indexOf("HPFTPhase=")+10,cky.indexOf("HPFTPhase=")+11);
     } else {
@@ -208,7 +208,7 @@ function MakeContent() {
 
     SecTitle = GetSecData(Section,"section","title");
     
-    var cky = document.cookie
+    var cky = document.cookie;
     if (cky.indexOf("HPFTPhase=") == -1) {
         var Phase = cky.slice(cky.indexOf("HPFTPhase=")+10,cky.indexOf("HPFTPhase=")+11);
     } else {
@@ -352,7 +352,7 @@ function MakeContent() {
 
     document.cookie = 'HPFTRecentPage=' + FileName.replace(".html","") + ';max-age=158112000';
     if (Number(Phase) < Number(GetSecData(Section,"section","phase"))) {
-        document.cookie = 'HPFTPhase=' + GetSecData(Section,"section","phase") + ';max-age=158112000'      
+        document.cookie = 'HPFTPhase=' + GetSecData(Section,"section","phase") + ';max-age=158112000';   
     }
 }
 
