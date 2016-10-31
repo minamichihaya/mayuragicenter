@@ -106,11 +106,10 @@ function MakeCover(){
     
     if (cky.indexOf("HPFTScroll=") != -1) {
         var tempstr = cky.slice(cky.indexOf("HPFTScroll=") + 11);
-        Scroll = Number(tempstr.slice(0,tempstr.indexOf("percent")));
-    } else {
-        Scroll = 0;
-    }
-    
+        Scroll = Number(tempstr.slice(0,tempstr.indexOf("pix")));
+        } else {
+            Scroll = 0;
+        }
     
     
     target = document.getElementsByTagName("html");
@@ -119,6 +118,7 @@ function MakeCover(){
     target.style.backgroundImage = 'url("images/' + Phase + '/cover.png")';
     target = document.getElementById("Continue");
     target.href = RecentPage + ".html";
+    
     target = document.getElementById("Index1");
     target.innerHTML = '<span class="SecSpan" id="prologue"><a href="' + SecList[0].section + '.html">' + SecList[0].title + '</a></span>';
     target = document.getElementById("SectionTitle");
@@ -306,6 +306,45 @@ function DefaultSansSerif(){
     document.getElementById("DefaultSansSerif").innerHTML = "Default (Sans-Serif)" + " ✓";
 }
 
+function ChoiceLight(){
+    alert("近日実装予定ですʅ(◔౪◔ ) ʃ");
+}
+
+function ChoiceDark(){
+    alert("近日実装予定ですʅ(◔౪◔ ) ʃ");
+}
+
+function DeleteBookmark() {
+    
+    var cky = document.cookie;
+    if (cky.indexOf("HPFTRecentPage=") != -1){
+        var RecentPage = cky.slice(cky.indexOf("HPFTRecentPage=") + 15);
+        RecentPage = RecentPage.slice(0, RecentPage.indexOf(".html"));
+    } else {
+        var RecentPage = "prologue";
+    }
+    
+    var target;
+    target = document.getElementsByTagName("html");
+    target[0].innerHTML = target[0].innerHTML.replace(/images\/[1-3]\//g,"images/1/");
+    target = document.getElementById("Cover");
+    target.style.backgroundImage = 'url("images/1/cover.png")';
+    target = document.getElementById("Continue");
+    target.href = "prologue.html";
+    target = document.getElementById(RecentPage);
+    target.style.border = "none";  
+    
+    document.cookie = 'HPFTPhase=1; max-age=31622400";';
+    document.cookie = 'HPFTRecentPage=prologue.html; max-age=31622400";';
+    document.cookie = 'HPFTScroll=0pix; max-age=31622400";';
+    
+}
+
+function InitializeSettings() {
+    alert("近日実装予定ですʅ(◔౪◔ ) ʃ");
+}
+
+
 /**********************************************************************
 ***********************************************************************
 
@@ -492,25 +531,6 @@ function MakeContent() {
             }
         }
     }
-
-    /********************************************************************
-       栞の書き込み
-    *********************************************************************/
-    
-    var PageCookie = 'HPFTRecentPage=' + FileName + '; max-age=158112000';
-    document.cookie = PageCookie;
-    
-    
-    if (Phase == "1" && Section == "3" && Subsection == "8") {
-            var PhaseCookie = 'HPFTPhase=2; max-age=158112000';
-            document.cookie = PhaseCookie;        
-        
-    } else {
-        if (Number(Phase) < Number(GetSecData(Section,"section","phase"))) {
-            var PhaseCookie = 'HPFTPhase=' + GetSecData(Section,"section","phase") + '; max-age=158112000';
-            document.cookie = PhaseCookie;
-        }
-    }
     
 }
 
@@ -612,13 +632,54 @@ function MakeContent() {
         document.getElementById("LoadingIcon").style.display = "none";
 
         
-    /********************************************************************
-            スクロールによる栞の変更
-    *********************************************************************/
+        /********************************************************************
+           ページのスクロール
+        *********************************************************************/
         
-        document.cookie =  'HPFTScroll=0percent; max-age=158112000';
+        if (document.cookie.indexOf("HPFTRecentPage=") != -1){
+            var RecentPage = document.cookie.slice(document.cookie.indexOf("HPFTRecentPage=") + 15);
+            RecentPage = RecentPage.slice(0, RecentPage.indexOf(".html"));
+        } else {
+            var RecentPage = "prologue";
+        }
+        
+        if (document.cookie.indexOf("HPFTScroll=") != -1) {
+        var tempstr = document.cookie.slice(document.cookie.indexOf("HPFTScroll=") + 11);
+        Scroll = Number(tempstr.slice(0,tempstr.indexOf("pix")));
+        } else {
+            Scroll = 0;
+        }
+        
+        if (RecentPage + ".html" == FileName) {
+            window.scrollTo(0,Scroll);
+        }        
+        
+        /********************************************************************
+           栞の書き込み
+        *********************************************************************/
+        
+        var PageCookie = 'HPFTRecentPage=' + FileName + '; max-age=158112000';
+        document.cookie = PageCookie;
+
+        if (Phase == "1" && Section == "3" && Subsection == "8") {
+                var PhaseCookie = 'HPFTPhase=2; max-age=158112000';
+                document.cookie = PhaseCookie;        
+
+        } else {
+            if (Number(Phase) < Number(GetSecData(Section,"section","phase"))) {
+                var PhaseCookie = 'HPFTPhase=' + GetSecData(Section,"section","phase") + '; max-age=158112000';
+                document.cookie = PhaseCookie;
+            }
+        }
+        
+        if (window.scrollY != NaN) {
+            document.cookie =  'HPFTScroll=' + window.scrollY + 'pix; max-age=158112000';
+        } else {
+            document.cookie =  'HPFTScroll=0pix; max-age=158112000';
+        }
+        
         document.onscroll = function() {
-            document.cookie =  'HPFTScroll=' + window.scrollY + 'percent; max-age=158112000';
+            document.cookie =  'HPFTScroll=' + window.scrollY + 'pix; max-age=158112000';
             if (window.scrollY / (document.documentElement.clientHeight - document.body.clientHeight) >= 0.95) {
                 if (Section == "3" && Subsection == "8" && Phase == "1") {
                     document.cookie = 'HPFTPhase=2; max-age=158112000';                   
