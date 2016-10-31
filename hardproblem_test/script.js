@@ -458,7 +458,7 @@ function MakeContent() {
     
     
     if (Phase == "1" && Section == "3" && Subsection == "8") {
-            var PhaseCookie = 'HPFTPhase=' + GetSecData(Section,"section","phase") + '; max-age=158112000';
+            var PhaseCookie = 'HPFTPhase=2; max-age=158112000';
             document.cookie = PhaseCookie;        
         
     } else {
