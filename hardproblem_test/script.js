@@ -580,7 +580,7 @@ function MakeContent() {
                 if (Section == "3" && Subsection == "8" && Phase == "1") {
                     document.cookie = 'HPFTPhase=2; max-age=158112000';                   
                 } else if (Section == "epilogue" && Phase == "2") {
-                    document.cookie = 'HPFTPhase=2; max-age=158112000';
+                    document.cookie = 'HPFTPhase=3; max-age=158112000';
                 }
             }
         }
