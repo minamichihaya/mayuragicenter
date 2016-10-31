@@ -161,7 +161,6 @@ function MakeCover(){
         switch (RecentPage) {
             case "prologue":
                 if (Scroll != 0) {
-                    alert(Scroll);
                     target = document.getElementById(RecentPage);
                     target.style.border = "solid 1px #fff";                    
                 }
