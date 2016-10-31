@@ -575,6 +575,7 @@ function MakeContent() {
         document.cookie =  'HPFTScroll=0percent; max-age=158112000';
         
         document.onscroll = function() {
+            console.log(Phase);
             document.cookie =  'HPFTScroll=' + window.scrollY + 'percent; max-age=158112000';
             if (window.scrollY / (document.documentElement.clientHeight - document.body.clientHeight) >= 0.90) {
                 if (Section == "3" && Subsection == "8" && Phase == "1") {
