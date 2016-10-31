@@ -356,13 +356,13 @@ div#DeleteBookmark:hover{
     text-decoration: underline;
 }
 
-div#InitializeSetting{
+div#InitializeSettings{
     right:0px;
     bottom:0px;
     width:350px;
 }
 
-div#InitializeSetting:hover{
+div#InitializeSettings:hover{
     opacity:0.7;
     text-decoration: underline;
 }

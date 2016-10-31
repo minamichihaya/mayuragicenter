@@ -76,9 +76,14 @@
 ***********************************************************************
 **********************************************************************/
 
+var Font;
+var BGColor;
+var Scroll;
+
 function MakeCover(){
     
     var cky = document.cookie;
+    
     if (cky.indexOf("HPFTPhase=") != -1) {
         var Phase = cky.slice(cky.indexOf("HPFTPhase=") + 10, cky.indexOf("HPFTPhase=") + 11);
     } else {
@@ -93,11 +98,20 @@ function MakeCover(){
     }
     
     if (cky.indexOf("HPFTFont=") != -1) {
-        var Font = cky.slice(cky.indexOf("HPFTFont=") + 9);
+        Font = cky.slice(cky.indexOf("HPFTFont=") + 9);
         Font = Font.slice(0,Font.indexOf("XXX"));
     } else {
-        var Font = "YuMincho";
+        Font = "YuMincho";
     }
+    
+    if (cky.indexOf("HPFTScroll=") != -1) {
+        var tempstr = cky.slice(cky.indexOf("HPFTScroll=") + 11);
+        Scroll = Number(tempstr.slice(0,tempstr.indexOf("percent")));
+    } else {
+        Scroll = 0;
+    }
+    
+    
     
     target = document.getElementsByTagName("html");
     target[0].innerHTML = target[0].innerHTML.replace(/images\/[1-3]\//g,"images/" + Phase + "/");
@@ -145,6 +159,13 @@ function MakeCover(){
     
     if ((Phase != "3")||(RecentPage == "epilogue")) {
         switch (RecentPage) {
+            case "prologue":
+                if (Scroll != 0) {
+                    alert(Scroll);
+                    target = document.getElementById(RecentPage);
+                    target.style.border = "solid 1px #fff";                    
+                }
+                break;
             case "afterwords":
                 break;
             case "acknowledgements":
@@ -158,7 +179,26 @@ function MakeCover(){
         }
     }
     
-    
+    switch (Font) {
+        case "YuMincho":
+            YuMincho();
+            break;
+        case "NotoSansCJK":
+            NotoSansCJK();
+            break;
+        case "Meiryo":
+            Meiryo();
+            break;
+        case "MSMincho":
+            MSMincho();
+            break;
+        case "DefaultSerif":
+            DefaultSerif();
+            break;
+        case "DefaultSansSerif":
+            DefaultSansSerif();
+            break;
+    }
     
 }
 
@@ -204,60 +244,65 @@ function CloseSetting(){
 
 function YuMincho(){
     document.cookie = 'HPFTFont=YuMinchoXXX; max-age=31622400';
-    document.getElementById("YuMincho").innerHTML = "Yu Mincho" + " ✓";
+    Font = "YuMincho";
+    document.getElementById("YuMincho").innerHTML = "Yū Minchō" + " ✓";
     document.getElementById("NotoSansCJK").innerHTML = "Noto Sans CJK";
-    document.getElementById("Meiryo").innerHTML = "Meiryo";
-    document.getElementById("MSMincho").innerHTML = "MS Mincho";
+    document.getElementById("Meiryo").innerHTML = "Meiryō";
+    document.getElementById("MSMincho").innerHTML = "MS Minchō";
     document.getElementById("DefaultSerif").innerHTML = "Default (Serif)";
     document.getElementById("DefaultSansSerif").innerHTML = "Default (Sans-Serif)";
 }
 
 function NotoSansCJK(){
     document.cookie = 'HPFTFont=NotoSansCJKXXX; max-age=31622400';
-    document.getElementById("YuMincho").innerHTML = "Yu Mincho";
+    Font = "NotoSansCJK";
+    document.getElementById("YuMincho").innerHTML = "Yū Minchō";
     document.getElementById("NotoSansCJK").innerHTML = "Noto Sans CJK" + " ✓";
-    document.getElementById("Meiryo").innerHTML = "Meiryo";
-    document.getElementById("MSMincho").innerHTML = "MS Mincho";
+    document.getElementById("Meiryo").innerHTML = "Meiryō";
+    document.getElementById("MSMincho").innerHTML = "MS Minchō";
     document.getElementById("DefaultSerif").innerHTML = "Default (Serif)";
     document.getElementById("DefaultSansSerif").innerHTML = "Default (Sans-Serif)";
 }
 
 function Meiryo(){
     document.cookie = 'HPFTFont=MeiryoXXX; max-age=31622400';
-    document.getElementById("YuMincho").innerHTML = "Yu Mincho";
+    Font = "Meiryo";
+    document.getElementById("YuMincho").innerHTML = "Yū Minchō";
     document.getElementById("NotoSansCJK").innerHTML = "Noto Sans CJK";
-    document.getElementById("Meiryo").innerHTML = "Meiryo" + " ✓";
-    document.getElementById("MSMincho").innerHTML = "MS Mincho";
+    document.getElementById("Meiryo").innerHTML = "Meiryō" + " ✓";
+    document.getElementById("MSMincho").innerHTML = "MS Minchō";
     document.getElementById("DefaultSerif").innerHTML = "Default (Serif)";
     document.getElementById("DefaultSansSerif").innerHTML = "Default (Sans-Serif)";
 }
 
 function MSMincho(){
     document.cookie = 'HPFTFont=MSMinchoXXX; max-age=31622400';
-    document.getElementById("YuMincho").innerHTML = "Yu Mincho";
+    Font = "MSMincho";
+    document.getElementById("YuMincho").innerHTML = "Yū Minchō";
     document.getElementById("NotoSansCJK").innerHTML = "Noto Sans CJK";
-    document.getElementById("Meiryo").innerHTML = "Meiryo";
-    document.getElementById("MSMincho").innerHTML = "MS Mincho" + " ✓";
+    document.getElementById("Meiryo").innerHTML = "Meiryō";
+    document.getElementById("MSMincho").innerHTML = "MS Minchō" + " ✓";
     document.getElementById("DefaultSerif").innerHTML = "Default (Serif)";
     document.getElementById("DefaultSansSerif").innerHTML = "Default (Sans-Serif)";
 }
 
 function DefaultSerif(){
-    font = "HPFTFont=DefaultSerifXXX; max-age=31622400";
-    document.getElementById("YuMincho").innerHTML = "Yu Mincho";
+    document.cookie = "HPFTFont=DefaultSerifXXX; max-age=31622400";
+    Font = "DefaultSerif";
+    document.getElementById("YuMincho").innerHTML = "Yū Minchō";
     document.getElementById("NotoSansCJK").innerHTML = "Noto Sans CJK";
-    document.getElementById("Meiryo").innerHTML = "Meiryo";
-    document.getElementById("MSMincho").innerHTML = "MS Mincho";
+    document.getElementById("Meiryo").innerHTML = "Meiryō";
+    document.getElementById("MSMincho").innerHTML = "MS Minchō";
     document.getElementById("DefaultSerif").innerHTML = "Default (Serif)" + " ✓";
     document.getElementById("DefaultSansSerif").innerHTML = "Default (Sans-Serif)";
 }
 
 function DefaultSansSerif(){
-    font = "HPFTFont=DefaultSansSerifXXX; max-age=31622400";
-    document.getElementById("YuMincho").innerHTML = "Yu Mincho";
+    document.cookie = "HPFTFont=DefaultSansSerifXXX; max-age=31622400";
+    document.getElementById("YuMincho").innerHTML = "Yū Minchō";
     document.getElementById("NotoSansCJK").innerHTML = "Noto Sans CJK";
-    document.getElementById("Meiryo").innerHTML = "Meiryo";
-    document.getElementById("MSMincho").innerHTML = "MS Mincho";
+    document.getElementById("Meiryo").innerHTML = "Meiryō";
+    document.getElementById("MSMincho").innerHTML = "MS Minchō";
     document.getElementById("DefaultSerif").innerHTML = "Default (Serif)";
     document.getElementById("DefaultSansSerif").innerHTML = "Default (Sans-Serif)" + " ✓";
 }
