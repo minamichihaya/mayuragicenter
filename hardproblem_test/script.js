@@ -573,15 +573,14 @@ function MakeContent() {
     *********************************************************************/
         
         document.cookie =  'HPFTScroll=0percent; max-age=158112000';
-        
+        alert(Section + "-" + Subsection + ", phase=" + Phase + ", scroll=" + window.scrollY / (document.documentElement.clientHeight - document.body.clientHeight));
         document.onscroll = function() {
-            console.log(Phase);
             document.cookie =  'HPFTScroll=' + window.scrollY + 'percent; max-age=158112000';
-            if (window.scrollY / (document.documentElement.clientHeight - document.body.clientHeight) >= 0.90) {
+            if (window.scrollY / (document.documentElement.clientHeight - document.body.clientHeight) >= 0.95) {
                 if (Section == "3" && Subsection == "8" && Phase == "1") {
                     document.cookie = 'HPFTPhase=2; max-age=158112000';                   
                 } else if (Section == "epilogue" && Phase == "2") {
-                    document.cookie = 'HPFTPhase=2; max-age=158112000';    
+                    document.cookie = 'HPFTPhase=2; max-age=158112000';
                 }
             }
         }
