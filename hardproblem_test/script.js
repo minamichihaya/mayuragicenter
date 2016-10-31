@@ -573,7 +573,6 @@ function MakeContent() {
     *********************************************************************/
         
         document.cookie =  'HPFTScroll=0percent; max-age=158112000';
-        alert(Section + "-" + Subsection + ", phase=" + Phase + ", scroll=" + window.scrollY / (document.documentElement.clientHeight - document.body.clientHeight));
         document.onscroll = function() {
             document.cookie =  'HPFTScroll=' + window.scrollY + 'percent; max-age=158112000';
             if (window.scrollY / (document.documentElement.clientHeight - document.body.clientHeight) >= 0.95) {
