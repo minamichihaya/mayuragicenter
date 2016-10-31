@@ -23,7 +23,7 @@
         {title:"因果の玉突き",section:"4",subsection:["1","2","3","4","5","6"],phase:"2"},
         {title:"機械の少女",section:"5",subsection:["1","2","3","4","5","6","7","8"],phase:"2"},
         {title:"もうひとつの部屋",section:"6",subsection:["1","2","3","4","5"],phase:"2"},
-        {title:"エピローグ",section:"epilogue",subsection:"0",phase:"3"},
+        {title:"エピローグ",section:"epilogue",subsection:"0",phase:"2"},
         {title:"あとがき",section:"afterwords",subsection:"0",phase:"0"},
         {title:"Acknowledgements",section:"acknowledgements",subsection:"0",phase:"0"},
         {title:"References",section:"references",subsection:"0",phase:"0"}
@@ -327,6 +327,8 @@ function MakeContent() {
     target[0].outerHTML = Text.responseText;
     
     
+
+    
     /********************************************************************
         CSSの読み込み
     *********************************************************************/
@@ -454,9 +456,16 @@ function MakeContent() {
     var PageCookie = 'HPFTRecentPage=' + FileName + '; max-age=158112000';
     document.cookie = PageCookie;
     
-    if (Number(Phase) < Number(GetSecData(Section,"section","phase"))) {
-        var PhaseCookie = 'HPFTPhase=' + GetSecData(Section,"section","phase") + '; max-age=158112000';
-        document.cookie = PhaseCookie;
+    
+    if (Phase == "1" && Section == "3" && Subsection == "8") {
+            var PhaseCookie = 'HPFTPhase=' + GetSecData(Section,"section","phase") + '; max-age=158112000';
+            document.cookie = PhaseCookie;        
+        
+    } else {
+        if (Number(Phase) < Number(GetSecData(Section,"section","phase"))) {
+            var PhaseCookie = 'HPFTPhase=' + GetSecData(Section,"section","phase") + '; max-age=158112000';
+            document.cookie = PhaseCookie;
+        }
     }
     
 }
@@ -474,6 +483,13 @@ function MakeContent() {
             var Section = FileName.substring(0, FileName.indexOf(".htm"));
             var Subsection = "0";
         };
+        
+        var cky = document.cookie;
+            if (cky.indexOf("HPFTPhase=") != -1) {
+                var Phase = cky.slice(cky.indexOf("HPFTPhase=") + 10, cky.indexOf("HPFTPhase=") + 11);
+            } else {
+                var Phase = "1";
+        }
 
         var SecTitle = GetSecData(Section,"section","title");
 
@@ -550,5 +566,23 @@ function MakeContent() {
         
         document.getElementById("TextBackground").style.visibility = "visible";
         document.getElementById("LoadingIcon").style.display = "none";
+
+        
+    /********************************************************************
+            スクロールによる栞の変更
+    *********************************************************************/
+        
+        document.cookie =  'HPFTScroll=0percent; max-age=158112000';
+        
+        document.onscroll = function() {
+            document.cookie =  'HPFTScroll=' + window.scrollY + 'percent; max-age=158112000';
+            if (window.scrollY / (document.documentElement.clientHeight - document.body.clientHeight) >= 0.90) {
+                if (Section == "3" && Subsection == "8" && Phase == "1") {
+                    document.cookie = 'HPFTPhase=2; max-age=158112000';                   
+                } else if (Section == "epilogue" && Phase == "2") {
+                    document.cookie = 'HPFTPhase=2; max-age=158112000';    
+                }
+            }
+        }
     }
 
