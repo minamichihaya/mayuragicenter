@@ -110,14 +110,19 @@ function MakeCover(){
         } else {
             Scroll = 0;
         }
-    
-    
+        
     target = document.getElementsByTagName("html");
     target[0].innerHTML = target[0].innerHTML.replace(/images\/[1-3]\//g,"images/" + Phase + "/");
     target = document.getElementById("Cover");
     target.style.backgroundImage = 'url("images/' + Phase + '/cover.png")';
-    target = document.getElementById("Continue");
-    target.href = RecentPage + ".html";
+    if (RecentPage == "prologue" && Scroll == 0) {
+        target = document.getElementById("Continue");
+        target.innerHTML = '<img src="images/' + Phase + '/start.png" class="Button">';
+        target.href = "prologue.html";
+    } else {
+        target = document.getElementById("Continue");
+        target.href = RecentPage + ".html";
+    }
     
     target = document.getElementById("Index1");
     target.innerHTML = '<span class="SecSpan" id="prologue"><a href="' + SecList[0].section + '.html">' + SecList[0].title + '</a></span>';
@@ -331,16 +336,22 @@ function DeleteBookmark() {
     target.style.backgroundImage = 'url("images/1/cover.png")';
     target = document.getElementById("Continue");
     target.href = "prologue.html";
+    target.innerHTML = '<img src="images/1/start.png" class="Button">';
     target = document.getElementById(RecentPage);
     target.style.border = "none";  
     
-    document.cookie = 'HPFTPhase=1; max-age=31622400";';
-    document.cookie = 'HPFTRecentPage=prologue.html; max-age=31622400";';
-    document.cookie = 'HPFTScroll=0pix; max-age=31622400";';
+    document.cookie = 'HPFTPhase=1; max-age=31622400';
+    document.cookie = 'HPFTRecentPage=prologue.html; max-age=31622400';
+    document.cookie = 'HPFTScroll=0pix; max-age=31622400';
     
 }
 
 function InitializeSettings() {
+    alert("近日実装予定ですʅ(◔౪◔ ) ʃ");
+}
+
+
+function OpenLink() {
     alert("近日実装予定ですʅ(◔౪◔ ) ʃ");
 }
 
@@ -382,7 +393,7 @@ function MakeContent() {
     } else {
         Section = FileName.substring(0, FileName.indexOf(".htm"));
         Subsection = "0";
-    };
+    }
 
     SecTitle = GetSecData(Section,"section","title");
     
@@ -658,9 +669,59 @@ function MakeContent() {
            栞の書き込み
         *********************************************************************/
         
-        var PageCookie = 'HPFTRecentPage=' + FileName + '; max-age=158112000';
-        document.cookie = PageCookie;
-
+        var ScrollCheck = false;
+        
+        if (RecentPage.indexOf("-") !== -1) {
+            var RecentSection = RecentPage.split("-")[0];
+            var RecentSubsection = RecentPage.split("-")[1];
+        } else {
+            var RecentSection = RecentPage;
+            var RecentSubsection = "0";
+        }
+        
+        if (Phase == "3") {
+            if (Section == "afterwords" || Section == "acknowledgements" || Section == "references") {
+                document.cookie = 'HPFTRecentPage=' + Section + '.html; max-age=158112000';
+                ScrollCheck = true;
+            }
+        } else if (RecentPage == "prologue") {
+            document.cookie = 'HPFTRecentPage=' + FileName + '; max-age=158112000';
+            ScrollCheck = true;
+        } else {
+            switch (Section) {
+                case "prologue":
+                    if (RecentSection == "prologue") {
+                        ScrollCheck = true;
+                    }
+                    break;
+                case "epilogue":
+                    document.cookie = 'HPFTRecentPage=epilogue.html; max-age=158112000';
+                    ScrollCheck = true;
+                    break;
+                case "afterwords":
+                    break;
+                case "acknowledgements":
+                    break;
+                case "references":
+                    break;
+                default:
+                    if (Number(RecentSection) < Number(Section)) {
+                        document.cookie ='HPFTRecentPage=' + FileName + '; max-age=158112000';
+                        ScrollCheck = true;
+                        break;
+                    } else if (Number(RecentSection) == Number(Section)) {
+                        if (Number(RecentSubsection) <= Number(Subsection)) {
+                            document.cookie ='HPFTRecentPage=' + FileName + '; max-age=158112000';
+                            ScrollCheck = true;
+                        }
+                    }
+                    break;
+            }
+            
+        }
+        
+        /*alert("Phase=" + Phase + ",  RecentPage=" + RecentPage + ",  RecentSection=" + RecentSection + ",  RecentSubsection=" + RecentSubsection + ",  Section=" + Section + ",  Subsection=" + Subsection + ",  ScrollCheck=" + ScrollCheck + ",  Cookie=" + document.cookie);*/
+        
         if (Phase == "1" && Section == "3" && Subsection == "8") {
                 var PhaseCookie = 'HPFTPhase=2; max-age=158112000';
                 document.cookie = PhaseCookie;        
@@ -678,13 +739,15 @@ function MakeContent() {
             document.cookie =  'HPFTScroll=0pix; max-age=158112000';
         }
         
-        document.onscroll = function() {
-            document.cookie =  'HPFTScroll=' + window.scrollY + 'pix; max-age=158112000';
-            if (window.scrollY / (document.documentElement.clientHeight - document.body.clientHeight) >= 0.95) {
-                if (Section == "3" && Subsection == "8" && Phase == "1") {
-                    document.cookie = 'HPFTPhase=2; max-age=158112000';                   
-                } else if (Section == "epilogue" && Phase == "2") {
-                    document.cookie = 'HPFTPhase=3; max-age=158112000';
+        if (ScrollCheck) {
+            document.onscroll = function() {
+                document.cookie =  'HPFTScroll=' + window.scrollY + 'pix; max-age=158112000';
+                if (window.scrollY / (document.documentElement.clientHeight - document.body.clientHeight) >= 0.95) {
+                    if (Section == "3" && Subsection == "8" && Phase == "1") {
+                        document.cookie = 'HPFTPhase=2; max-age=158112000';                   
+                    } else if (Section == "epilogue" && Phase == "2") {
+                        document.cookie = 'HPFTPhase=3; max-age=158112000';
+                    }
                 }
             }
         }

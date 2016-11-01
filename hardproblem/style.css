@@ -5,7 +5,7 @@
 
 body{
     background-color: black;
-    font-family: "游明朝",serif;
+    font-family: "游明朝", "YuMincho", "HG明朝E", "IPAex明朝", serif;
 }
 
 #Background{
@@ -79,13 +79,13 @@ a:hover{
 #menu{
     position: absolute;
     bottom:20px;
-    right:15px;
+    right:25px;
     text-align:center;
 }
 
 img.Button{
     height:60px;
-    margin: 10px;
+    margin-left: 30px;
     margin-bottom: 5px;
     opacity:0.95;
 }
@@ -108,6 +108,7 @@ img.Button:hover{
 #CloseButton:hover{
     opacity:0.7;
 }
+
 
 
 /************************************
@@ -201,7 +202,7 @@ span.SubsecSpan:hover{
 div#CharsBody{
 	margin: auto; 
     margin-top:80px;
-    font-family: "游明朝";
+    font-family: "游明朝", "YuMincho", "HG明朝E", "IPAex明朝", serif;
 }
 
 div.CharCard{
@@ -233,6 +234,7 @@ div.CharName{
     margin-bottom: 0px;
     position: relative;
     left:-5px;
+    font-family: "游明朝", "YuMincho", "HG明朝M", "IPAex明朝", serif;
 }
 
 div#CharTextRiko{
@@ -263,20 +265,22 @@ div.KeyWordsBody{
     margin-top: 80px;
     padding-left: 60px;
     padding-right: 60px;
-    font-family: "游明朝";
+    font-family: "游明朝", "YuMincho", "HG明朝M", "IPAex明朝", serif;
     overflow-y: scroll;
 }
 
 div.Article{
     font-size:20px;
     text-shadow: 0px 0px 5px #fff;
-    margin-top:30px;
-    margin-bottom: 30px;
+    margin-top:10px;
+    margin-bottom: 40px;
 }
 
 div.ArticleTitle{
     font-size:120%;
     font-weight: bold;
+    font-family: "游明朝", "YuMincho", "HG明朝E", "IPAex明朝", serif;
+    border-bottom: solid 1px #fff;
 }
 
 div.ArticleText{
@@ -309,7 +313,7 @@ div#SettingContents{
 }
 
 div.SettingItem{
-    font-family: "Noto Sans";
+    font-family: "Noto Sans", "Corbel", "Calibri", "Arial", sans-serif;
     font-size: 25px;
     position: absolute;
 }
@@ -367,6 +371,13 @@ div#InitializeSettings:hover{
     text-decoration: underline;
 }
 
+
+/************************************
+    リンクページ
+************************************/
+
+
+
 /************************************
     本文ページ
 ************************************/
@@ -423,7 +434,7 @@ div.Text{
 }
 
 div.Navigator{
-    font-family: "Noto Sans";
+    font-family: "Noto Sans", "Corbel", "Calibri", "Arial", sans-serif;
     font-size:20px;
 }
 
