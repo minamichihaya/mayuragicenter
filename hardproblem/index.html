@@ -27,12 +27,12 @@
                 <img src="images/1/characters.png" class="Button" onclick="OpenCharacters()">
                 <img src="images/1/keywords.png" class="Button" onclick="OpenKeyWords()">
                 <img src="images/1/setting.png" class="Button" onclick="OpenSetting()">
-                <img src="images/1/link.png" class="Button" onclick="OpenLink()">
+                <img src="images/1/link.png" class="Button" onclick="OpenLinks()">
             </div>
 
 
             <div id="Index">
-                <div id="CloseButton" onclick="CloseIndex()">✕</div>
+                <div id="CloseButton" onclick="Close()">✕</div>
                 <div id="Contents">
                     <div id="Index1"></div>
                     <div id="Index2">
@@ -45,7 +45,7 @@
 
 
             <div id="Characters">
-                <div id="CloseButton" onclick="CloseCharacters()">✕</div>
+                <div id="CloseButton" onclick="Close()">✕</div>
                 <div id="CharsBody">
                     <div id="CharNozomi" class="CharCard">
                         <img src="images/char_nozomi.png" class="CharImage">
@@ -64,7 +64,7 @@
 
 
             <div id="KeyWords">
-                <div id="CloseButton" onclick="CloseKeyWords()">✕</div>
+                <div id="CloseButton" onclick="Close()">✕</div>
                 <div class="KeyWordsBody">
                     <div class="Article">
                         <div class="ArticleTitle"><ruby>真揺<rp>《</rp><rt>まゆらぎ</rt><rp>》</rp></ruby>ニュータウン</div>
@@ -102,7 +102,7 @@
             </div>
 
             <div id="Setting">
-                <div id="CloseButton" onclick="CloseSetting()">✕</div>
+                <div id="CloseButton" onclick="Close()">✕</div>
                 <div id="SettingContents">
                     <div class="SettingItem" id="Font">
                         <div class="SettingTitle">Font</div>
@@ -137,6 +137,44 @@
                     
                     <div id="ConfirmIS" class="ConfirmText">設定を初期化します</div>
                     <div id="YesNoIS" class="YesNo"><span id="Yes" class="YesNo" onclick="InitializeSettings()">Initialize</span><span id="No" class="YesNo" onclick="CloseConfirm()">Cancel</span></div>
+                </div>
+            </div>
+            
+            <div id="Links">
+                <div id="CloseButton" onclick="Close()">✕</div>
+                <div id="LinkContents">
+                    <div id="MC" class="Banner">
+                        <a href="../" target="_blank">
+                            <img src="../banner/mayuragicenter_banner.png" id="MCBanner" class="BannerImage">
+                        </a>
+                        <span id="MCText" class="LinkText">
+                            作者のウェブサイト
+                        </span>
+                    </div>
+                    <div id="BS" class="Banner">
+                        <a href="https://minamichihaya.booth.pm/" target="_blank">
+                            <img src="../banner/bookstore_banner.png" id="BSBanner" class="BannerImage">
+                        </a>
+                        <span id="MCText" class="LinkText">
+                            単行本通販ページ
+                        </span>
+                    </div>
+                    <div id="DC" class="Banner">
+                        <a href="http://dark-constexpr.github.io/" target="_blank">
+                            <img src="../banner/dark-constexpr-bunner.gif" id="DCBanner" class="BannerImage">
+                        </a>
+                        <span id="MCText" class="LinkText">
+                            掲載誌
+                        </span>
+                    </div>
+                    <div id="SN" class="Banner">
+                        <a href="http://ncode.syosetu.com/n9592cf/" target="_blank">
+                            <img src="../banner/banner_narou.gif" id="SNBanner" class="BannerImage">
+                        </a>
+                        <span id="MCText" class="LinkText">
+                            こちらでも読めます
+                        </span>
+                    </div>
                 </div>
             </div>
 
