@@ -611,11 +611,11 @@ function MakeContent() {
                 }
                 break;
             case "NotoSansCJK":
-                document.getElementById("Content").style.fontFamily = "Noto Sans CJK JP";
+                document.getElementById("Content").style.fontFamily = '"Noto Sans CJK JP Regular", "源ノ角ゴシック JP Regular"';
                 document.getElementById("Content").style.color = "#444";
                 document.getElementById("Content").style.fontWeight = "300";
                 for (var i=0; i<=document.getElementsByClassName("SC").length - 1; i++) {
-                    document.getElementsByClassName("SC")[i].style.fontFamily = "Noto Sans CJK SC";
+                    document.getElementsByClassName("SC")[i].style.fontFamily = '"Noto Sans CJK SC Regular", "Source Han Sans SC Regular"';
                 }
                 break;
             case "Meiryo":
