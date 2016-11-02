@@ -77,7 +77,6 @@
 **********************************************************************/
 
 var Font;
-var BGColor;
 var Scroll;
 
 function MakeCover(){
@@ -98,18 +97,25 @@ function MakeCover(){
     }
     
     if (cky.indexOf("HPFTFont=") != -1) {
-        Font = cky.slice(cky.indexOf("HPFTFont=") + 9);
-        Font = Font.slice(0,Font.indexOf("XXX"));
+        var Font = cky.slice(cky.indexOf("HPFTFont=") + 9);
+        Font = Font.slice(0,Font.indexOf("XXX;"));
     } else {
-        Font = "YuMincho";
+        var Font = "YuMincho";
     }
     
     if (cky.indexOf("HPFTScroll=") != -1) {
         var tempstr = cky.slice(cky.indexOf("HPFTScroll=") + 11);
         Scroll = Number(tempstr.slice(0,tempstr.indexOf("pix")));
-        } else {
-            Scroll = 0;
-        }
+    } else {
+        Scroll = 0;
+    }
+    
+    if (cky.indexOf("HPFTBGC=") != -1) {
+        var BGColor = cky.slice(cky.indexOf("HPFTBGC=") + 8);
+        Font = Font.slice(0,Font.indexOf("Color"));
+    } else {
+        var BGColor = "Light";
+    }
         
     target = document.getElementsByTagName("html");
     target[0].innerHTML = target[0].innerHTML.replace(/images\/[1-3]\//g,"images/" + Phase + "/");
@@ -183,6 +189,8 @@ function MakeCover(){
         }
     }
     
+    alert(Font);
+    
     switch (Font) {
         case "YuMincho":
             YuMincho();
@@ -193,8 +201,8 @@ function MakeCover(){
         case "Meiryo":
             Meiryo();
             break;
-        case "MSMincho":
-            MSMincho();
+        case "HGMincho":
+            HGMincho();
             break;
         case "DefaultSerif":
             DefaultSerif();
@@ -202,6 +210,12 @@ function MakeCover(){
         case "DefaultSansSerif":
             DefaultSansSerif();
             break;
+    }
+    
+    if (BGColor == "Dark") {
+        ChoiceDark();
+    } else {
+        ChoiceLight();
     }
     
 }
@@ -251,8 +265,8 @@ function YuMincho(){
     Font = "YuMincho";
     document.getElementById("YuMincho").innerHTML = "Yū Minchō" + " ✓";
     document.getElementById("NotoSansCJK").innerHTML = "Noto Sans CJK";
+    document.getElementById("HGMincho").innerHTML = "HG Minchō";
     document.getElementById("Meiryo").innerHTML = "Meiryō";
-    document.getElementById("MSMincho").innerHTML = "MS Minchō";
     document.getElementById("DefaultSerif").innerHTML = "Default (Serif)";
     document.getElementById("DefaultSansSerif").innerHTML = "Default (Sans-Serif)";
 }
@@ -262,8 +276,19 @@ function NotoSansCJK(){
     Font = "NotoSansCJK";
     document.getElementById("YuMincho").innerHTML = "Yū Minchō";
     document.getElementById("NotoSansCJK").innerHTML = "Noto Sans CJK" + " ✓";
+    document.getElementById("HGMincho").innerHTML = "HG Minchō";
     document.getElementById("Meiryo").innerHTML = "Meiryō";
-    document.getElementById("MSMincho").innerHTML = "MS Minchō";
+    document.getElementById("DefaultSerif").innerHTML = "Default (Serif)";
+    document.getElementById("DefaultSansSerif").innerHTML = "Default (Sans-Serif)";
+}
+
+function HGMincho(){
+    document.cookie = 'HPFTFont=HGMinchoXXX; max-age=31622400';
+    Font = "HGMincho";
+    document.getElementById("YuMincho").innerHTML = "Yū Minchō";
+    document.getElementById("NotoSansCJK").innerHTML = "Noto Sans CJK";
+    document.getElementById("HGMincho").innerHTML = "HG Minchō" + " ✓";
+    document.getElementById("Meiryo").innerHTML = "Meiryō";
     document.getElementById("DefaultSerif").innerHTML = "Default (Serif)";
     document.getElementById("DefaultSansSerif").innerHTML = "Default (Sans-Serif)";
 }
@@ -273,19 +298,8 @@ function Meiryo(){
     Font = "Meiryo";
     document.getElementById("YuMincho").innerHTML = "Yū Minchō";
     document.getElementById("NotoSansCJK").innerHTML = "Noto Sans CJK";
+    document.getElementById("HGMincho").innerHTML = "HG Minchō";
     document.getElementById("Meiryo").innerHTML = "Meiryō" + " ✓";
-    document.getElementById("MSMincho").innerHTML = "MS Minchō";
-    document.getElementById("DefaultSerif").innerHTML = "Default (Serif)";
-    document.getElementById("DefaultSansSerif").innerHTML = "Default (Sans-Serif)";
-}
-
-function MSMincho(){
-    document.cookie = 'HPFTFont=MSMinchoXXX; max-age=31622400';
-    Font = "MSMincho";
-    document.getElementById("YuMincho").innerHTML = "Yū Minchō";
-    document.getElementById("NotoSansCJK").innerHTML = "Noto Sans CJK";
-    document.getElementById("Meiryo").innerHTML = "Meiryō";
-    document.getElementById("MSMincho").innerHTML = "MS Minchō" + " ✓";
     document.getElementById("DefaultSerif").innerHTML = "Default (Serif)";
     document.getElementById("DefaultSansSerif").innerHTML = "Default (Sans-Serif)";
 }
@@ -295,8 +309,8 @@ function DefaultSerif(){
     Font = "DefaultSerif";
     document.getElementById("YuMincho").innerHTML = "Yū Minchō";
     document.getElementById("NotoSansCJK").innerHTML = "Noto Sans CJK";
+    document.getElementById("HGMincho").innerHTML = "HG Minchō";
     document.getElementById("Meiryo").innerHTML = "Meiryō";
-    document.getElementById("MSMincho").innerHTML = "MS Minchō";
     document.getElementById("DefaultSerif").innerHTML = "Default (Serif)" + " ✓";
     document.getElementById("DefaultSansSerif").innerHTML = "Default (Sans-Serif)";
 }
@@ -305,18 +319,38 @@ function DefaultSansSerif(){
     document.cookie = "HPFTFont=DefaultSansSerifXXX; max-age=31622400";
     document.getElementById("YuMincho").innerHTML = "Yū Minchō";
     document.getElementById("NotoSansCJK").innerHTML = "Noto Sans CJK";
+    document.getElementById("HGMincho").innerHTML = "HG Minchō";
     document.getElementById("Meiryo").innerHTML = "Meiryō";
-    document.getElementById("MSMincho").innerHTML = "MS Minchō";
     document.getElementById("DefaultSerif").innerHTML = "Default (Serif)";
     document.getElementById("DefaultSansSerif").innerHTML = "Default (Sans-Serif)" + " ✓";
 }
 
 function ChoiceLight(){
-    alert("近日実装予定ですʅ(◔౪◔ ) ʃ");
+    document.cookie = "HPFTBGC=LightColor; max-age=31622400";
+    document.getElementById("ChoiceLight").innerHTML = "Light ✓";
+    document.getElementById("ChoiceDark").innerHTML = "Dark";
 }
 
 function ChoiceDark(){
-    alert("近日実装予定ですʅ(◔౪◔ ) ʃ");
+    document.cookie = "HPFTBGC=DarkColor; max-age=31622400";
+    document.getElementById("ChoiceLight").innerHTML = "Light";
+    document.getElementById("ChoiceDark").innerHTML = "Dark ✓";
+}
+
+function ConfirmDB() {
+    document.getElementById("ConfirmIS").style.display = "none";
+    document.getElementById("YesNoIS").style.display = "none";
+    document.getElementById("ConfirmDB").style.display = "block";
+    document.getElementById("YesNoDB").style.display = "block";
+    document.getElementById("Confirm").style.display = "block";
+}
+
+function ConfirmIS() {
+    document.getElementById("ConfirmDB").style.display = "none";
+    document.getElementById("YesNoDB").style.display = "none";
+    document.getElementById("ConfirmIS").style.display = "block";
+    document.getElementById("YesNoIS").style.display = "block";
+    document.getElementById("Confirm").style.display = "block";
 }
 
 function DeleteBookmark() {
@@ -328,7 +362,7 @@ function DeleteBookmark() {
     } else {
         var RecentPage = "prologue";
     }
-    
+
     var target;
     target = document.getElementsByTagName("html");
     target[0].innerHTML = target[0].innerHTML.replace(/images\/[1-3]\//g,"images/1/");
@@ -339,17 +373,25 @@ function DeleteBookmark() {
     target.innerHTML = '<img src="images/1/start.png" class="Button">';
     target = document.getElementById(RecentPage);
     target.style.border = "none";  
-    
+
     document.cookie = 'HPFTPhase=1; max-age=31622400';
     document.cookie = 'HPFTRecentPage=prologue.html; max-age=31622400';
     document.cookie = 'HPFTScroll=0pix; max-age=31622400';
     
+    CloseConfirm();
 }
 
 function InitializeSettings() {
-    alert("近日実装予定ですʅ(◔౪◔ ) ʃ");
+    
+    YuMincho();
+    ChoiceLight();
+    CloseConfirm();
 }
 
+
+function CloseConfirm() {
+    document.getElementById("Confirm").style.display = "none";
+}
 
 function OpenLink() {
     alert("近日実装予定ですʅ(◔౪◔ ) ʃ");
@@ -426,7 +468,13 @@ function MakeContent() {
     /********************************************************************
         CSSの読み込み
     *********************************************************************/
-
+    
+    if (cky.indexOf("HPFTFont=") != -1) {
+        var Font = cky.slice(cky.indexOf("HPFTBGC=") + 8);
+        Font = Font.slice(0,Font.indexOf("Color"));
+    } else {
+        var Font = "Light";
+    }
 
     HTML = document.getElementsByTagName("html");
     HTML[0].innerHTML = HTML[0].innerHTML + '<link rel="stylesheet" href="style.css" type="text/css">';
@@ -605,30 +653,32 @@ function MakeContent() {
             case "YuMincho":
                 document.getElementById("Content").style.fontFamily = '"游明朝","游明朝体","Yu Mincho","YuMincho"';
                 for (var i=0; i<=document.getElementsByClassName("SC").length - 1; i++) {
-                    document.getElementsByClassName("SC")[i].style.fontFamily = "SimSun";
+                    document.getElementsByClassName("SC")[i].style.fontFamily = '"SimSun"';
                     document.getElementsByClassName("SC")[i].style.fontSize = "105%";
                     document.getElementsByClassName("SC")[i].style.color = '#404040';
                 }
                 break;
             case "NotoSansCJK":
-                document.getElementById("Content").style.fontFamily = '"Noto Sans CJK JP Regular", "源ノ角ゴシック JP Regular"';
+                document.getElementById("Content").style.fontFamily = '"Noto Sans CJK JP", "源ノ角ゴシック"';
                 document.getElementById("Content").style.color = "#444";
                 document.getElementById("Content").style.fontWeight = "300";
                 for (var i=0; i<=document.getElementsByClassName("SC").length - 1; i++) {
-                    document.getElementsByClassName("SC")[i].style.fontFamily = '"Noto Sans CJK SC Regular", "Source Han Sans SC Regular"';
+                    document.getElementsByClassName("SC")[i].style.fontFamily = '"Noto Sans CJK SC", "Source Han Sans SC"';
+                }
+                break;
+            case "HGMincho":
+                document.getElementById("Content").style.fontFamily = '"HG明朝B","HG MinchoB"';
+                document.getElementById("Content").style.color = '#444';
+                for (var i=0; i<=document.getElementsByClassName("SC").length - 1; i++) {
+                    document.getElementsByClassName("SC")[i].style.fontFamily = '"SimSun"';
+                    document.getElementsByClassName("SC")[i].style.fontWeight = '800';
                 }
                 break;
             case "Meiryo":
                 document.getElementById("Content").style.fontFamily = '"メイリオ","Meiryo"';
                 document.getElementById("Content").style.color = "#444";
                 for (var i=0; i<=document.getElementsByClassName("SC").length - 1; i++) {
-                    document.getElementsByClassName("SC")[i].style.fontFamily = "Microsoft YaHei";
-                }
-                break;
-            case "MSMincho":
-                document.getElementById("Content").style.fontFamily = '"MS Mincho","ＭＳ 明朝"';
-                for (var i=0; i<=document.getElementsByClassName("SC").length - 1; i++) {
-                    document.getElementsByClassName("SC")[i].style.fontFamily = "SimSun";
+                    document.getElementsByClassName("SC")[i].style.fontFamily = '"Microsoft YaHei"';
                 }
                 break;
             case "DefaultSerif":

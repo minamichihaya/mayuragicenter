@@ -107,10 +107,10 @@
                     <div class="SettingItem" id="Font">
                         <div class="SettingTitle">Font</div>
                         <div class="SettingChoices">
-                            <div class="FontChoice" onclick="YuMincho()" id="YuMincho">Yu Mincho</div>
+                            <div class="FontChoice" onclick="YuMincho()" id="YuMincho">Yū Minchō</div>
                             <div class="FontChoice" onclick="NotoSansCJK()" id="NotoSansCJK">Noto Sans CJK</div>
-                            <div class="FontChoice" onclick="Meiryo()" id="Meiryo">Meiryo</div>
-                            <div class="FontChoice" onclick="MSMincho()" id="MSMincho">MS Mincho</div>
+                            <div class="FontChoice" onclick="HGMincho()" id="HGMincho">HG Minchō</div>
+                            <div class="FontChoice" onclick="Meiryo()" id="Meiryo">Meiryō</div>
                             <div class="FontChoice" onclick="DefaultSerif()" id="DefaultSerif">Default (Serif)</div>
                             <div class="FontChoice" onclick="DefaultSansSerif()" id="DefaultSansSerif">Default (Sans-Serif)</div>
                         </div>
@@ -118,16 +118,25 @@
                     <div class="SettingItem" id="Color">
                         <div class="SettingTitle">Background Color</div>
                         <div class="SettingChoices">
-                            <span class="ColorChoice" id="ChoiceLight" onclick="ChoiceLight()">Light ✓</span>
+                            <span class="ColorChoice" id="ChoiceLight" onclick="ChoiceLight()">Light</span>
                             <span class="ColorChoice" id="ChoiceDark" onclick="ChoiceDark()">Dark</span>
                         </div>
                     </div>
-                    <div class="SettingItem" id="DeleteBookmark" onclick="DeleteBookmark()">
+                    <div class="SettingItem" id="DeleteBookmark" onclick="ConfirmDB()">
                         <div class="SettingTitle">Delete Bookmark</div>
                     </div>
-                    <div class="SettingItem" id="InitializeSettings" onclick="InitializeSettings()">
+                    <div class="SettingItem" id="InitializeSettings" onclick="ConfirmIS()">
                         <div class="SettingTitle">Initialize Settings</div>
                     </div>
+                </div>
+                <div id="Confirm">
+                    <div id="ConfirmBackground"></div>
+                    
+                    <div id="ConfirmDB" class="ConfirmText">栞を削除します</div>
+                    <div id="YesNoDB" class="YesNo"><span id="Yes" class="YesNo" onclick="DeleteBookmark()">Delete</span><span id="No" class="YesNo" onclick="CloseConfirm()">Cancel</span></div>
+                    
+                    <div id="ConfirmIS" class="ConfirmText">設定を初期化します</div>
+                    <div id="YesNoIS" class="YesNo"><span id="Yes" class="YesNo" onclick="InitializeSettings()">Initialize</span><span id="No" class="YesNo" onclick="CloseConfirm()">Cancel</span></div>
                 </div>
             </div>
 
