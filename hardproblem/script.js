@@ -451,7 +451,6 @@ function MakeContent() {
     }
     
     target = document.getElementsByTagName("body");
-    console.log("Text.responseText = " + Text.responseText);
     target[0].outerHTML = Text.responseText;
     
     /********************************************************************
