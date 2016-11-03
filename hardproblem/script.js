@@ -608,276 +608,278 @@ function MakeContent() {
     
 }
 
-    /********************************************************************
-            本文の表示
-    *********************************************************************/
-    function DisplayContent() {
-        
-        var FileName = window.location.href.split("/").pop();
+/********************************************************************
+        本文の表示
+*********************************************************************/
+function DisplayContent() {
+    
+    alert("displaycontent");
 
-        if (FileName.indexOf("-") !== -1) {
-            var Section = FileName.split("-")[0].substring(FileName[0].length - 1);
-            var Subsection = FileName.split("-")[1].substring(0, 1);
+    var FileName = window.location.href.split("/").pop();
+
+    if (FileName.indexOf("-") !== -1) {
+        var Section = FileName.split("-")[0].substring(FileName[0].length - 1);
+        var Subsection = FileName.split("-")[1].substring(0, 1);
+    } else {
+        var Section = FileName.substring(0, FileName.indexOf(".htm"));
+        var Subsection = "0";
+    };
+
+    var cky = document.cookie;
+        if (cky.indexOf("HPFTPhase=") != -1) {
+            var Phase = cky.slice(cky.indexOf("HPFTPhase=") + 10, cky.indexOf("HPFTPhase=") + 11);
         } else {
-            var Section = FileName.substring(0, FileName.indexOf(".htm"));
-            var Subsection = "0";
-        };
-        
-        var cky = document.cookie;
-            if (cky.indexOf("HPFTPhase=") != -1) {
-                var Phase = cky.slice(cky.indexOf("HPFTPhase=") + 10, cky.indexOf("HPFTPhase=") + 11);
+            var Phase = "1";
+    }
+
+    var SecTitle = GetSecData(Section,"section","title");
+
+    var Text = new XMLHttpRequest();
+
+    try {
+        Text.open("GET", "texts/prologue.txt", false);
+        Text.send();
+        console.log("同期通信完了");
+    } catch(e) {
+        console.log(e + "\r当ページはGoogleChrome推奨です。");
+        Text.open("GET", "texts/prologue.txt", true);
+        Text.onload = function() {
+            console.log(Text.responseText);
+        }
+        Text.send();
+    }
+    /*
+    if (Subsection !== "0") {
+        Text.open("GET", "texts/" + Section + "-" + Subsection + ".txt", false);
+    } else {
+        Text.open("GET", "texts/" + Section + ".txt", false);
+    };
+
+    Text.send("");*/
+
+    var Content = Text.responseText;
+
+    while (Content.indexOf('|') > -1) {
+        Content = Content.replace('|','<ruby>');
+        Content = Content.replace('《','<rp>[</rp><rt>');
+        Content = Content.replace('》','</rt><rp>]</rp></ruby>');
+    };
+
+    while (Content.indexOf('!sc') > -1) {
+        Content = Content.replace('!sc','<span class="SC">');
+        Content = Content.replace('sc!','</span>');
+    };
+
+    Content = Content.replace(/――/g,'<span class="Dash">――</span>');
+
+    document.getElementById("Content").innerHTML = Content;
+
+    var cky=document.cookie;
+    if (cky.indexOf("HPFTFont=") != -1) {
+        var Font = cky.slice(cky.indexOf("HPFTFont=") + 9);
+        Font = Font.slice(0,Font.indexOf("XXX"));
+    } else {
+        var Font = "YuMincho";
+    }
+
+    if (cky.indexOf("HPFTBGC=") != -1) {
+        var BGColor = cky.slice(cky.indexOf("HPFTBGC=") + 8);
+        BGColor = BGColor.slice(0,BGColor.indexOf("Color"));
+    } else {
+        var BGColor = "Light";
+    }
+
+    switch (Font) {
+        case "YuMincho":
+            document.getElementById("Content").style.fontFamily = '"游明朝","游明朝体","Yu Mincho","YuMincho"';
+            if (BGColor == "Dark") {
+                document.getElementById("Content").style.color = "#fff";
             } else {
-                var Phase = "1";
-        }
-
-        var SecTitle = GetSecData(Section,"section","title");
-
-        var Text = new XMLHttpRequest();
-        
-        try {
-            Text.open("GET", "texts/prologue.txt", false);
-            Text.send();
-            console.log("同期通信完了");
-        } catch(e) {
-            console.log(e + "\r当ページはGoogleChrome推奨です。");
-            Text.open("GET", "texts/prologue.txt", true);
-            Text.onload = function() {
-                console.log(Text.responseText);
+                document.getElementById("Content").style.color = "#000";
             }
-            Text.send();
-        }
-        /*
-        if (Subsection !== "0") {
-            Text.open("GET", "texts/" + Section + "-" + Subsection + ".txt", false);
-        } else {
-            Text.open("GET", "texts/" + Section + ".txt", false);
-        };
-
-        Text.send("");*/
-
-        var Content = Text.responseText;
-
-        while (Content.indexOf('|') > -1) {
-            Content = Content.replace('|','<ruby>');
-            Content = Content.replace('《','<rp>[</rp><rt>');
-            Content = Content.replace('》','</rt><rp>]</rp></ruby>');
-        };
-
-        while (Content.indexOf('!sc') > -1) {
-            Content = Content.replace('!sc','<span class="SC">');
-            Content = Content.replace('sc!','</span>');
-        };
-        
-        Content = Content.replace(/――/g,'<span class="Dash">――</span>');
-        
-        document.getElementById("Content").innerHTML = Content;
-        
-        var cky=document.cookie;
-        if (cky.indexOf("HPFTFont=") != -1) {
-            var Font = cky.slice(cky.indexOf("HPFTFont=") + 9);
-            Font = Font.slice(0,Font.indexOf("XXX"));
-        } else {
-            var Font = "YuMincho";
-        }
-        
-        if (cky.indexOf("HPFTBGC=") != -1) {
-            var BGColor = cky.slice(cky.indexOf("HPFTBGC=") + 8);
-            BGColor = BGColor.slice(0,BGColor.indexOf("Color"));
-        } else {
-            var BGColor = "Light";
-        }
-        
-        switch (Font) {
-            case "YuMincho":
-                document.getElementById("Content").style.fontFamily = '"游明朝","游明朝体","Yu Mincho","YuMincho"';
+            for (var i=0; i<=document.getElementsByClassName("SC").length - 1; i++) {
+                document.getElementsByClassName("SC")[i].style.fontFamily = '"SimSun"';
+                document.getElementsByClassName("SC")[i].style.fontSize = "105%";
                 if (BGColor == "Dark") {
-                    document.getElementById("Content").style.color = "#fff";
+                    document.getElementsByClassName("SC")[i].style.color = '#fff';
                 } else {
-                    document.getElementById("Content").style.color = "#000";
+                    document.getElementsByClassName("SC")[i].style.color = '#404040';
                 }
-                for (var i=0; i<=document.getElementsByClassName("SC").length - 1; i++) {
-                    document.getElementsByClassName("SC")[i].style.fontFamily = '"SimSun"';
-                    document.getElementsByClassName("SC")[i].style.fontSize = "105%";
-                    if (BGColor == "Dark") {
-                        document.getElementsByClassName("SC")[i].style.color = '#fff';
-                    } else {
-                        document.getElementsByClassName("SC")[i].style.color = '#404040';
-                    }
-                }
-                break;
-            case "NotoSansCJK":
-                document.getElementById("Content").style.fontFamily = '"Noto Sans CJK JP", "源ノ角ゴシック"';
-                if (BGColor == "Dark") {
-                    document.getElementById("Content").style.color = "#fff";
-                } else {
-                    document.getElementById("Content").style.color = "#444";
-                }
-                document.getElementById("Content").style.fontWeight = "300";
-                for (var i=0; i<=document.getElementsByClassName("SC").length - 1; i++) {
-                    document.getElementsByClassName("SC")[i].style.fontFamily = '"Noto Sans CJK SC", "Source Han Sans SC"';
-                }
-                break;
-            case "HGMincho":
-                document.getElementById("Content").style.fontFamily = '"HG明朝B","HG MinchoB"';
-                if (BGColor == "Dark") {
-                    document.getElementById("Content").style.color = "#eee";
-                } else {
-                    document.getElementById("Content").style.color = '#444';
-                }
-                for (var i=0; i<=document.getElementsByClassName("SC").length - 1; i++) {
-                    document.getElementsByClassName("SC")[i].style.fontFamily = '"SimSun"';
-                    document.getElementsByClassName("SC")[i].style.fontWeight = '800';
-                }
-                break;
-            case "Meiryo":
-                document.getElementById("Content").style.fontFamily = '"メイリオ","Meiryo"';
-                if (BGColor == "Dark") {
-                    document.getElementById("Content").style.color = "#fff";
-                } else {
-                    document.getElementById("Content").style.color = '#444';
-                }
-                for (var i=0; i<=document.getElementsByClassName("SC").length - 1; i++) {
-                    document.getElementsByClassName("SC")[i].style.fontFamily = '"Microsoft YaHei"';
-                    if (BGColor == "Dark") {
-                        document.getElementsByClassName("SC")[i].style.fontWeight = '300';
-                    } else {
-                        document.getElementsByClassName("SC")[i].style.fontWeight = '400';
-                    }
-                }
-                break;
-            case "DefaultSerif":
-                document.getElementById("Content").style.fontFamily = 'serif';
-                if (BGColor == "Dark") {
-                    document.getElementById("Content").style.color = "#fff";
-                } else {
-                    document.getElementById("Content").style.color = '#000';
-                }
-                break;
-            case "DefaultSansSerif":
-                document.getElementById("Content").style.fontFamily = 'sans-serif';
-                if (BGColor == "Dark") {
-                    document.getElementById("Content").style.color = "#fff";
-                } else {
-                    document.getElementById("Content").style.color = '#000';
-                }
-                break;
-        }
-        
-        if ((document.getElementsByClassName("Dash")[0] != undefined) && (Font == "YuMincho")) {
-            for (var i = 0; i <= document.getElementsByClassName("Dash").length - 1; i++) {
-                document.getElementsByClassName("Dash")[i].style.fontFamily = '"ＭＳ 明朝", "MS Mincho", serif';
-            }   
-        }
-        
-        document.getElementById("TextBackground").style.visibility = "visible";
-        document.getElementById("LoadingIcon").style.display = "none";
-
-        
-        /********************************************************************
-           ページのスクロール
-        *********************************************************************/
-        
-        if (document.cookie.indexOf("HPFTRecentPage=") != -1){
-            var RecentPage = document.cookie.slice(document.cookie.indexOf("HPFTRecentPage=") + 15);
-            RecentPage = RecentPage.slice(0, RecentPage.indexOf(".html"));
-        } else {
-            var RecentPage = "prologue";
-        }
-        
-        if (document.cookie.indexOf("HPFTScroll=") != -1) {
-        var tempstr = document.cookie.slice(document.cookie.indexOf("HPFTScroll=") + 11);
-        Scroll = Number(tempstr.slice(0,tempstr.indexOf("pix")));
-        } else {
-            Scroll = 0;
-        }
-        
-        if (RecentPage + ".html" == FileName) {
-            window.scrollTo(0,Scroll);
-        }        
-        
-        /********************************************************************
-           栞の書き込み
-        *********************************************************************/
-        
-        var ScrollCheck = false;
-        
-        if (RecentPage.indexOf("-") !== -1) {
-            var RecentSection = RecentPage.split("-")[0];
-            var RecentSubsection = RecentPage.split("-")[1];
-        } else {
-            var RecentSection = RecentPage;
-            var RecentSubsection = "0";
-        }
-        
-        if (Phase == "3") {
-            if (Section == "afterwords" || Section == "acknowledgements" || Section == "references") {
-                document.cookie = 'HPFTRecentPage=' + Section + '.html; max-age=158112000';
-                ScrollCheck = true;
             }
-        } else if (RecentPage == "prologue") {
-            document.cookie = 'HPFTRecentPage=' + FileName + '; max-age=158112000';
+            break;
+        case "NotoSansCJK":
+            document.getElementById("Content").style.fontFamily = '"Noto Sans CJK JP", "源ノ角ゴシック"';
+            if (BGColor == "Dark") {
+                document.getElementById("Content").style.color = "#fff";
+            } else {
+                document.getElementById("Content").style.color = "#444";
+            }
+            document.getElementById("Content").style.fontWeight = "300";
+            for (var i=0; i<=document.getElementsByClassName("SC").length - 1; i++) {
+                document.getElementsByClassName("SC")[i].style.fontFamily = '"Noto Sans CJK SC", "Source Han Sans SC"';
+            }
+            break;
+        case "HGMincho":
+            document.getElementById("Content").style.fontFamily = '"HG明朝B","HG MinchoB"';
+            if (BGColor == "Dark") {
+                document.getElementById("Content").style.color = "#eee";
+            } else {
+                document.getElementById("Content").style.color = '#444';
+            }
+            for (var i=0; i<=document.getElementsByClassName("SC").length - 1; i++) {
+                document.getElementsByClassName("SC")[i].style.fontFamily = '"SimSun"';
+                document.getElementsByClassName("SC")[i].style.fontWeight = '800';
+            }
+            break;
+        case "Meiryo":
+            document.getElementById("Content").style.fontFamily = '"メイリオ","Meiryo"';
+            if (BGColor == "Dark") {
+                document.getElementById("Content").style.color = "#fff";
+            } else {
+                document.getElementById("Content").style.color = '#444';
+            }
+            for (var i=0; i<=document.getElementsByClassName("SC").length - 1; i++) {
+                document.getElementsByClassName("SC")[i].style.fontFamily = '"Microsoft YaHei"';
+                if (BGColor == "Dark") {
+                    document.getElementsByClassName("SC")[i].style.fontWeight = '300';
+                } else {
+                    document.getElementsByClassName("SC")[i].style.fontWeight = '400';
+                }
+            }
+            break;
+        case "DefaultSerif":
+            document.getElementById("Content").style.fontFamily = 'serif';
+            if (BGColor == "Dark") {
+                document.getElementById("Content").style.color = "#fff";
+            } else {
+                document.getElementById("Content").style.color = '#000';
+            }
+            break;
+        case "DefaultSansSerif":
+            document.getElementById("Content").style.fontFamily = 'sans-serif';
+            if (BGColor == "Dark") {
+                document.getElementById("Content").style.color = "#fff";
+            } else {
+                document.getElementById("Content").style.color = '#000';
+            }
+            break;
+    }
+
+    if ((document.getElementsByClassName("Dash")[0] != undefined) && (Font == "YuMincho")) {
+        for (var i = 0; i <= document.getElementsByClassName("Dash").length - 1; i++) {
+            document.getElementsByClassName("Dash")[i].style.fontFamily = '"ＭＳ 明朝", "MS Mincho", serif';
+        }   
+    }
+
+    document.getElementById("TextBackground").style.visibility = "visible";
+    document.getElementById("LoadingIcon").style.display = "none";
+
+
+    /********************************************************************
+       ページのスクロール
+    *********************************************************************/
+
+    if (document.cookie.indexOf("HPFTRecentPage=") != -1){
+        var RecentPage = document.cookie.slice(document.cookie.indexOf("HPFTRecentPage=") + 15);
+        RecentPage = RecentPage.slice(0, RecentPage.indexOf(".html"));
+    } else {
+        var RecentPage = "prologue";
+    }
+
+    if (document.cookie.indexOf("HPFTScroll=") != -1) {
+    var tempstr = document.cookie.slice(document.cookie.indexOf("HPFTScroll=") + 11);
+    Scroll = Number(tempstr.slice(0,tempstr.indexOf("pix")));
+    } else {
+        Scroll = 0;
+    }
+
+    if (RecentPage + ".html" == FileName) {
+        window.scrollTo(0,Scroll);
+    }        
+
+    /********************************************************************
+       栞の書き込み
+    *********************************************************************/
+
+    var ScrollCheck = false;
+
+    if (RecentPage.indexOf("-") !== -1) {
+        var RecentSection = RecentPage.split("-")[0];
+        var RecentSubsection = RecentPage.split("-")[1];
+    } else {
+        var RecentSection = RecentPage;
+        var RecentSubsection = "0";
+    }
+
+    if (Phase == "3") {
+        if (Section == "afterwords" || Section == "acknowledgements" || Section == "references") {
+            document.cookie = 'HPFTRecentPage=' + Section + '.html; max-age=158112000';
             ScrollCheck = true;
-        } else {
-            switch (Section) {
-                case "prologue":
-                    if (RecentSection == "prologue") {
-                        ScrollCheck = true;
-                    }
-                    break;
-                case "epilogue":
-                    document.cookie = 'HPFTRecentPage=epilogue.html; max-age=158112000';
+        }
+    } else if (RecentPage == "prologue") {
+        document.cookie = 'HPFTRecentPage=' + FileName + '; max-age=158112000';
+        ScrollCheck = true;
+    } else {
+        switch (Section) {
+            case "prologue":
+                if (RecentSection == "prologue") {
+                    ScrollCheck = true;
+                }
+                break;
+            case "epilogue":
+                document.cookie = 'HPFTRecentPage=epilogue.html; max-age=158112000';
+                ScrollCheck = true;
+                break;
+            case "afterwords":
+                break;
+            case "acknowledgements":
+                break;
+            case "references":
+                break;
+            default:
+                if (Number(RecentSection) < Number(Section)) {
+                    document.cookie ='HPFTRecentPage=' + FileName + '; max-age=158112000';
                     ScrollCheck = true;
                     break;
-                case "afterwords":
-                    break;
-                case "acknowledgements":
-                    break;
-                case "references":
-                    break;
-                default:
-                    if (Number(RecentSection) < Number(Section)) {
+                } else if (Number(RecentSection) == Number(Section)) {
+                    if (Number(RecentSubsection) <= Number(Subsection)) {
                         document.cookie ='HPFTRecentPage=' + FileName + '; max-age=158112000';
                         ScrollCheck = true;
-                        break;
-                    } else if (Number(RecentSection) == Number(Section)) {
-                        if (Number(RecentSubsection) <= Number(Subsection)) {
-                            document.cookie ='HPFTRecentPage=' + FileName + '; max-age=158112000';
-                            ScrollCheck = true;
-                        }
                     }
-                    break;
-            }
-            
+                }
+                break;
         }
-        
-        if (Phase == "1" && Section == "3" && Subsection == "8") {
-                var PhaseCookie = 'HPFTPhase=2; max-age=158112000';
-                document.cookie = PhaseCookie;        
 
-        } else {
-            if (Number(Phase) < Number(GetSecData(Section,"section","phase"))) {
-                var PhaseCookie = 'HPFTPhase=' + GetSecData(Section,"section","phase") + '; max-age=158112000';
-                document.cookie = PhaseCookie;
-            }
+    }
+
+    if (Phase == "1" && Section == "3" && Subsection == "8") {
+            var PhaseCookie = 'HPFTPhase=2; max-age=158112000';
+            document.cookie = PhaseCookie;        
+
+    } else {
+        if (Number(Phase) < Number(GetSecData(Section,"section","phase"))) {
+            var PhaseCookie = 'HPFTPhase=' + GetSecData(Section,"section","phase") + '; max-age=158112000';
+            document.cookie = PhaseCookie;
         }
-        
-        if (window.scrollY != NaN) {
+    }
+
+    if (window.scrollY != NaN) {
+        document.cookie =  'HPFTScroll=' + window.scrollY + 'pix; max-age=158112000';
+    } else {
+        document.cookie =  'HPFTScroll=0pix; max-age=158112000';
+    }
+
+    if (ScrollCheck) {
+        document.onscroll = function() {
             document.cookie =  'HPFTScroll=' + window.scrollY + 'pix; max-age=158112000';
-        } else {
-            document.cookie =  'HPFTScroll=0pix; max-age=158112000';
-        }
-        
-        if (ScrollCheck) {
-            document.onscroll = function() {
-                document.cookie =  'HPFTScroll=' + window.scrollY + 'pix; max-age=158112000';
-                if (window.scrollY / (document.documentElement.clientHeight - document.body.clientHeight) >= 0.95) {
-                    if (Section == "3" && Subsection == "8" && Phase == "1") {
-                        document.cookie = 'HPFTPhase=2; max-age=158112000';                   
-                    } else if (Section == "epilogue" && Phase == "2") {
-                        document.cookie = 'HPFTPhase=3; max-age=158112000';
-                    }
+            if (window.scrollY / (document.documentElement.clientHeight - document.body.clientHeight) >= 0.95) {
+                if (Section == "3" && Subsection == "8" && Phase == "1") {
+                    document.cookie = 'HPFTPhase=2; max-age=158112000';                   
+                } else if (Section == "epilogue" && Phase == "2") {
+                    document.cookie = 'HPFTPhase=3; max-age=158112000';
                 }
             }
         }
     }
+}
 
