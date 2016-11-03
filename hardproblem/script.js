@@ -595,17 +595,13 @@ function MakeContent() {
         document.getElementById("Footer").style.color = "#333";
     }
     
-    window.onload = DisplayContent();
-    console.log("背景色変更\r" + document.getElementsByTagName("body")[0].outerHTML);
-    
+    window.onload = DisplayContent();    
 }
 
 /********************************************************************
         本文の表示
 *********************************************************************/
 function DisplayContent() {
-    
-    alert("displaycontent");
 
     var FileName = window.location.href.split("/").pop();
 
