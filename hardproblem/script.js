@@ -620,20 +620,15 @@ function DisplayContent() {
     var Text = new XMLHttpRequest();
 
     try {
-        Text.open("GET", "texts/prologue.txt", false);
-        Text.send();
-    } catch(e) {
-        alert(e);
+        if (Subsection !== "0") {
+            Text.open("GET", "texts/" + Section + "-" + Subsection + ".txt", false);
+        } else {
+            Text.open("GET", "texts/" + Section + ".txt", false);
         }
+        Text.send("");
+    } catch (e) {
+        alert(e);
     }
-    /*
-    if (Subsection !== "0") {
-        Text.open("GET", "texts/" + Section + "-" + Subsection + ".txt", false);
-    } else {
-        Text.open("GET", "texts/" + Section + ".txt", false);
-    };
-
-    Text.send("");*/
 
     var Content = Text.responseText;
 
