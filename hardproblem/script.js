@@ -450,7 +450,7 @@ function MakeContent() {
     try {
         Text.open("GET", "texts/html.txt", false);
         Text.send();
-        console.log("OK");
+        console.log("同期通信完了");
     } catch(e) {
         console.log(e + "\r当ページはGoogleChrome推奨です。");
         Text.open("GET", "texts/html.txt", true);
@@ -609,7 +609,6 @@ function MakeContent() {
     }
     
     console.log("背景色変更\r" + document.getElementsByTagName("body")[0].innerHTML);
-    alert(1234);
     
 }
 
@@ -638,12 +637,25 @@ function MakeContent() {
         var SecTitle = GetSecData(Section,"section","title");
 
         var Text = new XMLHttpRequest();
-
+        
+        try {
+            Text.open("GET", "texts/prologue.txt", false);
+            Text.send();
+            console.log("同期通信完了");
+        } catch(e) {
+            console.log(e + "\r当ページはGoogleChrome推奨です。");
+            Text.open("GET", "texts/prologue.txt", true);
+            Text.onload = function() {
+                console.log(Text.responseText);
+            }
+            Text.send();
+        }
+        /*
         if (Subsection !== "0") {
             Text.open("GET", "texts/" + Section + "-" + Subsection + ".txt", false);
         } else {
             Text.open("GET", "texts/" + Section + ".txt", false);
-        };
+        };*/
 
         Text.send("");
 
