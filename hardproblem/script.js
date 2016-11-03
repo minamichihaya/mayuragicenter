@@ -655,9 +655,9 @@ function MakeContent() {
             Text.open("GET", "texts/" + Section + "-" + Subsection + ".txt", false);
         } else {
             Text.open("GET", "texts/" + Section + ".txt", false);
-        };*/
+        };
 
-        Text.send("");
+        Text.send("");*/
 
         var Content = Text.responseText;
 
