@@ -457,13 +457,14 @@ function MakeContent() {
         Text.onload = function() {
             console.log(Text.responseText);
         }
-        Text.send(null);
+        Text.send();
     }
     
     target = document.getElementsByTagName("body");
+    console.log("Text.responseText = " + Text.responseText);
     target[0].outerHTML = Text.responseText;
     
-    console.log("body出力");
+    console.log("body出力\r" + document.getElementsByTagName("body")[0].innerHTML);
     
     /********************************************************************
         CSSの読み込み
@@ -479,7 +480,7 @@ function MakeContent() {
     HTML = document.getElementsByTagName("html");
     HTML[0].innerHTML = HTML[0].innerHTML + '<link rel="stylesheet" href="style.css" type="text/css">';
     
-    console.log("CSS読み込み");
+    console.log("CSS読み込み\r" + document.getElementsByTagName("body")[0].innerHTML);
     
     /********************************************************************
         各種タグ変更
@@ -528,7 +529,7 @@ function MakeContent() {
     }
     target = document.getElementById("SecCoverLogo");
     
-    console.log("タグ変更");
+    console.log("【タグ変更】\r" + document.getElementsByTagName("body")[0].innerHTML);
     
     /********************************************************************
         ヘッダー／フッターのリンク修正
