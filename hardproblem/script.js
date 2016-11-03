@@ -497,6 +497,7 @@ function MakeContent() {
                                                       '<link rel="shortcut icon" href="images/'+ Phase + '/favicon.png" type="image/png">');
     target = document.getElementById("LoadingIcon");
     target.src = 'images/' + Phase + '/loading.gif';
+    alert(123);
     if (Subsection == "1") {
         target = document.getElementById("SecCoverImg");
         target.src = 'images/section' + Section + '.png';
