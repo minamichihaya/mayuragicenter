@@ -451,7 +451,6 @@ function MakeContent() {
         console.log(e + "\r当ページはGoogleChrome推奨です。");
         Text.open("GET", "texts/html.txt", true);
         Text.onload = function() {
-            console.log(Text.responseText);
         }
         Text.send();
     }
@@ -459,8 +458,6 @@ function MakeContent() {
     target = document.getElementsByTagName("body");
     console.log("Text.responseText = " + Text.responseText);
     target[0].outerHTML = Text.responseText;
-    
-    console.log("body出力\r" + document.getElementsByTagName("body")[0].outerHTML);
     
     /********************************************************************
         CSSの読み込み
@@ -475,8 +472,6 @@ function MakeContent() {
 
     HTML = document.getElementsByTagName("html");
     HTML[0].innerHTML = HTML[0].innerHTML + '<link rel="stylesheet" href="style.css" type="text/css">';
-    
-    console.log("CSS読み込み\r" + document.getElementsByTagName("body")[0].innerHTML);
     
     /********************************************************************
         各種タグ変更
@@ -524,8 +519,6 @@ function MakeContent() {
         target.style.display = "none"
     }
     target = document.getElementById("SecCoverLogo");
-    
-    console.log("【タグ変更】\r" + document.getElementsByTagName("body")[0].innerHTML);
     
     /********************************************************************
         ヘッダー／フッターのリンク修正
@@ -587,8 +580,6 @@ function MakeContent() {
         }
     }
     
-    console.log("ナビゲータ変更\r" + document.getElementsByTagName("body")[0].innerHTML);
-    
     /********************************************************************
             背景色の変更
     *********************************************************************/
@@ -604,7 +595,7 @@ function MakeContent() {
         document.getElementById("Footer").style.color = "#333";
     }
     
-    console.log("背景色変更\r" + document.getElementsByTagName("body")[0].innerHTML);
+    console.log("背景色変更\r" + document.getElementsByTagName("body")[0].outerHTML);
     
 }
 
