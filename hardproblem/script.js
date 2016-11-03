@@ -459,9 +459,11 @@ function MakeContent() {
         }
         Text.send(null);
     }
-
+    
     target = document.getElementsByTagName("body");
     target[0].outerHTML = Text.responseText;
+    
+    console.log("body出力");
     
     /********************************************************************
         CSSの読み込み
@@ -476,6 +478,8 @@ function MakeContent() {
 
     HTML = document.getElementsByTagName("html");
     HTML[0].innerHTML = HTML[0].innerHTML + '<link rel="stylesheet" href="style.css" type="text/css">';
+    
+    console.log("CSS読み込み");
     
     /********************************************************************
         各種タグ変更
