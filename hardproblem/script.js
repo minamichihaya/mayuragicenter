@@ -50,10 +50,6 @@
     }
 
 
-    function DisplayContent() {
-        LoadText();
-    }
-
     function ChangeLoading() {
         var cky = document.cookie;
         if (cky.indexOf("HPFTPhase=") != -1) {
@@ -615,7 +611,7 @@ function MakeContent() {
     /********************************************************************
             本文の表示
     *********************************************************************/
-    function LoadText() {
+    function DisplayContent() {
         
         var FileName = window.location.href.split("/").pop();
 
