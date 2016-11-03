@@ -609,7 +609,7 @@ function MakeContent() {
     }
     
     console.log("背景色変更\r" + document.getElementsByTagName("body")[0].innerHTML);
-    alert(123);
+    alert(1234);
     
 }
 
