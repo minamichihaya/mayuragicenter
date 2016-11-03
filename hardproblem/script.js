@@ -497,7 +497,6 @@ function MakeContent() {
                                                       '<link rel="shortcut icon" href="images/'+ Phase + '/favicon.png" type="image/png">');
     target = document.getElementById("LoadingIcon");
     target.src = 'images/' + Phase + '/loading.gif';
-    alert(123);
     if (Subsection == "1") {
         target = document.getElementById("SecCoverImg");
         target.src = 'images/section' + Section + '.png';
@@ -610,6 +609,7 @@ function MakeContent() {
     }
     
     console.log("背景色変更\r" + document.getElementsByTagName("body")[0].innerHTML);
+    alert(123);
     
 }
 
