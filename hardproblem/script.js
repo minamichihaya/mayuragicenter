@@ -479,7 +479,7 @@ function MakeContent() {
     
     target = document.getElementsByTagName("title");
     if (Subsection == "0") {
-        target[0].innerHTML = SecTitle + "／" + target.innerHTML[0];
+        target[0].innerHTML = SecTitle + "／" + target[0].innerHTML;
     } else {
         target[0].innerHTML = "§" + Section + " " + SecTitle + "(" + Subsection + ")／" + target[0].innerHTML;
     }
