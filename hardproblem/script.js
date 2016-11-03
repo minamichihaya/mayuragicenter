@@ -446,15 +446,21 @@ function MakeContent() {
     /********************************************************************
         head/bodyの出力
     *********************************************************************/
-    
+        
+    try {
+        Text.open("GET", "texts/html.txt", false);
+        Text.send();
+    } catch(e) {
+        console.log(e + "\r当ページはGoogleChrome推奨です。");
+        Text.open("GET", "texts/html.txt", true);
+        Text.onload = function() {
+            console.log(Text.responseText);
+        }
+        Text.send(null);
+    }
 
-    Text.open("GET", "texts/html.txt", false);
-    Text.send("");
     target = document.getElementsByTagName("body");
     target[0].outerHTML = Text.responseText;
-    
-    
-
     
     /********************************************************************
         CSSの読み込み
@@ -470,18 +476,15 @@ function MakeContent() {
     HTML = document.getElementsByTagName("html");
     HTML[0].innerHTML = HTML[0].innerHTML + '<link rel="stylesheet" href="style.css" type="text/css">';
     
-    
     /********************************************************************
         各種タグ変更
     *********************************************************************/
-
-
     
     target = document.getElementsByTagName("title");
     if (Subsection == "0") {
-        target[0].innerHTML = SecTitle + "／" + target[0].innerHTML;
+        target[0].innerHTML = SecTitle + " - " + target[0].innerHTML;
     } else {
-        target[0].innerHTML = "§" + Section + " " + SecTitle + "(" + Subsection + ")／" + target[0].innerHTML;
+        target[0].innerHTML = "§" + Section + " " + SecTitle + "[" + Subsection + "] - " + target[0].innerHTML;
     }
     target = document.getElementsByTagName("link");
     target[0].outerHTML = target[0].outerHTML.replace('<link rel="shortcut icon" href="images/1/favicon.png" type="image/png">',
@@ -519,8 +522,6 @@ function MakeContent() {
         target.style.display = "none"
     }
     target = document.getElementById("SecCoverLogo");
-    
-
     
     /********************************************************************
         ヘッダー／フッターのリンク修正
@@ -603,6 +604,7 @@ function MakeContent() {
             本文の表示
     *********************************************************************/
     function LoadText() {
+        
         var FileName = window.location.href.split("/").pop();
 
         if (FileName.indexOf("-") !== -1) {
@@ -619,8 +621,6 @@ function MakeContent() {
             } else {
                 var Phase = "1";
         }
-        
-        
 
         var SecTitle = GetSecData(Section,"section","title");
 
@@ -648,7 +648,7 @@ function MakeContent() {
         };
         
         Content = Content.replace(/――/g,'<span class="Dash">――</span>');
-
+        
         document.getElementById("Content").innerHTML = Content;
         
         var cky=document.cookie;
