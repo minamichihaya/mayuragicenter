@@ -464,7 +464,7 @@ function MakeContent() {
     console.log("Text.responseText = " + Text.responseText);
     target[0].outerHTML = Text.responseText;
     
-    console.log("body出力\r" + document.getElementsByTagName("body")[0].innerHTML);
+    console.log("body出力\r" + document.getElementsByTagName("body")[0].outerHTML);
     
     /********************************************************************
         CSSの読み込み
@@ -591,7 +591,7 @@ function MakeContent() {
         }
     }
     
-    console.log("ナビゲーター変更");
+    console.log("ナビゲータ変更\r" + document.getElementsByTagName("body")[0].innerHTML);
     
     /********************************************************************
             背景色の変更
@@ -608,7 +608,7 @@ function MakeContent() {
         document.getElementById("Footer").style.color = "#333";
     }
     
-    console.log("背景色変更");
+    console.log("背景色変更\r" + document.getElementsByTagName("body")[0].innerHTML);
     
 }
 
@@ -840,8 +840,6 @@ function MakeContent() {
             }
             
         }
-        
-        /*alert("Phase=" + Phase + ",  RecentPage=" + RecentPage + ",  RecentSection=" + RecentSection + ",  RecentSubsection=" + RecentSubsection + ",  Section=" + Section + ",  Subsection=" + Subsection + ",  ScrollCheck=" + ScrollCheck + ",  Cookie=" + document.cookie);*/
         
         if (Phase == "1" && Section == "3" && Subsection == "8") {
                 var PhaseCookie = 'HPFTPhase=2; max-age=158112000';
