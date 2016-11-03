@@ -446,13 +446,8 @@ function MakeContent() {
     try {
         Text.open("GET", "texts/html.txt", false);
         Text.send();
-        console.log("同期通信完了");
     } catch(e) {
-        console.log(e + "\r当ページはGoogleChrome推奨です。");
-        Text.open("GET", "texts/html.txt", true);
-        Text.onload = function() {
-        }
-        Text.send();
+        alert(e);
     }
     
     target = document.getElementsByTagName("body");
@@ -627,14 +622,9 @@ function DisplayContent() {
     try {
         Text.open("GET", "texts/prologue.txt", false);
         Text.send();
-        console.log("同期通信完了");
     } catch(e) {
-        console.log(e + "\r当ページはGoogleChrome推奨です。");
-        Text.open("GET", "texts/prologue.txt", true);
-        Text.onload = function() {
-            console.log(Text.responseText);
+        alert(e);
         }
-        Text.send();
     }
     /*
     if (Subsection !== "0") {
