@@ -1,5 +1,5 @@
 
-<body onload="DisplayContent()">
+<body>
     <div id="Background">
         <img src="images/bgi.jpg" class="BGI">
         <img src="images/1/loading.gif" id="LoadingIcon">
