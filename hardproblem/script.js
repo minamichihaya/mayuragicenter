@@ -450,6 +450,7 @@ function MakeContent() {
     try {
         Text.open("GET", "texts/html.txt", false);
         Text.send();
+        console.log("OK");
     } catch(e) {
         console.log(e + "\r当ページはGoogleChrome推奨です。");
         Text.open("GET", "texts/html.txt", true);
