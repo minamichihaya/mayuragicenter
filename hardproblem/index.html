@@ -1,188 +1,51 @@
-<html lang="ja">
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:domain" content="minamichihaya.github.io">
+  <meta name="twitter:site" content="mayuragicenter">
+  <meta name="twitter:creator" content="pasberth">
+  <meta name="twitter:title" content="ふたりのハードプロブレム">
+  <meta name="twitter:description" content=" 機械になりたい、って思った。 いまでもそう思ってる。">
+  <meta name="twitter:image:src" content="http://minamichihaya.github.io/img/twittercard.png">
+  <meta name="twitter:app:name:iphone" content="">
+  <meta name="twitter:app:name:ipad" content="">
+  <meta name="twitter:app:name:googleplay" content="">
+  <meta name="twitter:app:url:iphone" content="">
+  <meta name="twitter:app:url:ipad" content="">
+  <meta name="twitter:app:url:googleplay" content="">
+  <meta name="twitter:app:id:iphone" content="">
+  <meta name="twitter:app:id:ipad" content="">
+  <meta name="twitter:app:id:googleplay" content="">
+  <link rel="stylesheet" type="text/css" href="desktop.css" />
+  <link rel="stylesheet" type="text/css" href="portrait.css" />
+  <link rel="stylesheet" type="text/css" href="landscape.css" />
+  <title>ふたりのハードプロブレム</title>
+  <link rel="shortcut icon" href="../img/icon_hardproblem.png" type="image/png">
+</head>
+<body id="page" class="index">
+  <div v-component="hpft-main-header"></div>
 
-    <head>
-        <title>ふたりのハードプロブレム</title>
-        <meta name="author" content="南正太郎">
-        <meta name="copyright" content="南正太郎">
-        <meta name="generator" content="Adobe Brackets">
-        <meta name="keywords" content="小説, 南正太郎, ふたりのハードプロブレム">
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css" type="text/css">
-        <link rel="shortcut icon" href="images/1/favicon.png"　type="image/png">
-        <script type="text/javascript", src="script.js"></script>
-    </head>
-    
-    <body onload="DisplayCover()">
-        <div id="Background">
-            <img src="images/bgi.jpg" class="BGI">
-            <img src="images/1/loading.gif" id="LoadingIcon">
-            <script>ChangeLoading();</script>
-        </div>
-        
-        <div id="Cover">
-            <img src="images/1/cover.png" id="cover">
-            <img src="images/1/logo.png" id="Logo" onclick="OpenIndex()">
-            <div id="menu">
-                <a href="" id="Continue"><img src="images/1/continue.png" class="Button"></a>
-                <img src="images/1/characters.png" class="Button" onclick="OpenCharacters()">
-                <img src="images/1/keywords.png" class="Button" onclick="OpenKeyWords()">
-                <img src="images/1/setting.png" class="Button" onclick="OpenSetting()">
-                <img src="images/1/link.png" class="Button" onclick="OpenLinks()">
-            </div>
+  <div id="main-contents" class="contents">
+    <img class="hpft-cover" id="cover" src="../img/title0.png"/>
+    <div id="main-hpft-index" v-component="hpft-index"></div>
 
-
-            <div id="Index">
-                <div id="CloseButton" onclick="Close()">✕</div>
-                <div id="Contents">
-                    <div id="Index1"></div>
-                    <div id="Index2">
-                        <div id="SectionTitle"></div>
-                        <div id="Subsection"></div>
-                    </div>
-                    <div id="Index3"></div>
-                </div>
-            </div>
+<figure class="link">
+<li class="link"><a href="https://minamichihaya.github.io/novel.html#hardproblem"><img src="../img/mayuragicenter_banner.png"></a></li>
+<li class="link"><a href="https://minamichihaya.booth.pm/" target="_blank"><img src="../img/hpft_bs.png"></a></li>
+<li class="link"><a href="http://dark-constexpr.github.io/" target="_blank"><img src="../img/dark-constexpr-bunner.gif"></li>
+<li class="link"><a href="http://ncode.syosetu.com/n9592cf/" target="_blank"><img src="../img/banner_narou.gif"></li>
+</figure>
 
 
-            <div id="Characters">
-                <div id="CloseButton" onclick="Close()">✕</div>
-                <div id="CharsBody">
-                    <div id="CharNozomi" class="CharCard">
-                        <img src="images/char_nozomi.png" class="CharImage">
-                        <div class="CharText" id="CharTextNozomi">
-                            <div class="CharName">青山<ruby>希海<rp>《</rp><rt>のぞみ</rt><rp>》</rp></ruby></div>
-                            不登校が原因で留年をしてしまった真浜大学自然科学部の五年生。頭は回る方だし運動神経だって悪くはないが、不器用なせいで様々な生きづらさを抱えている。第二種特定精神医療従事者の資格持ち。</div>
-                    </div>
-                    <div id="CharRiko" class="CharCard">
-                        <img src="images/char_riko.png" class="CharImage">
-                        <div class="CharText" id="CharTextRiko">
-                            <div class="CharName">リコ</div>
-                            アンドロイドの少女。上海人偶機器人工学サマリー１７シリーズの第４世代。無邪気な子供のような性格で何にでも興味を示す。ある事件が原因で記憶を失っている。</div>
-                    </div>
-                </div>
-            </div>
+  </div>
 
-
-            <div id="KeyWords">
-                <div id="CloseButton" onclick="Close()">✕</div>
-                <div class="KeyWordsBody">
-                    <div class="Article">
-                        <div class="ArticleTitle"><ruby>真揺<rp>《</rp><rt>まゆらぎ</rt><rp>》</rp></ruby>ニュータウン</div>
-                        <div class="ArticleText">希海が生まれ育ち、今も暮らしている街。大規模ニュータウンとしては日本最古のものだが、都心からのアクセスと良好な住環境のために今でもベッドタウンとしての人気が高い。</div>
-                    </div>
-                    <div class="Article">
-                        <div class="ArticleTitle">真浜大学</div>
-                        <div class="ArticleText">真揺ニュータウンの至近にある国立大学。希海が在籍している。名物は学食の天津麻婆丼。</div>
-                    </div>
-                    <div class="Article">
-                        <div class="ArticleTitle">上海人偶機器人工学</div>
-                        <div class="ArticleText">アジアを代表するアンドロイドメーカー。通称ＳＤＲ (Shanghai Dolls and Robotics)。</div>
-                    </div>
-                    <div class="Article">
-                        <div class="ArticleTitle"><ruby>ＦＩＡＮＣ<rp>《</rp><rt>ファイアンク</rt><rp>》</rp></ruby></div>
-                        <div class="ArticleText">フラクタル集積人工神経回路(Fractale Integrated Artificial Neuro Circuit)。サマリー１７シリーズに搭載されているニューラルプロセッサ。演算に量子もつれ効果を利用しているためオルゴンによる干渉保護や冷媒による熱交換といった様々なコヒーレンス維持装置が併せて搭載されていることが多い。</div>
-                    </div>
-                    <div class="Article">
-                        <div class="ArticleTitle">ニューロワーム</div>
-                        <div class="ArticleText">オルゴン場を実体とする情報生命体。人の脳内で形成されるオルゴン場に侵入し、様々な疾病を引き起こす。</div>
-                    </div>
-                    <div class="Article">
-                        <div class="ArticleTitle">閉律症</div>
-                        <div class="ArticleText">ニューロワームに感染した人間が発症する主要な疾病。脳が閉鎖状態になって外界からの刺激に反応しなくなり、眠ったままになる。</div>
-                    </div>
-                    <div class="Article">
-                        <div class="ArticleTitle">ルーミング</div>
-                        <div class="ArticleText">閉律症を患った人間を治療する技術。作業者の脳と患者の脳を接続し、大規模エンタングル状態を作ることで患者の意識に没入する。</div>
-                    </div>
-                    <div class="Article">
-                        <div class="ArticleTitle">精神医療従事者</div>
-                        <div class="ArticleText">ルーミングで患者の意識に入り込むための資格。患者の支配下にある精神世界で特殊能力を扱うことができる者が取得できる。第一種から第三種までがあり、上位の資格ほど治療できる範 囲が広いがその際の危険も大きくなる。</div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="Setting">
-                <div id="CloseButton" onclick="Close()">✕</div>
-                <div id="SettingContents">
-                    <div class="SettingItem" id="Font">
-                        <div class="SettingTitle">Font</div>
-                        <div class="SettingChoices">
-                            <div class="FontChoice" onclick="YuMincho()" id="YuMincho">Yū Minchō</div>
-                            <div class="FontChoice" onclick="NotoSansCJK()" id="NotoSansCJK">Noto Sans CJK</div>
-                            <div class="FontChoice" onclick="HGMincho()" id="HGMincho">HG Minchō</div>
-                            <div class="FontChoice" onclick="Meiryo()" id="Meiryo">Meiryō</div>
-                            <div class="FontChoice" onclick="DefaultSerif()" id="DefaultSerif">Default (Serif)</div>
-                            <div class="FontChoice" onclick="DefaultSansSerif()" id="DefaultSansSerif">Default (Sans-Serif)</div>
-                        </div>
-                    </div>
-                    <div class="SettingItem" id="Color">
-                        <div class="SettingTitle">Background Color</div>
-                        <div class="SettingChoices">
-                            <span class="ColorChoice" id="ChoiceLight" onclick="ChoiceLight()">Light</span>
-                            <span class="ColorChoice" id="ChoiceDark" onclick="ChoiceDark()">Dark</span>
-                        </div>
-                    </div>
-                    <div class="SettingItem" id="DeleteBookmark" onclick="ConfirmDB()">
-                        <div class="SettingTitle">Delete Bookmark</div>
-                    </div>
-                    <div class="SettingItem" id="InitializeSettings" onclick="ConfirmIS()">
-                        <div class="SettingTitle">Initialize Settings</div>
-                    </div>
-                </div>
-                <div id="Confirm">
-                    <div id="ConfirmBackground"></div>
-                    
-                    <div id="ConfirmDB" class="ConfirmText">栞を削除します</div>
-                    <div id="YesNoDB" class="YesNo"><span id="Yes" class="YesNo" onclick="DeleteBookmark()">Delete</span><span id="No" class="YesNo" onclick="CloseConfirm()">Cancel</span></div>
-                    
-                    <div id="ConfirmIS" class="ConfirmText">設定を初期化します</div>
-                    <div id="YesNoIS" class="YesNo"><span id="Yes" class="YesNo" onclick="InitializeSettings()">Initialize</span><span id="No" class="YesNo" onclick="CloseConfirm()">Cancel</span></div>
-                </div>
-            </div>
-            
-            <div id="Links">
-                <div id="CloseButton" onclick="Close()">✕</div>
-                <div id="LinkContents">
-                    <div id="MC" class="Banner">
-                        <a href="../" target="_blank">
-                            <img src="../banner/mayuragicenter_banner.png" id="MCBanner" class="BannerImage">
-                        </a>
-                        <span id="MCText" class="LinkText">
-                            作者のウェブサイト
-                        </span>
-                    </div>
-                    <div id="BS" class="Banner">
-                        <a href="https://minamichihaya.booth.pm/" target="_blank">
-                            <img src="../banner/bookstore_banner.png" id="BSBanner" class="BannerImage">
-                        </a>
-                        <span id="MCText" class="LinkText">
-                            単行本通販ページ
-                        </span>
-                    </div>
-                    <div id="DC" class="Banner">
-                        <a href="http://dark-constexpr.github.io/" target="_blank">
-                            <img src="../banner/dark-constexpr-bunner.gif" id="DCBanner" class="BannerImage">
-                        </a>
-                        <span id="MCText" class="LinkText">
-                            掲載誌
-                        </span>
-                    </div>
-                    <div id="SN" class="Banner">
-                        <a href="http://ncode.syosetu.com/n9592cf/" target="_blank">
-                            <img src="../banner/banner_narou.gif" id="SNBanner" class="BannerImage">
-                        </a>
-                        <span id="MCText" class="LinkText">
-                            こちらでも読めます
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        
-    </body>
-
-    <script>MakeCover();</script>
-
+ </body>
 </html>
+
+<script src="cookie.js"></script>
+<script src="config.js"></script>
+<script src="../vendor/vue.min.js"></script>
+<script src="components.js"></script>
+<script src="page.js"></script>

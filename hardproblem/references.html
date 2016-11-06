@@ -1,16 +1,152 @@
 <html>
-    <head>
-        <title>ふたりのハードプロブレム</title>
-        <meta name="author" content="南正太郎">
-        <meta name="copyright" content="南正太郎">
-        <meta name="description" content="機械になりたい、って思った。今でもそう思ってる。">
-        <meta name="keywords" content="小説, 南正太郎, ふたりのハードプロブレム">
-        <meta charset="UTF-8">
-        <meta name="robots" content="index,follow">
-        <link rel="shortcut icon" href="images/1/favicon.png" type="image/png">
-        <link rel="stylesheet" href="style.css" type="text/css">
-    </head>    
-    <body></body>
-    <script type="text/javascript", src="script.js"></script>
-    <script>MakeContent();</script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <link rel="stylesheet" type="text/css" href="desktop.css" />
+  <link rel="stylesheet" type="text/css" href="portrait.css" />
+  <link rel="stylesheet" type="text/css" href="landscape.css" />
+  <title>ふたりのハードプロブレム</title>
+  <link rel="shortcut icon" href="../img/icon_hardproblem.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="../fonts/yu_mincho.css" id="fontsets">
+</head>
+<body id="page">
+  <div v-component="hpft-page-header"></div>
+
+  <div class="contents">
+<div class="text">
+<span class="ref_category">Novels</span>
+<li class="ref_title">秋山瑞人 - イリヤの空、UFOの夏</li>
+高校の頃、夢中になって読んでたライトノベル。本作とは特にストーリー／キャラクター上の関連性はないんですけど、何せ一番必死に読み込んだ小説なので文体がかなり影響受けてる……かもしれないです（恐れ多くて断言できない）。
+<li class="ref_title">秋山瑞人,たくま朋正,かとうひでお - 鉄コミュニケイション</li>
+ロボットになりたかった女の子と人間になりたかったロボットの話。ロボットの描写とかストーリー上の位置づけとかに関して少なからぬ影響を受けています。自分をロボット娘好きにした最初の原因。
+<li class="ref_title">今野緒雪 - マリア様がみてる</li>
+有名ソフト百合小説。これを読んで「主人公が女でも問題なく感情移入できるばかりか、1カップルにつき女の子ふたり出せるから一粒で二度おいしいじゃないか」と思ったので本作品も同様のソフト百合路線でいかせてもらいました。あとこれに登場する志摩子&乃梨子のカップリングはリコと希海の四代くらい前の元ネタです。突然変異を繰り返してすでに原形を留めてませんが「誰にでも優しくて少し影のある女の子」&「頭に血がのぼりやすいヘタレな少年的女の子」という部分にかろうじてその面影を見ることができますね。
+<li class="ref_title">ねこねこソフト - サナララ</li>
+オムニバス形式のえっちゲー。ドロップアウターが主人公となる第3章に強い影響を受けてます。なおこのゲーム、プレイした人ならお気づきになられるかもしれませんが第1章のヒロインの名前が<ruby>希末<rp>《</rp><rt>のぞみ</rt><rp>》</rp></ruby>なんですよね。何か関連があるのかと思われるかもしれませんが、これに関しては単なる偶然の一致ですね（意図して同じにしていないだけで無意識下では引っ張られてたんでしょうけど……）。そういえば希海という名前はホントになんとなくで付けたんですが、いざ最後まで書ききってみると何だかストーリー上の色んな意味が見出せそうな感じになってて、結果的にとてもいいネーミングになったと思ってます。
+<li class="ref_title">ねこねこソフト - 120円の春</li>
+春夏秋冬、オムニバス形式のノベルゲーム。冬と春は直接的に影響受けました。人生に疲れた主人公が純真無垢な女の子に出会うってプロットがまんまふたりのハードプロブレムですね。特に春には§2にとてもよく似たシーンが出てきます。パクりです。
+
+
+<span class="ref_category">Music</span>
+<li class="ref_title">Yellow Magic Orchestra - 東風《Tong Poo》</li>
+この曲のプロモーションビデオ中に「<span class="simplified">东风</span>」とタイトルが出てくるんですけど、作中に簡体字が出てくるのはそれの影響ですね。また人民服が出てきたり社会主義だったりするのもYMOの影響です。
+<li class="ref_title">Yellow Magic Orchestra - 中国女《La Femme Chinoise》</li>
+歌詞の「For Susie Wong and Shanghai Dolls」って部分がSDRの命名元になってます。なおSDRはShanghai Dolls and Roboticsの略。
+<li class="ref_title">細野晴臣 - Esashi</li>
+江差追分にアラブのライをフィーチャーした曲。§6で登場した「かもめ池」の命名元。
+<li class="ref_title">細野晴臣 - Orgone Box</li>
+オルゴン・エネルギーの発見者(提唱者？)であるヴィルヘルム・ライヒ博士とミニマルミュージックの大家スティーブ・ライヒをかけた曲。オルゴン云々の元ネタであり、§4の希海のセリフ(そしてこのような時代には～)の元ネタでもあります。また、§6で出てきた村雲山という地名もこの曲からですね。
+<li class="ref_title">細野晴臣 - Ohenro-San</li>
+§4に出てきた八十八地区という地名の元ですね。お遍路さん→八十八ヶ所→八十八、みたいな。
+<li class="ref_title">細野晴臣 - Caravan</li>
+§6に出てきた熱砂という地名のインスピレーション元ですね。このリファレンスに記載されている細野晴臣さんの曲はすべてOmni Sight Seeingというアルバムに収録されているんですが、真揺ニュータウンおよび近隣の地名は基本的にこのアルバムから取るようにしてます。
+<li class="ref_title">細野晴臣 - Laugh-Gas</li>
+フランスのクラブでライを演奏するアラブ人ミュージシャンに影響を受けて製作された曲。フランス→トリコロール→三色、というわけでエピローグに出てきた「三色彩道」の元ネタです。とは言え真揺ニュータウンのモデルになった千里ニュータウンにも同名の通りがあるんですけどね。
+<li class="ref_title">細野晴臣 - Pleocene</li>
+心の波が鎮まった状態を地底湖にたとえて歌った楽曲。歌詞に「まゆらぎの鳴く、常世の春」って部分があるんですけど、これが真揺ニュータウンの元ネタです。なお「まゆらぎ」とは孔雀明王のことだとか。
+<li class="ref_title">坂本龍一 - 千のナイフ《Thousand Knives》</li>
+§5で見せた希海の隠し技の元ネタ……というか、希海の能力の元ネタです。DIOのナイフ投げみたいなことさせたくてあんな能力になりました。
+<li class="ref_title">坂本龍一 - Ballet Mécanique</li>
+人間に恋をした機械(オルゴールとの説あり)の曲。希海の<ruby>核<rp>《</rp><rt>カーネル</rt><rp>》</rp></ruby>がオルゴールなのはここから着想を得ました。本文にもところどころに歌詞を引用した言い回しが出てきますね。また作者が選ぶリコのイメージ曲でもあります。
+<li class="ref_title">Harry Dacre - Daisy Bell</li>
+超有名ですね。世界ではじめて機械が歌った曲であり、2001年宇宙の旅でHALが歌った曲です。<a href="https://www.youtube.com/watch?v=CK2DePGkEos" target="_blank" style="color:#0055bb; text-decoration:none;">これ</a>なんかは作者が選ぶ希海のイメージ曲だったり。
+<li class="ref_title">Terry Riley</li>
+現代音楽家。§2に登場する教科書の著書はここから名前を拝借しました。
+<li class="ref_title">Morton Subotnick</li>
+現代音楽家。§3に登場するスボトニック型どうちゃらこうちゃらはここから拝借しました。
+<li class="ref_title">Haruka Nakamura</li>
+エレクトロニカのアーティスト。リコの昔の名前「ハルカ」の元ネタ。
+<li class="ref_title">Rei Harakami</li>
+エレクトロニカのアーティスト。§5でちらっとだけ出てくるアンドロイドの名前の元ネタ。
+<li class="ref_title">KOKIA - question</li>
+読者が考えてくれた本作テーマソング
+<li class="ref_title">KOKIA - I Catch a Cold</li>
+読者が考えてくれたリコ視点ソング
+<li class="ref_title">KOKIA - 私の太陽</li>
+読者が考えてくれた希海視点ソング
+<li class="ref_title">Unicorn Kid - hydrate</li>
+読者が考えてくれた本作テーマソングその2
+<li class="ref_title">大貫妙子,坂本龍一 - 3びきのくま</li>
+作者が考えるリコの好きそうな曲。聴きながらしんみりしてそう。
+<li class="ref_title">Squarepusher - Dark Steering</li>
+作者が考える希海の好きそうな曲。ヘッドホンで聴きながら頭振ってそう。それでもって掃除機かけてるリコに（邪魔だなあ……）とか思われてそう。
+
+
+<span class="ref_category">Music/Vocaloid</span>
+<li class="ref_title">Crypton Future Media, Inc. - 初音ミク</li>
+みんな大好きミクさん。自分をロボット娘好きにした2つ目の原因。ぶっちゃけリコのキャラクターはかなりの部分がこの御方の影響下にあります。リコが二つ結びなのも、名前がカナ2文字なのもそのせい。もっと言えばリコが敬語なのも自分の脳内ミクさんが敬語で喋ってるからだし、いつも明るく楽しそうにしてるのも同じ理由からです。
+<li class="ref_title">baker - celluloid</li>
+自分がボカロにハマるきっかけになった曲です。黎明期・最初期のボカロ曲といえばわりと明るい感じの曲調がほとんどだったんですけど、そんな中で日々の不安とか矮小感とかを無機的な機械音声で歌い上げるこの曲に衝撃を受けたのを覚えています。「ああ、そうだよな。機械だって苦しいんだよな」とかそんなことを考えてしまって、そこから§6の展開を思いつきました。なのでこの曲が一番直接的な影響元かもしれません。
+<li class="ref_title">kiichi - 電気羊の夢(reprise)</li>
+窓の向こうにノスタルジック景色が広がっている様子を歌ったエレクトロニカ。§5および§6に出てくる精神空間はこの曲をイメージしてます。
+<li class="ref_title">kiichi - 氷結のディスコ</li>
+歌詞に「四畳の砂漠」という部分があって、同じような言い回しをどこかで使った覚えがあります。
+<li class="ref_title">kiichi - Paralyze</li>
+「夏の陽炎、目眩と頭痛」って歌詞があって、希海が夏に頭痛を覚える設定の元ネタ……なんですが、なんか最近自分も夏になったら頭痛に襲われるようになりました。
+<li class="ref_title">kiichi - <span style="font-size:90%;">The New Town Renaissance Plan of Chairman Baphomet</span></li>
+ニュータウンってかっこいいなーとか思うきっかけになった曲。本作の舞台がニュータウンなのはこの曲および自分の通ってた大学の立地のせい。
+<li class="ref_title">kiichi - 銀色雲</li>
+どこにも所属できない悲しさを歌った曲。修士課程修了間近の冬、一人ぼっちの研究室でずっとこれを聞いてました。ところどころに歌詞を引用した言い回しが出てきます。
+
+
+<span class="ref_category">Voiceactors(actresses)</span>
+<li class="ref_title">中原麻衣</li>
+読者が考えてくれたリコの声優
+<li class="ref_title">水瀬いのり</li>
+読者が考えてくれたリコの声優その2
+<li class="ref_title">内田彩</li>
+読者が考えてくれた希海の声優
+<li class="ref_title">佐藤利奈</li>
+読者が考えてくれた希海の声優その2
+<li class="ref_title">小山力也</li>
+読者が考えてくれた東の声優
+
+
+<span class="ref_category">Locations</span>
+<li class="ref_title">大阪府豊中市,吹田市 - 千里ニュータウン</li>
+真揺ニュータウンのモデル。下記の阪大吹田キャンパスに通うときによく通ってました。なおキャラクターの苗字はすべてここの地名から取られてます。
+<li class="ref_title">大阪府池田市 - 産業技術総合研究所関西センター</li>
+SDR近畿事業所の立地場所のモデル。一度だけ行ったことあります。
+<li class="ref_title">和歌山県西牟婁郡白浜町 - 白良浜</li>
+§2で行った海はここを想定してます。なお取材とかは当然してないので実際とはかなり違うかと。
+<li class="ref_title">大阪府吹田市 - 万博記念公園</li>
+解放記念公園のモデル。
+<li class="ref_title">大阪府泉南地域</li>
+小春の住んでる千霧区のモデル。こちらも取材なんぞしておりません。
+<li class="ref_title">大阪府吹田市 - 大阪大学吹田キャンパス</li>
+真浜大学のモデルであり作者の母校。自分は大学院からこちらに通ってました。作中に出てくる天津麻婆丼は阪大名物なのでお立ち寄りの際はぜひ一度どうぞ。
+<li class="ref_title">神戸市垂水区 - ジェームス山</li>
+§5で出てきた天分市縁谷近辺のモデル。なおこちらも取材とかは当然していませんが、少なくとも作中で描写してるような下町ではないと思います。
+
+
+<span class="ref_category">Science ＆ Philosophy</span>
+<li class="ref_title">石黒浩 - ロボットとは何か</li>
+有名なイシグロイドの製作者の本。リコが気を失ったら空気の抜ける音がする(アクチュエータで駆動しているため)だとか、そういう部分を参考にさせてもらいました。
+<li class="ref_title">浅田稔 - ロボットいう思想</li>
+学習というプロセスで知能を作っていく、という感じの本。リコたちサマリー17シリーズの設定アレコレに影響を与えています。
+<li class="ref_title">柴田正良 - ロボットの心</li>
+機械の心についての哲学的なアレコレを取り上げた本。「事物の理解とはなにか」みたいなところの考察を得るための参考にした覚えがあります。
+<li class="ref_title">G.バーンズ - 物性物理学のための群論入門</li>
+大学院の頃にちょろっとだけ読みました。§5および§6で<ruby>核<rp>《</rp><rt>カーネル</rt><rp>》</rp></ruby>を指してテトラヘドラルだとかアイコサヘドラルだとか言ってるのはこれで勉強した点群の話です。対称性がだんだん上がっていくイメージ。
+<li class="ref_title">ロジャー・ペンローズ - 心の影</li>
+大規模量子もつれ状態にある軸索内の波動関数がどーたらこーたらで意識が生じる……って仮説でFIANCの量子効果とか§6の意識が飛ぶ描写とかに使ってるんですけど、正直ちゃんと理解できてないので表層だけです。寛大な心でお読み下さい。
+<li class="ref_title">リチャード・ドーキンス - 虹の解体</li>
+「科学は詩性を提供する」という主張の科学啓蒙書。自分は文学とか芸術とかそういう方面の素養に乏しく、ずっとそれを負い目に感じてきたんですけど、この本を読んで考え方を改めましたね。「確かに自分はそっちの素養はてんで空っきしだけど、科学ならちょっとだけ分かるぞ。だったらそれをそのまま描写に使ってやればいいんじゃないか」なんて前向きに考えさせてくれた良書です。
+
+
+<span class="ref_category">How to</span>
+<li class="ref_title">西島大介,さやわか - 西島大介のひらめき☆マンガ学校</li>
+「これからの時代、漫画家としてやっていくにはどうすれば？」みたいな本です。物凄く乱暴に要約すると「背景とか緻密な書き込みとか計算されたコマ割りとか(あるいはストーリーでさえも)、別に無くても漫画は成立するんだから、いらない要素はざくざく削っていこう。じゃないと手が回らないよ」という内容。自分はそれまで絵も小説もまともに書いたことがない人間だったのでこの本に出てくる話、とりわけリソースに欠く状況でいかにパッケージングするかという話はかなり参考になりました。
+<li class="ref_title">鈴木信一 - 文才がなくても書ける小説講座</li>
+素人向け小説技法書。「ある文章を書けば疑問が生まれるので、その疑問に答えていく形で次なる情報を提示してやるとよい」という部分がめちゃくちゃ役に立ってます。
+</div>
+
+    <div id="footer" v-component="hpft-page-footer"></div>
+  </div>
+</body>
 </html>
+
+<script src="config.js"></script>
+<script src="../vendor/vue.min.js"></script>
+<script src="components.js"></script>
+<script src="page.js"></script>

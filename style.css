@@ -68,7 +68,7 @@ img.topbanner{
 ul.top{
     width:1024px;
     margin-top:1em;
-    right:50px;
+    right:25px;
     position:relative;
 
 }
@@ -78,7 +78,7 @@ li.top{
     list-style-type:none;
     font-size:large;
     line-height:300%;
-    width:256px;
+    width:200px;
     text-align:center;
 }
 
