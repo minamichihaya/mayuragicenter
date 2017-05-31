@@ -14,7 +14,7 @@ window.onload = function(){
 			return "https://mayuragicenter.github.io/";
 		}
 	}();
-	document.body.innerHTML = '<a href="' + jump + '">移動しました</a>。\nブックマークの変更等よろしくです。';
+	document.body.innerHTML = '<a href="' + jump + '">移動しました</a>。<br>ブックマークの変更等よろしくです。';
 	setTimeout(function(){
 		location.href = jump;
 	}, 3000);
