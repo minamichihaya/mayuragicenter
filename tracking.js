@@ -4,12 +4,16 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-100279260-1', 'auto');
 ga('send', 'pageview');
-setTimeout(function(){
+let jump = function(){
 	if (location.href.indexOf("/hardproblem") != -1) {
-		location.href = "https://mayuragicenter.github.io/hardproblem/";
+		return "https://mayuragicenter.github.io/hardproblem/";
 	} else if (location.href.indexOf("/metastable3") != -1) {
-		location.href = "https://mayuragicenter.github.io/metastable3/";
+		return "https://mayuragicenter.github.io/metastable3/";
 	} else {
-		location.href = "https://mayuragicenter.github.io/";
+		return "https://mayuragicenter.github.io/";
 	}
+}();
+document.body.innerHTML = '<a href="' + jump + '">移動しました</a>。\nブックマークの変更等よろしくです。';
+setTimeout(function(){
+	location.href = jump;
 }, 3000);
