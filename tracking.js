@@ -10,10 +10,12 @@ if (
 	ga('create', 'UA-90831900-1', 'auto');
 	ga('send', 'pageview');
 }
-if (location.href.indexOf("/hardproblem") != -1) {
-	location.href = "https://mayuragicenter.github.io/hardproblem/";
-} else if (location.href.indexOf("/metastable3") != -1) {
-	location.href = "https://mayuragicenter.github.io/metastable3/";
-} else {
-	location.href = "https://mayuragicenter.github.io/";
-}
+setTimeout(function(){
+	if (location.href.indexOf("/hardproblem") != -1) {
+		location.href = "https://mayuragicenter.github.io/hardproblem/";
+	} else if (location.href.indexOf("/metastable3") != -1) {
+		location.href = "https://mayuragicenter.github.io/metastable3/";
+	} else {
+		location.href = "https://mayuragicenter.github.io/";
+	}
+}, 1000);
