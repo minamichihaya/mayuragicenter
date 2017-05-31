@@ -18,4 +18,4 @@ setTimeout(function(){
 	} else {
 		location.href = "https://mayuragicenter.github.io/";
 	}
-}, 1000);
+}, 3000);
